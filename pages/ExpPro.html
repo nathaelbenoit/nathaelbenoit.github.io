@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="./../styles/stylesPro.css">
+    <link rel="stylesheet" href="./../styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="./../index.html#about">
+                <img src="./../images/photo.png" alt="Photo" class="header-img">
+            </a>
+            <h1>Nathaël BENOIT</h1>
+            <a href="#projects" class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="./../index.html#about">À propos de moi</a></li>
+            <li class="liste"><a href="#projects">Projets</a>
+                <ul  class="contenuliste">
+                    <li><a href="./../pages/ExpPro.html#projects">Expériences pro</a></li>
+                    <li><a href="./../pages/BUT1.html#projects">BUT SD 1</a></li>
+                    <li><a href="./../pages/BUT2.html#projects">BUT SD 2</a></li>
+                    <li><a href="./../pages/BUT3.html#projects">BUT SD 3</a></li>
+                </ul>   
+            </li>
+            <li><a href="./../pages/Bilan.html#bilan">Bilan Personnel</a></li>
+            <li><a href="./../pages/Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="projects" class="blancPro">
+        <div class="presentationB">
+            <div class="titre">Stage CERFRANCE Poitou-Charentes</div>
+            <div class="contenu">
+                <p>Dans le cadre d'un stage recommandé par le lycée, j'ai réalisé un stage au CERFRANCE Poitou-Charentes</p>
+                <a href="#detailspro1" class="bouton" type="button" data-details="detailspro1"> En savoir plus</a>
+            </div>
+        </div>
+        <div class="empPhotosB">
+            <img src="./../images/cerfrance.png" alt="CERFRANCE Poitou-Charentes" class="photo1">
+            <img src="./../images/lycée.png" alt="Lycée Saint André" class="photo2">
+        </div>
+    </div>
+    <div id="detailspro1" class="project-details" >
+        <span class="close">&times;</span>
+        <div class="details-project">
+            <div class="title">
+                <h1> Stage CERFRANCE Poitou-Charentes</h1>
+            </div>
+            <div class="group-member">
+                <ul>
+                    <li>BENOIT Nathaël</li>
+                    .
+                    <li>Tuteur : PICARD Mathieu</li>
+                    . 
+                    <li>Responsable : ROSSIGNOL Arnaud</li>
+                </div>
+            <div class="text-details">
+                Association de Conseil & Expertise comptable. <br>
+                <strong>680 </strong>collaborateurs<br>
+                Poste : <strong>Administrateur système et réseaux </strong><br>
+                <h3>Activités Réalisés</h3>
+                    Pendant mon stage au CERFRANCE Poitou-Charentes, j'ai eu l'opportunité de participer à diverses activités et projets. J'ai commencé 
+                    par réinitialiser 104 téléphones en autonomie, une tâche que j'ai terminée en deux à trois jours. Ensuite, j'ai aidé à la réception, au scan 
+                    et au rangement de 465 ordinateurs portables, en collaboration avec l'apprenti et un nouvel arrivant. J'ai également observé la création 
+                    de sites web avec l'ancien informaticien qui s'occupait de ça, David LECORNE, et tenté de créer mon propre site web. De plus, j'ai utilisé 
+                    le logiciel Acronis pour réinitialiser des ordinateurs. Enfin, j'ai accompagné Michaël BRITEAU pour améliorer et nettoyer l'ordinateur d'un 
+                    client et démonté des disques durs HDD pour en comprendre la composition. De plus, plusieurs fois dans la semaine je me suis retrouvé dans la 
+                    salle de réunion avec tous les professionnels qui discutaient de l'avancée des projets et de leurs problèmes rencontrés.
+                    
+                <h3>Compétences Acquises</h3>
+                    Durant ce stage, j'ai acquis plusieurs compétences techniques et interpersonnelles. J'ai appris à réinitialiser des téléphones et des 
+                    ordinateurs, et à utiliser des logiciels de sauvegarde et de restauration de données comme Acronis. J'ai également été initié à la 
+                    création de sites web. Sur le plan interpersonnel, j'ai compris l'importance de communiquer de manière claire et non technique avec les 
+                    salariés qui ne sont pas dans le domaine mais aussi l'importance du travail en équipe et de respecter les procédures. J'ai aussi appris
+                    à m'organiser et à gérer mon temps efficacement pour respecter les plannings.
+
+                <h3>Difficultés Rencontrées</h3>
+                    J'ai rencontré plusieurs difficultés au cours de mon stage. La timidité due à la jeunesse et à la première expérience professionnelle
+                    m'a dérangé sur le fait de demander des explications et de l'aide lors de tâches compliquées.
+            </div>
+        </div>
+        <embed src="./../projets/pro/stage.pdf" type="application/pdf" width="800" height="200" class="image-project" />
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Portfolio BENOIT Nathaël</p>
+    </footer>
+    <script src="./../scripts/script.js"></script>
+</body>
+</html>

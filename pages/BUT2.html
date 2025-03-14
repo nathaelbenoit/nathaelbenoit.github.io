@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="./../styles/stylesProjets.css">
+    <link rel="stylesheet" href="./../styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .prochainement{
+            text-align: center;
+            font-size: 2.5rem;
+            margin-top: 50px;
+        }
+        .loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            margin: 0 auto; /* Center the loader */
+        }
+
+        .loader-bar {
+            width: 10px;
+            height: 100%;
+            background-color: #30443b;
+            margin: 0 5px;
+            animation: loading 1s infinite;
+        }
+
+        .loader-bar:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .loader-bar:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+        .loader-bar:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+        .loader-bar:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+        .loader-bar:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes loading {
+            0%, 100% {
+                transform: scaleY(1);
+            }
+            50% {
+                transform: scaleY(0.5);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="./../index.html#about">
+                <img src="./../images/photo.png" alt="Photo" class="header-img">
+            </a>
+            <h1>Nathaël BENOIT</h1>
+            <a href="#projects" class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="./../index.html#about">À propos de moi</a></li>
+            <li class="liste"><a href="#projects">Projets</a>
+                <ul  class="contenuliste">
+                    <li><a href="./../pages/ExpPro.html#projects">Expériences pro</a></li>
+                    <li><a href="./../pages/BUT1.html#projects">BUT SD 1</a></li>
+                    <li><a href="./../pages/BUT2.html#projects">BUT SD 2</a></li>
+                    <li><a href="./../pages/BUT3.html#projects">BUT SD 3</a></li>
+                </ul>   
+            </li>
+            <li><a href="./../pages/Bilan.html#bilan">Bilan Personnel</a></li>
+            <li><a href="./../pages/Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="projects" class="blanc">
+        <div class="prochainement">
+            <br><br>
+            <p>PROCHAINEMENT...</p>
+        </div>
+        <div class="loader">
+            <div class="loader-bar"></div>
+            <div class="loader-bar"></div>
+            <div class="loader-bar"></div>
+            <div class="loader-bar"></div>
+            <div class="loader-bar"></div>
+        </div>
+
+        <div class="project-grid">
+            
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Portfolio BENOIT Nathaël</p>
+    </footer>
+    <script src="./../scripts/script.js"></script>
+</body>
+</html>

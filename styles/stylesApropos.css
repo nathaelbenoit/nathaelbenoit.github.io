@@ -1,0 +1,88 @@
+.zonetextGauche{
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    margin-top: 2%;
+    width: 35%;
+    height: auto;
+    color: #e2f4f1;
+}
+
+.images{
+    display: flex;
+    width: 60%;
+    margin-top: 2%;
+    background-color: #e2f4f1;
+    height: auto;
+    border-radius: 10px;
+}
+
+.zonetextDroite{
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    margin-top: 2%;
+    width: 35%;
+    height: auto;
+    color: #e2f4f1;
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content p{
+    text-align: justify;
+}
+
+.info1{
+    position: relative;
+    top: 15%;
+    left: 35%;
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 8px 8px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.info2{
+    position: relative;
+    top: -5%;
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 8px 8px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.velo1{
+    position: relative;
+    top: -5%;
+    left: 30%;
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 8px 8px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.velo2{
+    position: relative;
+
+    left: -10%;
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 8px 8px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.iut{
+    position: relative;
+    left: 45%;
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 8px 8px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+
+.empimage{
+    position: relative;
+    top: 10%;
+    width: 50%;
+}
