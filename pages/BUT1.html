@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
-    <link rel="stylesheet" href="./../styles/stylesProjets.css">
-    <link rel="stylesheet" href="./../styles/styles.css">
+    <title>Portfolio BENOIT Nathaël</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./../styles/styles.css">
 </head>
 <body>
     <header>
         <div class="header-content">
-            <a href="#projects">
+            <a href="./../index.html#about">
                 <img src="./../images/photo.png" alt="Photo" class="header-img">
             </a>
             <h1>Nathaël BENOIT</h1>
@@ -20,409 +21,453 @@
             </a>
         </div>
     </header>
-    <nav>
-        <ul>
-            <li><a href="./../index.html#about">À propos de moi</a></li>
-            <li class="liste"><a href="#projects">Projets</a>
-                <ul  class="contenuliste">
-                    <li><a href="./../pages/ExpPro.html#projects">Expériences pro</a></li>
-                    <li><a href="./../pages/BUT1.html#projects">BUT SD 1</a></li>
-                    <li><a href="./../pages/BUT2.html#projects">BUT SD 2</a></li>
-                    <li><a href="./../pages/BUT3.html#projects">BUT SD 3</a></li>
-                </ul>   
-            </li>
-            <li><a href="./../pages/Bilan.html#bilan">Bilan Personnel</a></li>
-            <li><a href="./../pages/Contact.html">Contact</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav justify-content-center w-100">
+                    <li class="nav-item"><a class="nav-link" href="./../index.html#about">À propos de moi</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projets</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./../pages/ExpPro.html#projects">Expériences pro</a></li>
+                            <li><a class="dropdown-item" href="#projects">BUT SD 1</a></li>
+                            <li><a class="dropdown-item" href="./../pages/BUT2.html#projects">BUT SD 2</a></li>
+                            <li><a class="dropdown-item" href="./../pages/BUT3.html#projects">BUT SD 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="./../pages/Bilan.html#bilan">Bilan Personnel</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./../pages/Contact.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <div id="projects" class="blanc">
-        <div class="presentationB">
-            <div class="titre">Oral & Anglais</div>
-            <div class="contenu">
+    <div id="projects" class="container">
+        <div class="row content">
+            <div class="col-md-6">
+                <h1>Oral & Anglais</h1>
                 <p>Dans le cadre de nos cours de Communication et d'Anglais nous devions faire un exposé sur une
                     ville hôte des Jeux Olympiques</p>
                 <a href="#details1" class="bouton" type="button" data-details="details1"> En savoir plus</a>
             </div>
-        </div>
-        <div class="empPhotosB">
-            <img src="./../images/montreal.jpg" alt="photo de Montreal" class="photosB">
+            <div class="col-md-6">
+                <img src="./../images/montreal.jpg" alt="photo de Montreal" class="img-fluid rounded">
+            </div>
         </div>
     </div>
-    <div id="details1" class="project-details" >
+
+    <div id="details1" class="project-details container" >
         <span class="close">&times;</span>
-        <div class="details-project">
-            <div class="title">
-                <h1> Projet Universitaire - Présentation en anglais d'un territoire économique et culturel</h1>
+        <div class="row content">
+            <div class="col-md-6">
+                <div class="title">
+                    <h1> Projet Universitaire - Présentation en anglais d'un territoire économique et culturel</h1>
+                </div>
+                <div class="group-member">
+                    <ul>
+                        <li>BENOIT Nathaël</li>
+                        ⋅
+                        <li>PITON Jérémy</li>
+                        ⋅
+                        <li>GASSE Armand-Valentin</li>
+                    </ul>
+                </div>
+                <div class="text-details">
+                        Lors de ce projet, nous avons utilisé des données libre afin de décrire un territoire économique et culturel. Avec mon groupe nous
+                        avons travaillé sur les Jeux Olympiques de Montréal 1976. <br><br>
+                        Ce projet universitaire nous a mené à <u>rechercher</u> des données caractérisant un territoire spécifique 
+                        afin  de comprendre et <u>identifier</u> les informations essentielles. Cela nous a aussi mené à faire une présentation orale 
+                        synthétisant les indicateurs clés mais aussi de nous guider dans <u>l’appropriation</u> des termes anglais pour parler du téritoire 
+                        dans le cadre de la présentation.
+    
+                    <h3>Organisation du projet</h3>
+                        Lors de notre projet universitaire sur les Jeux Olympiques de Montréal 1976, nous avons exploré divers aspects de la ville de 
+                        Montréal, notamment sa géographie, sa démographie et son économie. Nous avons comparé les données climatiques de 1976 et 2023, 
+                        analysé les statistiques démographiques et économiques de l'époque, et étudié l'impact des Jeux Olympiques sur la ville. Nous avons
+                        également présenté l'histoire et l'architecture de Montréal, ainsi que les impacts culturels et sportifs des Jeux Olympiques sur la
+                        ville.
+                    
+                    <h3>Compétences Acquises </h3>
+                        Ce projet nous a permis de développer plusieurs compétences clés. Nous avons amélioré nos compétences en recherche et en analyse 
+                        de données en étudiant les statistiques climatiques, démographiques et économiques. Nous avons également renforcé nos compétences 
+                        en présentation et en communication en préparant et en présentant nos résultats de manière claire et structurée, que ce soit en 
+                        français ou en anglais. De plus, nous avons acquis une meilleure compréhension de l'impact des événements internationaux sur les 
+                        villes hôtes, tant sur le plan économique que culturel.
+    
+                    <br><br>
+                    <h3>Acquis professionnels :</h3> Capacité de recherche et de sélection d’informations sur un sujet précis, travail 
+                        d’équipe, aisance orale.
+                </div>
             </div>
-            <div class="group-member">
-                <ul>
-                    <li>BENOIT Nathaël</li>
-                    ⋅
-                    <li>PITON Jérémy</li>
-                    ⋅
-                    <li>GASSE Armand-Valentin</li>
-                </ul>
-            </div>
-            <div class="text-details">
-                    Lors de ce projet, nous avons utilisé des données libre afin de décrire un territoire économique et culturel. Avec mon groupe nous
-                    avons travaillé sur les Jeux Olympiques de Montréal 1976. <br><br>
-                    Ce projet universitaire nous a mené à <u>rechercher</u> des données caractérisant un territoire spécifique 
-                    afin  de comprendre et <u>identifier</u> les informations essentielles. Cela nous a aussi mené à faire une présentation orale 
-                    synthétisant les indicateurs clés mais aussi de nous guider dans <u>l’appropriation</u> des termes anglais pour parler du téritoire 
-                    dans le cadre de la présentation.
-
-                <h3>Organisation du projet</h3>
-                    Lors de notre projet universitaire sur les Jeux Olympiques de Montréal 1976, nous avons exploré divers aspects de la ville de 
-                    Montréal, notamment sa géographie, sa démographie et son économie. Nous avons comparé les données climatiques de 1976 et 2023, 
-                    analysé les statistiques démographiques et économiques de l'époque, et étudié l'impact des Jeux Olympiques sur la ville. Nous avons
-                    également présenté l'histoire et l'architecture de Montréal, ainsi que les impacts culturels et sportifs des Jeux Olympiques sur la
-                    ville.
-                
-                <h3>Compétences Acquises </h3>
-                    Ce projet nous a permis de développer plusieurs compétences clés. Nous avons amélioré nos compétences en recherche et en analyse 
-                    de données en étudiant les statistiques climatiques, démographiques et économiques. Nous avons également renforcé nos compétences 
-                    en présentation et en communication en préparant et en présentant nos résultats de manière claire et structurée, que ce soit en 
-                    français ou en anglais. De plus, nous avons acquis une meilleure compréhension de l'impact des événements internationaux sur les 
-                    villes hôtes, tant sur le plan économique que culturel.
-
-                <br><br>
-                <h3>Acquis professionnels :</h3> Capacité de recherche et de sélection d’informations sur un sujet précis, travail 
-                    d’équipe, aisance orale.
-
+            <div class="col-md-6">
+                <embed src="./../projets/Projet_Territoire.pdf" type="application/pdf" class="image-project pdf-responsive" />
             </div>
         </div>
-        <embed src="./../projets/Projet_Territoire.pdf" type="application/pdf" width="800" height="200" class="image-project" /> 
     </div>
 
-    <div class="noir">
-        <div class="presentationN">
-            <div class="titre">Ecrit & Economie</div>
-            <div class="contenu">
-                <p>Dans le cadre de nos cours d'économie nous devions faire une étude économique, démographiques et sociales d'un département</p>
-                <a href="#details2" class="bouton" type="button" data-details="details2"> En savoir plus</a>
+    <div class="vert">
+        <div id="projects" class="container">
+            <div class="row content">
+                <div class="col-md-6 order-md-2 order-1">
+                    <h1>Ecrit & Economie</h1>
+                    <p>Dans le cadre de nos cours d'économie nous devions faire une étude économique, démographiques et sociales d'un département</p>
+                    <a href="#details2" class="bouton" type="button" data-details="details2"> En savoir plus</a>
+                </div>
+                <div class="col-md-6 order-md-1 order-2">
+                    <img src="./../images/hautevienneNFP.jpg" alt="photo haute-vienne" class="img-fluid rounded">
+                </div>
             </div>
         </div>
-        <div class="empPhotosN">
-            <img src="./../images/hautevienneNFP.jpg" alt="photo haute-vienne" class="photosN">
-        </div>
-    </div>
-    <div id="details2" class="project-details" >
+    </div>  
+
+    <div id="details2" class="project-details container" >
         <span class="close">&times;</span>
-        <div class="details-project">
-            <div class="title">
-                <h1> Projet Universitaire - Apprendre en situation la production de données en entreprise</h1>
+        <div class="row content">
+            <div class="col-md-6">
+                <div class="title">
+                    <h1> Projet Universitaire - Apprendre en situation la production de données en entreprise</h1>
+                </div>
+                <div class="group-member">
+                    <ul>
+                        <li>BENOIT Nathaël</li>
+                    </ul>
+                </div>
+                <div class="text-details">
+                    
+                    Lors de ce projet, j'ai utilisé des données libre provenant du site de l'INSEE afin de faire une description économique du département 
+                    de Haute-Vienne en France. <br><br>
+                    Ce projet universitaire m'a mené à <u>rechercher</u> ce que le commenditaire nous demande et de le <u>décomposer</u> en plusieurs parties. 
+                    Après avoir bien compris ce que le commenditaire nous a demandé. Cela nous a aussi mené à faire une <u>synthèse écrite</u> reformulant 
+                    les indicateurs clés 
+    
+                    <h3>Organisation du projet</h3>
+                    Lors de notre projet universitaire sur la Haute-Vienne, nous avons réalisé une étude statistique pour le Nouveau Front Populaire (NFP) 
+                    afin de mieux comprendre l'électorat du département. Nous avons analysé les données démographiques, économiques et sociales fournies par
+                    l'INSEE. Cette analyse comprenait la répartition de la population par âge, le ratio de dépendance économique, et le taux de chômage. 
+                    Nous avons dressé un portrait détaillé de la population de la Haute-Vienne en 2021, en mettant en évidence les caractéristiques clés 
+                    telles que l'âge moyen, l'âge médian, et les taux de chômage par commune. Nous avons analysé ces dernières et nous avons réalisé des 
+                    graphiques grâce à Excel. Enfin, nous avons rédigé un document argumenté afin d'orienter le donneur d'ordre.
+                    
+                    <h3>Compétences Acquises </h3>
+    
+                    Ce projet nous a permis de développer plusieurs compétences essentielles. Nous avons amélioré nos compétences en analyse de données en 
+                    exploitant les statistiques de l'INSEE pour dresser un portrait précis de la population. Nous avons également renforcé nos compétences 
+                    en communication écrite lors de la rédaction de la synthèse. De plus, nous avons acquis une meilleure compréhension 
+                    des dynamiques démographiques et économiques, ainsi que de leur impact sur les politiques locales.
+                    
+                    <br><br>
+                    <h3>Acquis professionnels :</h3> Capacité de recherche et de sélection d’informations économiques et démographiques, 
+                    capacité d’analyse de données, aisance rédactionnelle.
+                </div>
             </div>
-            <div class="group-member">
-                <ul>
-                    <li>BENOIT Nathaël</li>
-                </ul>
-            </div>
-            <div class="text-details">
-                
-                Lors de ce projet, j'ai utilisé des données libre provenant du site de l'INSEE afin de faire une description économique du département 
-                de Haute-Vienne en France. <br><br>
-                Ce projet universitaire m'a mené à <u>rechercher</u> ce que le commenditaire nous demande et de le <u>décomposer</u> en plusieurs parties. 
-                Après avoir bien compris ce que le commenditaire nous a demandé. Cela nous a aussi mené à faire une <u>synthèse écrite</u> reformulant 
-                les indicateurs clés 
-
-                <h3>Organisation du projet</h3>
-                Lors de notre projet universitaire sur la Haute-Vienne, nous avons réalisé une étude statistique pour le Nouveau Front Populaire (NFP) 
-                afin de mieux comprendre l'électorat du département. Nous avons analysé les données démographiques, économiques et sociales fournies par
-                l'INSEE. Cette analyse comprenait la répartition de la population par âge, le ratio de dépendance économique, et le taux de chômage. 
-                Nous avons dressé un portrait détaillé de la population de la Haute-Vienne en 2021, en mettant en évidence les caractéristiques clés 
-                telles que l'âge moyen, l'âge médian, et les taux de chômage par commune. Nous avons analysé ces dernières et nous avons réalisé des 
-                graphiques grâce à Excel. Enfin, nous avons rédigé un document argumenté afin d'orienter le donneur d'ordre.
-                
-                <h3>Compétences Acquises </h3>
-
-                Ce projet nous a permis de développer plusieurs compétences essentielles. Nous avons amélioré nos compétences en analyse de données en 
-                exploitant les statistiques de l'INSEE pour dresser un portrait précis de la population. Nous avons également renforcé nos compétences 
-                en communication écrite lors de la rédaction de la synthèse. De plus, nous avons acquis une meilleure compréhension 
-                des dynamiques démographiques et économiques, ainsi que de leur impact sur les politiques locales.
-                
-                <br><br>
-                <h3>Acquis professionnels :</h3> Capacité de recherche et de sélection d’informations économiques et démographiques, 
-                capacité d’analyse de données, aisance rédactionnelle.
+            <div class="col-md-6">
+                <embed src="./../projets/Projet_Economie.pdf" type="application/pdf" class="image-project pdf-responsive" />
             </div>
         </div>
-        <embed src="./../projets/Projet_Economie.pdf" type="application/pdf" width="800" height="200" class="image-project" />
     </div>
 
-    <div class="blanc">
-        <div class="presentationB">
-            <div class="titre">Python & Json</div>
-            <div class="contenu">
+    <div id="projects" class="container">
+        <div class="row content">
+            <div class="col-md-6">
+                <h1>Python & Json</h1>
                 <p>Dans le cadre de nos cours de programmation nous devions extraire des données d'un fichier Json, les traiter
-                    et en faire un fichier csv
-                </p>
-                    <a href="#details3" class="bouton" type="button" data-details="details3"> En savoir plus</a>
+                    et en faire un fichier csv</p>
+                <a href="#details3" class="bouton" type="button" data-details="details3"> En savoir plus</a>
+            </div>
+            <div class="col-md-6">
+                <img src="./../images/jsonCsv.jpg" alt="JsonPythonCsv" class="img-fluid rounded">
             </div>
         </div>
-        <div class="empPhotosB">
-            <img src="./../images/jsonCsv.jpg" alt="JsonPythonCsv" class="photosB">
-        </div>
     </div>
-    <div id="details3" class="project-details" >
+
+    <div id="details3" class="project-details container" >
         <span class="close">&times;</span>
-        <div class="details-project">
-            <div class="title">
-                <h1> Projet Universitaire - Gestion de fichiers en PYTHON</h1>
+        <div class="row content">
+            <div class="col-md-6">
+                <div class="title">
+                    <h1> Projet Universitaire - Gestion de fichiers en PYTHON</h1>
+                </div>
+                <div class="group-member">
+                    <ul>
+                        <li>BENOIT Nathaël</li>
+                        . 
+                        <li>GASSE Armand-Valentin</li>
+                    </ul>
+                </div>
+                <div class="text-details">
+                    
+                    Lors de ce projet, nous avons utilisé des données provenant d'un fichier JSON afin de les traiter et de les 
+                    convertir en un fichier CSV. <br><br>
+                    Ce projet universitaire nous a mené à <u>extraire</u> les données du fichier JSON, à les <u>traiter</u> pour les
+                    nettoyer et les organiser, et à les <u>convertir</u> en un format CSV pour une utilisation ultérieure.
+                    Cela nous a aussi mené à comprendre les enjeux de la programmation et de la gestion de fichiers en Python.
+    
+                    <h3>Organisation du projet</h3>
+                    Lors de notre projet universitaire, nous avons structuré notre travail en plusieurs étapes. Nous avons commencé par
+                    extraire les données du fichier JSON et les stocker dans une liste Python. Nous avons ensuite nettoyé les données en
+                    supprimant les dictionnaires non voulus. Nous avons ensuite organisé les données dans une liste de dictionnaire Python
+                    les avons converties en un fichier CSV.               
+    
+                    <h3>Compétences Acquises </h3>
+                    Ce projet nous a permis de développer plusieurs compétences en programmation et en gestion de fichiers. Nous avons amélioré
+                    nos compétences en manipulation de données en utilisant des bibliothèques Python telles que JSON et CSV. Nous avons également
+                    renforcé nos compétences en parcours de listes et en manipulation de dictionnaires. De plus, nous avons acquis une meilleure
+                    compréhension des enjeux liés à la gestion de fichiers et à la conversion de données entre différents formats.
+                    
+                    <br><br>
+                    <h3>Acquis professionnels :</h3> Capacité d’interprétation des besoins, travail d’équipe, aisance avec le langage python.
+                </div>
             </div>
-            <div class="group-member">
-                <ul>
-                    <li>BENOIT Nathaël</li>
-                    . 
-                    <li>GASSE Armand-Valentin</li>
-                </ul>
-            </div>
-            <div class="text-details">
-                
-                Lors de ce projet, nous avons utilisé des données provenant d'un fichier JSON afin de les traiter et de les 
-                convertir en un fichier CSV. <br><br>
-                Ce projet universitaire nous a mené à <u>extraire</u> les données du fichier JSON, à les <u>traiter</u> pour les
-                nettoyer et les organiser, et à les <u>convertir</u> en un format CSV pour une utilisation ultérieure.
-                Cela nous a aussi mené à comprendre les enjeux de la programmation et de la gestion de fichiers en Python.
-
-                <h3>Organisation du projet</h3>
-                Lors de notre projet universitaire, nous avons structuré notre travail en plusieurs étapes. Nous avons commencé par
-                extraire les données du fichier JSON et les stocker dans une liste Python. Nous avons ensuite nettoyé les données en
-                supprimant les dictionnaires non voulus. Nous avons ensuite organisé les données dans une liste de dictionnaire Python
-                les avons converties en un fichier CSV.               
-
-                <h3>Compétences Acquises </h3>
-                Ce projet nous a permis de développer plusieurs compétences en programmation et en gestion de fichiers. Nous avons amélioré
-                nos compétences en manipulation de données en utilisant des bibliothèques Python telles que JSON et CSV. Nous avons également
-                renforcé nos compétences en parcours de listes et en manipulation de dictionnaires. De plus, nous avons acquis une meilleure
-                compréhension des enjeux liés à la gestion de fichiers et à la conversion de données entre différents formats.
-                
-                <br><br>
-                <h3>Acquis professionnels :</h3> Capacité d’interprétation des besoins, travail d’équipe, aisance avec le langage python.
+            <div class="col-md-6">
+                <embed src="./../projets/Projet_GestionDeFichiers.pdf" type="application/pdf" class="image-project pdf-responsive" />
+                <a href="./../projets/Projet_Gestion-de-fichiers.rar">Télécharger les fichiers</a>
             </div>
         </div>
-        <embed src="./../projets/Projet_GestionDeFichiers.pdf" type="application/pdf" width="800" height="200" class="image-project" />
-        <a href="./../projets/Projet_Gestion-de-fichiers.rar">Télécharger les fichiers</a>
     </div>
 
-    <div class="noir">
-        <div class="presentationN">
-            <div class="titre">Excel & VBA</div>
-            <div class="contenu">
-                <p>Dans le cadre de nos cours de programmation nous devions faire un reporting  qui nous permet de calculer nos 
-                    moyennes en BUT 1 en avance 
-                </p>
-                <a href="#details4" class="bouton" type="button" data-details="details4"> En savoir plus</a>
+    <div class="vert">
+        <div id="projects" class="container">
+            <div class="row content">
+                <div class="col-md-6 order-md-2 order-1">
+                    <h1>Excel & VBA</h1>
+                    <p>Dans le cadre de nos cours de programmation nous devions faire un reporting  qui nous permet de calculer nos 
+                        moyennes en BUT 1 en avance </p>
+                    <a href="#details4" class="bouton" type="button" data-details="details4"> En savoir plus</a>
+                </div>
+                <div class="col-md-6 order-md-1 order-2">
+                    <img src="./../images/vba-excel.jpg" alt="Excel-VBA" class="img-fluid rounded">
+                </div>
             </div>
         </div>
-        <div class="empPhotosN">
-            <img src="./../images/vba-excel.jpg" alt="Excel-VBA" class="photosN">
-        </div>
-    </div>
-    <div id="details4" class="project-details" >
+    </div>  
+
+    <div id="details4" class="project-details container" >
         <span class="close">&times;</span>
-        <div class="details-project">
-            <div class="title">
-                <h1> Projet Universitaire - Création d'un reporting EXCEL VBA</h1>
+        <div class="row content">
+            <div class="col-md-6">
+                <div class="title">
+                    <h1> Projet Universitaire - Création d'un reporting EXCEL VBA</h1>
+                </div>
+                <div class="group-member">
+                    <ul>
+                        <li>BENOIT Nathaël</li>
+                        . 
+                        <li>PITON Jérémy</li>
+                    </ul>
+                </div>
+                <div class="text-details">
+                    
+                    Lors de ce projet, nous avons utilisé des données provenant du barème des notes par compétences et par matière 
+                    de BUT SD Première année que nous avons mis dans un fichier Excel afin de créer un reporting automatisé en VBA 
+                    pour ajouter, modifier et supprimer les notes. <br><br>
+    
+                    Ce projet universitaire nous a mené à <u>automatiser</u> les calculs en utilisant de multiples fonctions Excel et VBA 
+                    pour <u>analyser</u> les données. Cela nous a aussi mener a présenter notre projet à l'orale pour expliquer notre démarche.
+    
+                    <h3>Organisation du projet</h3>
+                    Lors de notre projet universitaire, nous avons structuré notre reporting en plusieurs parties. Nous avons commencé par
+                    importer les données du barème des notes dans un fichier Excel et les avons organisées en fonction des compétences et des
+                    matières. Nous avons ensuite utiliser des formules Excel simples pour calculer des moyennes par matière. Nous avons
+                    ensuite créé nous même certaines fonctions en VBA pour calculer les moyennes en fonction des coeficients associés.
+                    Nous avons créer des graphiques dynamiques pour visualiser les résultats. Ayant créé une application fonctionnelle,
+                    nous avons créé une IHM avec des boutons pour réliser les actions souhaités.
+                    
+                    <h3>Compétences Acquises </h3>
+    
+                    Ce projet nous a permis de développer plusieurs compétences en Excel et en VBA. Nous avons amélioré nos compétences en
+                    manipulation de données en utilisant des formules Excel et des fonctions VBA. Nous avons également renforcé nos compétences
+                    en création de graphiques et en génération de rapports. De plus, nous avons acquis une meilleure compréhension des enjeux
+                    liés à la programmation en VBA et à la création de reporting en Excel.
+                    
+                    <br><br>
+                    <h3>Acquis professionnels :</h3> Capacité d’évaluation des attentes, travail d’équipe, aisance avec le langage VBA 
+                    et de Excel, aisance orale.
+                </div>
             </div>
-            <div class="group-member">
-                <ul>
-                    <li>BENOIT Nathaël</li>
-                    . 
-                    <li>PITON Jérémy</li>
-                </ul>
-            </div>
-            <div class="text-details">
-                
-                Lors de ce projet, nous avons utilisé des données provenant du barème des notes par compétences et par matière 
-                de BUT SD Première année que nous avons mis dans un fichier Excel afin de créer un reporting automatisé en VBA 
-                pour ajouter, modifier et supprimer les notes. <br><br>
-
-                Ce projet universitaire nous a mené à <u>automatiser</u> les calculs en utilisant de multiples fonctions Excel et VBA 
-                pour <u>analyser</u> les données. Cela nous a aussi mener a présenter notre projet à l'orale pour expliquer notre démarche.
-
-                <h3>Organisation du projet</h3>
-                Lors de notre projet universitaire, nous avons structuré notre reporting en plusieurs parties. Nous avons commencé par
-                importer les données du barème des notes dans un fichier Excel et les avons organisées en fonction des compétences et des
-                matières. Nous avons ensuite utiliser des formules Excel simples pour calculer des moyennes par matière. Nous avons
-                ensuite créé nous même certaines fonctions en VBA pour calculer les moyennes en fonction des coeficients associés.
-                Nous avons créer des graphiques dynamiques pour visualiser les résultats. Ayant créé une application fonctionnelle,
-                nous avons créé une IHM avec des boutons pour réliser les actions souhaités.
-                
-                <h3>Compétences Acquises </h3>
-
-                Ce projet nous a permis de développer plusieurs compétences en Excel et en VBA. Nous avons amélioré nos compétences en
-                manipulation de données en utilisant des formules Excel et des fonctions VBA. Nous avons également renforcé nos compétences
-                en création de graphiques et en génération de rapports. De plus, nous avons acquis une meilleure compréhension des enjeux
-                liés à la programmation en VBA et à la création de reporting en Excel.
-                
-                <br><br>
-                <h3>Acquis professionnels :</h3> Capacité d’évaluation des attentes, travail d’équipe, aisance avec le langage VBA 
-                et de Excel, aisance orale.
+            <div class="col-md-6">
+                <embed src="./../projets/Projet_AplicationVBA.pdf" type="application/pdf" class="image-project pdf-responsive" />
+                <a href="./../projets/Projet_AplicationVBA.xlsm">Télécharger les fichiers</a>
             </div>
         </div>
-        <embed src="./../projets/Projet_AplicationVBA.pdf" type="application/pdf" width="800" height="200" class="image-project" />
-        <a href="./../projets/Projet_AplicationVBA.xlsm">Télécharger les fichiers</a>
     </div>
 
-    <div class="blanc">
-        <div class="presentationB">
-            <div class="titre">Enquête & Sport</div>
-            <div class="contenu">
+    <div id="projects" class="container">
+        <div class="row content">
+            <div class="col-md-6">
+                <h1>Enquête & Sport</h1>
                 <p>Dans le cadre de nos cours de gestion nous devions extraire des données d'une enquête, de les analysé et en faire 
-                    un document de synthèse
-                </p>
+                    un document de synthèse</p>
                     <a href="#details5" class="bouton" type="button" data-details="details5"> En savoir plus</a>
             </div>
-        </div>
-        <div class="empPhotosB">
-            <img src="./../images/enquete.jpeg" alt="JsonPythonCsv" class="photosB">
+            <div class="col-md-6">
+                <img src="./../images/enquete.jpeg" alt="JsonPythonCsv" class="img-fluid rounded">
+            </div>
         </div>
     </div>
-    <div id="details5" class="project-details" >
+
+    <div id="details5" class="project-details container" >
         <span class="close">&times;</span>
-        <div class="details-project">
-            <div class="title">
-                <h1> Projet Universitaire - Enquêtes</h1>
+        <div class="row content">
+            <div class="col-md-6">
+                <div class="title">
+                    <h1> Projet Universitaire - Enquêtes</h1>
+                </div>
+                <div class="group-member">
+                    <ul>
+                        <li>BENOIT Nathaël</li>
+                        . 
+                        <li>GASSE Armand-Valentin</li>
+                    </ul>
+                </div>
+                <div class="text-details">
+                    Lors de ce projet, nous avons utilisé des données d'une enquête réalisé au préalable afin de décrire
+                    les étudiants de l'Université de Poitiers Campus de Niort. <br><br>
+                    Ce projet universitaire nous a mené à <u>interpréter</u>, <u>analyser</u> et <u>synthétiser</u> les données 
+                    de l'enquête. 
+                    Cela nous a aussi mené à faire un document de synthèse reformulant les indicateurs clés.
+    
+                    <h3>Organisation du projet</h3>
+                    Lors de notre projet universitaire, nous avons structuré l'enquête autour de plusieurs axes : le sexe,
+                     le département géographique, le département de formation, le niveau de formation, le type de logement, 
+                     et la situation d'alternance ou de bourse. Nous avons interrogé les étudiants sur leurs habitudes sportives 
+                     actuelles et passées, les raisons de l'arrêt éventuel du sport, et l'influence de la COVID-19 sur leurs 
+                     comportements. Les données ont été collectées et analysées pour identifier les tendances et les motivations 
+                     des étudiants à pratiquer ou non une activité sportive.
+    
+                    <h3>Compétences Acquises </h3>
+                    Ce projet nous a permis de développer diverses compétences, notamment en gestion de projet, en collecte et 
+                    analyse de données. Nous avons appris à concevoir et administrer des enquêtes, à analyser les résultats de 
+                    manière critique, et à présenter nos conclusions de façon claire et structurée. De plus, nous avons acquis 
+                    une meilleure compréhension des enjeux liés à la pratique sportive et à la santé des étudiants, ainsi que 
+                    des compétences en travail d'équipe et en organisation.
+                    
+                    <h3>Acquis professionnels :</h3> Capacité d’analyse d’une enquête, travail d’équipe, aisance rédactionnelle.
+                </div>
             </div>
-            <div class="group-member">
-                <ul>
-                    <li>BENOIT Nathaël</li>
-                    . 
-                    <li>GASSE Armand-Valentin</li>
-                </ul>
-            </div>
-            <div class="text-details">
-                Lors de ce projet, nous avons utilisé des données d'une enquête réalisé au préalable afin de décrire
-                les étudiants de l'Université de Poitiers Campus de Niort. <br><br>
-                Ce projet universitaire nous a mené à <u>interpréter</u>, <u>analyser</u> et <u>synthétiser</u> les données 
-                de l'enquête. 
-                Cela nous a aussi mené à faire un document de synthèse reformulant les indicateurs clés.
-
-                <h3>Organisation du projet</h3>
-                Lors de notre projet universitaire, nous avons structuré l'enquête autour de plusieurs axes : le sexe,
-                 le département géographique, le département de formation, le niveau de formation, le type de logement, 
-                 et la situation d'alternance ou de bourse. Nous avons interrogé les étudiants sur leurs habitudes sportives 
-                 actuelles et passées, les raisons de l'arrêt éventuel du sport, et l'influence de la COVID-19 sur leurs 
-                 comportements. Les données ont été collectées et analysées pour identifier les tendances et les motivations 
-                 des étudiants à pratiquer ou non une activité sportive.
-
-                <h3>Compétences Acquises </h3>
-                Ce projet nous a permis de développer diverses compétences, notamment en gestion de projet, en collecte et 
-                analyse de données. Nous avons appris à concevoir et administrer des enquêtes, à analyser les résultats de 
-                manière critique, et à présenter nos conclusions de façon claire et structurée. De plus, nous avons acquis 
-                une meilleure compréhension des enjeux liés à la pratique sportive et à la santé des étudiants, ainsi que 
-                des compétences en travail d'équipe et en organisation.
-                
-                <h3>Acquis professionnels :</h3> Capacité d’analyse d’une enquête, travail d’équipe, aisance rédactionnelle.
+            <div class="col-md-6">
+                <embed src="./../projets/Projet_Enquete.pdf" type="application/pdf"  class="image-project pdf-responsive" />
             </div>
         </div>
-        <embed src="./../projets/Projet_Enquete.pdf" type="application/pdf" width="800" height="200" class="image-project" />
     </div>
 
-    <div class="noir">
-        <div class="presentationN">
-            <div class="titre">Portfolio</div>
-            <div class="contenu">
-                <p>Dans le cadre de nos cours de programmation et de communication nous devions faire un portfolio 
-                    pour nous présenter et décrire les projets
-                </p>
-                <a href="#details6" class="bouton" type="button" data-details="details6"> En savoir plus</a>
+    <div class="vert">
+        <div id="projects" class="container">
+            <div class="row content">
+                <div class="col-md-6 order-md-2 order-1">
+                    <h1>Portfolio</h1>
+                    <p>Dans le cadre de nos cours de programmation et de communication nous devions faire un portfolio 
+                        pour nous présenter et décrire les projets</p>
+                    <a href="#details6" class="bouton" type="button" data-details="details6"> En savoir plus</a>
+                </div>
+                <div class="col-md-6 order-md-1 order-2">
+                    <img src="./../images/portfolio.jpg" alt="portfolio" class="img-fluid rounded">
+                </div>
             </div>
         </div>
-        <div class="empPhotosN">
-            <img src="./../images/portfolio.jpg" alt="portfolio" class="photosN">
-        </div>
-    </div>
-    <div id="details6" class="project-details" >
+    </div>  
+
+    <div id="details6" class="project-details container" >
         <span class="close">&times;</span>
-        <div class="details-project">
-            <div class="title">
-                <h1> Projet Universitaire - Portfolio</h1>
+        <div class="row content">
+            <div class="col-md-6">
+                <div class="title">
+                    <h1> Projet Universitaire - Portfolio</h1>
+                </div>
+                <div class="group-member">
+                    <ul>
+                        <li>BENOIT Nathaël</li>
+                    </ul>
+                </div>
+                <div class="text-details">
+                    
+                    Lors de ce projet, j'ai utilisé nos projets universitaires afin de les synthétiser
+                    et de les présenter dans un portfolio. <br><br>
+                    Ce projet universitaire m'a mené à <u>synthétiser</u> les informations clés de nos projets, à les <u>organiser</u>
+                    de manière logique et à les <u>présenter</u> de façon claire et professionnelle. Cela m'a aussi mené à <u>réfléchir</u>
+                    sur nos compétences et nos acquis professionnels.
+    
+                    <h3>Organisation du projet</h3>
+                    Lors de notre projet universitaire, j'ai structuré mon portfolio en plusieurs parties. J'ai commencé par
+                    rédiger une présentation de moi qui présente mon parcours et mes passions.
+                    J'ai ensuite présenté nos projets universitaires en les décrivant, en expliquant les compétences acquises et en
+                    mettant en avant les acquis professionnels. J'ai également réaliser un bilan personnel pour réfléchir sur cette 
+                    année universitaire et sur mes projets futurs. Et enfin, j'ai créé une page de contact pour permettre aux visiteurs
+                    de me contacter.
+                    
+                    <h3>Compétences Acquises </h3>
+    
+                    Ce projet m'a permis de développer plusieurs compétences essentielles. J'ai amélioré mes compétences en synthèse
+                    et en organisation de l'information en structurant mon portfolio de manière logique et cohérente. J'ai également
+                    renforcé mes compétences en communication en rédigeant des textes clairs et concis mais aussi en informatique lors de la 
+                    conception de ce site. De plus, j'ai acquis une meilleure
+                    compréhension de mes compétences et de mes acquis professionnels, ce qui m'a permis de réfléchir sur mon parcours et
+                    mes projets futurs.
+                    
+                    <h3>Acquis professionnels :</h3> Capacité de synthèse et d’organisation de l’information, aisance en HTML et CSS,
+                     aisance rédactionnelle.
+                </div>
             </div>
-            <div class="group-member">
-                <ul>
-                    <li>BENOIT Nathaël</li>
-                </ul>
-            </div>
-            <div class="text-details">
-                
-                Lors de ce projet, j'ai utilisé nos projets universitaires afin de les synthétiser
-                et de les présenter dans un portfolio. <br><br>
-                Ce projet universitaire m'a mené à <u>synthétiser</u> les informations clés de nos projets, à les <u>organiser</u>
-                de manière logique et à les <u>présenter</u> de façon claire et professionnelle. Cela m'a aussi mené à <u>réfléchir</u>
-                sur nos compétences et nos acquis professionnels.
-
-                <h3>Organisation du projet</h3>
-                Lors de notre projet universitaire, j'ai structuré mon portfolio en plusieurs parties. J'ai commencé par
-                rédiger une présentation de moi qui présente mon parcours et mes passions.
-                J'ai ensuite présenté nos projets universitaires en les décrivant, en expliquant les compétences acquises et en
-                mettant en avant les acquis professionnels. J'ai également réaliser un bilan personnel pour réfléchir sur cette 
-                année universitaire et sur mes projets futurs. Et enfin, j'ai créé une page de contact pour permettre aux visiteurs
-                de me contacter.
-                
-                <h3>Compétences Acquises </h3>
-
-                Ce projet m'a permis de développer plusieurs compétences essentielles. J'ai amélioré mes compétences en synthèse
-                et en organisation de l'information en structurant mon portfolio de manière logique et cohérente. J'ai également
-                renforcé mes compétences en communication en rédigeant des textes clairs et concis mais aussi en informatique lors de la 
-                conception de ce site. De plus, j'ai acquis une meilleure
-                compréhension de mes compétences et de mes acquis professionnels, ce qui m'a permis de réfléchir sur mon parcours et
-                mes projets futurs.
-                
-                <h3>Acquis professionnels :</h3> Capacité de synthèse et d’organisation de l’information, aisance en HTML et CSS,
-                 aisance rédactionnelle.
+            <div class="col-md-6">
+                <embed src="./../projets/" type="application/pdf" class="image-project pdf-responsive" />
             </div>
         </div>
-        <embed src="./../projets/" type="application/pdf" width="800" height="200" class="image-project" />
     </div>
 
-    <div class="blanc">
-        <div class="presentationB">
-            <div class="titre">Base de données & IHM</div>
-            <div class="contenu">
+    <div id="projects" class="container">
+        <div class="row content">
+            <div class="col-md-6">
+                <h1>Base de données & IHM</h1>
                 <p>Dans le cadre de nos cours de programmation nous devions créer et organiser une base de données ainsi
-                    qu'une IHM pour l'utiliser
-                </p>
+                    qu'une IHM pour l'utiliser</p>
                     <a href="#details7" class="bouton" type="button" data-details="details7"> En savoir plus</a>
             </div>
-        </div>
-        <div class="empPhotosB">
-            <img src="./../images/baseDeDonnée.jpg" alt="JsonPythonCsv" class="photosB">
+            <div class="col-md-6">
+                <img src="./../images/baseDeDonnée.jpg" alt="JsonPythonCsv" class="img-fluid rounded">
+            </div>
         </div>
     </div>
-    <div id="details7" class="project-details" >
-        <span class="close">&times;</span>
-        <div class="details-project">
-            <div class="title">
-                <h1> Projet Universitaire - Conception et implémentation d'une base de données</h1>
-            </div>
-            <div class="group-member">
-                <ul>
-                    <li>BENOIT Nathaël</li>
-                    . 
-                    <li>BABIN Paul</li>
-                </ul>
-            </div>
-            <div class="text-details">
-                
-                ...
 
-                <h3>Organisation du projet</h3>
-                ...
-                
-                <h3>Compétences Acquises </h3>
-                ...
-                
-                <br><br>
-                <h3>Acquis professionnels :</h3> ...
+    <div id="details7" class="project-details container" >
+        <span class="close">&times;</span>
+        <div class="row content">
+            <div class="col-md-6">
+                <div class="title">
+                    <h1> Projet Universitaire - Conception et implémentation d'une base de données</h1>
+                </div>
+                <div class="group-member">
+                    <ul>
+                        <li>BENOIT Nathaël</li>
+                        . 
+                        <li>BABIN Paul</li>
+                    </ul>
+                </div>
+                <div class="text-details">
+                    
+                    ...
+    
+                    <h3>Organisation du projet</h3>
+                    ...
+                    
+                    <h3>Compétences Acquises </h3>
+                    ...
+                    
+                    <br><br>
+                    <h3>Acquis professionnels :</h3> ...
+                </div>
+            </div>
+            <div class="col-md-6">
+                <embed src="./../projets/" type="application/pdf" class="image-project pdf-responsive" />
             </div>
         </div>
-        <embed src="./../projets/" type="application/pdf" width="800" height="200" class="image-project" />
     </div>
 
     <footer>
         <p>&copy; 2025 Portfolio BENOIT Nathaël</p>
     </footer>
-<script src="./../scripts/script.js"></script>
+    <script src="./../scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-</html>
+</html> 

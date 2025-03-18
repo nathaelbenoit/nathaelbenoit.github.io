@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio BENOIT Nathaël</title>
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="stylesheet" href="./styles/stylesApropos.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
     <header>
@@ -21,72 +21,71 @@
             </a>
         </div>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#about">À propos de moi</a></li>
-            <li class="liste"><a href="#about">Projets</a>
-                <ul  class="contenuliste">
-                    <li><a href="./pages/ExpPro.html#projects">Expériences pro</a></li>
-                    <li><a href="./pages/BUT1.html#projects">BUT SD 1</a></li>
-                    <li><a href="./pages/BUT2.html#projects">BUT SD 2</a></li>
-                    <li><a href="./pages/BUT3.html#projects">BUT SD 3</a></li>
-                </ul>   
-            </li>
-            <li><a href="./pages/Bilan.html#bilan">Bilan Personnel</a></li>
-            <li><a href="./pages/Contact.html">Contact</a></li>
-            <li><a href="./pages/TEST.html">TEST</a></li>
-        </ul>
-    </nav>
-    <div id="about">
-        <div class="content">
-            <div class="images">
-                <div class="empimage">
-                    <img src="./images/iut.jpg" alt="IUT Niort" class="iut">
-                </div>
-            </div>
-            <div class="zonetextDroite">
-                <h1>Nathaël BENOIT</h1>
-                <p>Bonjour, je m'appelle <strong>Nathaël BENOIT</strong>. Je suis étudiant en BUT Science des données à l'Université de Poitiers.</p>
-                <p>Passionné par l'analyse de données et les nouvelles technologies, je m'efforce de développer mes compétences à travers divers projets 
-                    universitaires et personnels.</p>
-                <p>Dans cette formation, j'acquis des compétences importantes dans certains domaines comme la programmation, les statistiques, et l'utilisation
-                    d'outils de data analyse.</p>
-            </div>
-            <div class="zonetextGauche">
-                <h1>Passion pour l'informatique</h1>
-                <p>Je me suis intéressé à l'informatique dès tout petit où j'ai été plongé dans les jeux vidéo en jouant avec ma famille et mes amis. </p>
-                <p>Pendant le Covid-19, j'ai eu le temps de m'amuser à ouvrir des ordinateurs et des téléphones. C'est ainsi que ma passion pour l'informatique est née.</p>
-                <p>Pour le bac, j'ai donc choisi les spécialités mthématiques et numérique et sciences de l'informatique pour suivre ma passion.</p>
-            </div>
-            <div class="images">
-                <div class="empimage">
-                <img src="./images/disquedur.jpg" alt="" class="info1">
-                </div>
-                <div class="empimage">
-                <img src="./images/tel.jpg" alt="" class="info2">
-                </div>
-            </div>
-            <div class="images">
-                <div class="empimage">
-                <img src="./images/velo2.jpg" alt="" class="velo1">
-                </div>
-                <div class="empimage">
-                <img src="./images/velo1.jpg" alt="" class="velo2">
-                </div>
-            </div>
-            <div class="zonetextDroite">
-                <h1>Le Cyclisme</h1>
-                <p>En plus de l'informatique, je suis assez sportif. Je suis passionné par la pratique du vélo en tout genre, que ce soit du 
-                vélo de route ou encore du VTT. Je regarde certaines compétitions de VTT mais surtout le tour de France. </p>
-                <p>J'essaie de pratiquer tout type de sport le plus souvent possible que ce soit seul ou avec mes amis. Durant l'année,
-                j'ai fait du badminthon au sein de l'association sportive de l'université (le SUAPS).</p>
-                </p><br>
-            
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav justify-content-center w-100">
+                    <li class="nav-item"><a class="nav-link" href="#about">À propos de moi</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projets</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./pages/ExpPro.html#projects">Expériences pro</a></li>
+                            <li><a class="dropdown-item" href="./pages/BUT1.html#projects">BUT SD 1</a></li>
+                            <li><a class="dropdown-item" href="./pages/BUT2.html#projects">BUT SD 2</a></li>
+                            <li><a class="dropdown-item" href="./pages/BUT3.html#projects">BUT SD 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/Bilan.html#bilan">Bilan Personnel</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/Contact.html">Contact</a></li>
+                </ul>
             </div>
         </div>
+    </nav>
+    <div id="about" class="container">
+        <div class="row content">
+            <div class="col-md-6">
+                <h1>Nathaël BENOIT</h1>
+                <p>Bonjour, je m'appelle <strong>Nathaël BENOIT</strong>. Je suis étudiant en BUT Science des données à l'Université de Poitiers.</p>
+                <p>Passionné par l'analyse de données et les nouvelles technologies, je m'efforce de développer mes compétences à travers divers projets universitaires et personnels.</p>
+                <p>Dans cette formation, j'acquis des compétences importantes dans certains domaines comme la programmation, les statistiques, et l'utilisation d'outils de data analyse.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="./images/iut.jpg" alt="IUT Niort" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+    <div id="about" class="container">
+        <div class="row content">
+            <div class="col-md-6 order-md-1 order-2">
+                <img src="./images/tel.jpg" alt="" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6 order-md-2 order-1">
+                <h1>Passion pour l'informatique</h1>
+                <p>Je me suis intéressé à l'informatique dès tout petit où j'ai été plongé dans les jeux vidéo en jouant avec ma famille et mes amis.</p>
+                <p>Pendant le Covid-19, j'ai eu le temps de m'amuser à ouvrir des ordinateurs et des téléphones. C'est ainsi que ma passion pour l'informatique est née.</p>
+                <p>Pour le bac, j'ai donc choisi les spécialités mathématiques et numérique et sciences de l'informatique pour suivre ma passion.</p>
+            </div>
+        </div>
+    </div>
+    <div id="about" class="container">
+        <div class="row content">
+            <div class="col-md-6">
+                <h1>Le Cyclisme</h1>
+                <p>En plus de l'informatique, je suis assez sportif. Je suis passionné par la pratique du vélo en tout genre, que ce soit du vélo de route ou encore du VTT. Je regarde certaines compétitions de VTT mais surtout le tour de France.</p>
+                <p>J'essaie de pratiquer tout type de sport le plus souvent possible que ce soit seul ou avec mes amis. Durant l'année, j'ai fait du badminthon au sein de l'association sportive de l'université (le SUAPS).</p>
+            </div>
+            <div class="col-md-6">
+                <img src="./images/velo1.jpg" alt="" class="img-fluid rounded ">   
+            </div>
+        </div>
+    </div>
     <footer>
         <p>&copy; 2025 Portfolio BENOIT Nathaël</p>
     </footer>
     <script src="./scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
