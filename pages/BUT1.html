@@ -12,46 +12,51 @@
 <body>
     <header>
         <div class="header-content">
-            <a href="./../index.html#about">
-                <img src="./../images/photo.png" alt="Photo" class="header-img">
-            </a>
-            <h1>Nathaël BENOIT</h1>
-            <a href="#projects" class="scroll-down">
-                <i class="fas fa-chevron-down"></i>
-            </a>
-        </div>
-    </header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse " id="navbarNav">
-                <ul class="navbar-nav justify-content-center w-100">
-                    <li class="nav-item"><a class="nav-link" href="./../index.html#about">À propos de moi</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projets</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="./../pages/ExpPro.html#projects">Expériences pro</a></li>
-                            <li><a class="dropdown-item" href="#projects">BUT SD 1</a></li>
-                            <li><a class="dropdown-item" href="./../pages/BUT2.html#projects">BUT SD 2</a></li>
-                            <li><a class="dropdown-item" href="./../pages/BUT3.html#projects">BUT SD 3</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="./../pages/Bilan.html#bilan">Bilan Personnel</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./../pages/Contact.html#contact">Contact</a></li>
-                </ul>
+            <div class="container">
+                <div class="row content">
+                    <div class="col-md-6 ">
+                        <h1>PORTFOLIO</h1><h2>Nathaël BENOIT</h2><br><br>
+                    </div>
+                    <div class="col-md-6">
+                        <nav class="navbar navbar-expand-xl navbar-dark">
+                            <div class="container-fluid">
+                                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                    <ul class="navbar-nav justify-content-center w-100">                    
+                                        <li class="nav-item"><a class="nav-link" href="./../index.html#about">À propos de moi</a></li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projets</a>
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <li><a class="dropdown-item" href="./../pages/ExpPro.html#projects">Expériences pro</a></li>
+                                                <li><a class="dropdown-item" href="#projects">BUT SD 1</a></li>
+                                                <li><a class="dropdown-item" href="./../pages/BUT2.html#projects">BUT SD 2</a></li>
+                                                <li><a class="dropdown-item" href="./../pages/BUT3.html#projects">BUT SD 3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="./../pages/Bilan.html#bilan">Bilan Personnel</a></li>
+                                        <li class="nav-item"><a class="nav-link cont" href="./../pages/Contact.html#contact">Contactez-moi</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-
+    </header>
     <div id="projects" class="container">
         <div class="row content">
             <div class="col-md-6">
                 <h1>Oral & Anglais</h1>
                 <p>Dans le cadre de nos cours de Communication et d'Anglais nous devions faire un exposé sur une
-                    ville hôte des Jeux Olympiques</p>
-                <a href="#details1" class="bouton" type="button" data-details="details1"> En savoir plus</a>
+                    ville hôte des Jeux Olympiques</p><br>
+                <figure>
+                    <figcaption class="blockquote-footer">
+                        <a href="#details1" class="bouton" type="button" data-details="details1"> En savoir plus</a>
+                    </figcaption>
+                </figure>
             </div>
             <div class="col-md-6">
                 <img src="./../images/montreal.jpg" alt="photo de Montreal" class="img-fluid rounded">
@@ -113,7 +118,12 @@
                 <div class="col-md-6 order-md-2 order-1">
                     <h1>Ecrit & Economie</h1>
                     <p>Dans le cadre de nos cours d'économie nous devions faire une étude économique, démographiques et sociales d'un département</p>
-                    <a href="#details2" class="bouton" type="button" data-details="details2"> En savoir plus</a>
+                    <br>
+                    <figure>
+                        <figcaption class="blockquote-footer">
+                            <a href="#details2" class="bouton" type="button" data-details="details2"> En savoir plus</a>
+                        </figcaption>
+                    </figure>
                 </div>
                 <div class="col-md-6 order-md-1 order-2">
                     <img src="./../images/hautevienneNFP.jpg" alt="photo haute-vienne" class="img-fluid rounded">
@@ -173,7 +183,13 @@
                 <h1>Python & Json</h1>
                 <p>Dans le cadre de nos cours de programmation nous devions extraire des données d'un fichier Json, les traiter
                     et en faire un fichier csv</p>
-                <a href="#details3" class="bouton" type="button" data-details="details3"> En savoir plus</a>
+                <br>
+                <figure>
+                    <figcaption class="blockquote-footer">
+                        <a href="#details3" class="bouton" type="button" data-details="details3"> En savoir plus</a>
+                    </figcaption>
+                </figure>
+                
             </div>
             <div class="col-md-6">
                 <img src="./../images/jsonCsv.jpg" alt="JsonPythonCsv" class="img-fluid rounded">
@@ -232,7 +248,13 @@
                     <h1>Excel & VBA</h1>
                     <p>Dans le cadre de nos cours de programmation nous devions faire un reporting  qui nous permet de calculer nos 
                         moyennes en BUT 1 en avance </p>
-                    <a href="#details4" class="bouton" type="button" data-details="details4"> En savoir plus</a>
+                    <br>
+                    <figure>
+                        <figcaption class="blockquote-footer">
+                            <a href="#details4" class="bouton" type="button" data-details="details4"> En savoir plus</a>
+                        </figcaption>
+                    </figure>
+                    
                 </div>
                 <div class="col-md-6 order-md-1 order-2">
                     <img src="./../images/vba-excel.jpg" alt="Excel-VBA" class="img-fluid rounded">
@@ -297,7 +319,13 @@
                 <h1>Enquête & Sport</h1>
                 <p>Dans le cadre de nos cours de gestion nous devions extraire des données d'une enquête, de les analysé et en faire 
                     un document de synthèse</p>
-                    <a href="#details5" class="bouton" type="button" data-details="details5"> En savoir plus</a>
+                <br>
+                <figure>
+                    <figcaption class="blockquote-footer">
+                        <a href="#details5" class="bouton" type="button" data-details="details5"> En savoir plus</a>
+                    </figcaption>
+                </figure>
+                    
             </div>
             <div class="col-md-6">
                 <img src="./../images/enquete.jpeg" alt="JsonPythonCsv" class="img-fluid rounded">
@@ -357,7 +385,13 @@
                     <h1>Portfolio</h1>
                     <p>Dans le cadre de nos cours de programmation et de communication nous devions faire un portfolio 
                         pour nous présenter et décrire les projets</p>
-                    <a href="#details6" class="bouton" type="button" data-details="details6"> En savoir plus</a>
+                        <br>
+                    <figure>
+                        <figcaption class="blockquote-footer">
+                            <a href="#details6" class="bouton" type="button" data-details="details6"> En savoir plus</a>
+                        </figcaption>
+                    </figure>
+                    
                 </div>
                 <div class="col-md-6 order-md-1 order-2">
                     <img src="./../images/portfolio.jpg" alt="portfolio" class="img-fluid rounded">
@@ -419,7 +453,13 @@
                 <h1>Base de données & IHM</h1>
                 <p>Dans le cadre de nos cours de programmation nous devions créer et organiser une base de données ainsi
                     qu'une IHM pour l'utiliser</p>
-                    <a href="#details7" class="bouton" type="button" data-details="details7"> En savoir plus</a>
+                    <br>
+                    <figure>
+                        <figcaption class="blockquote-footer">
+                            <a href="#details7" class="bouton" type="button" data-details="details7"> En savoir plus</a>
+                        </figcaption>
+                    </figure>
+                    
             </div>
             <div class="col-md-6">
                 <img src="./../images/baseDeDonnée.jpg" alt="JsonPythonCsv" class="img-fluid rounded">

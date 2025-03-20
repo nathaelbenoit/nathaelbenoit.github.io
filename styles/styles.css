@@ -19,21 +19,18 @@ a:hover{
     text-decoration: underline;
 }
 .header-content {
-    text-align: center;
     padding: 50px 0;
-    background-color: #30443b; /* Primary Color */
-    color: #FFFFFF; /* Text Color */
+    background-color: #30443b;
+    color: #FFFFFF;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
-.header-img {
-    width: 150px;
-    border-radius: 50%;
+
+.header-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
 }
-.scroll-down {
-    display: block;
-    margin: 20px auto;
-    font-size: 24px;
-    color: #ffffff; /* Accent Color */
-}
+
 .content {
     padding: 20px;
 }
@@ -135,4 +132,20 @@ footer {
 
 .vert a{
     color: rgb(230, 230, 230);
+}
+
+.cont {
+    background-color: #ffffff;
+    color: #30443b !important;
+    font-weight: 700;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.cont:hover {
+    background-color: #1d2722;
+    color: #ffffff !important;
+}
+.navbar-nav .nav-link {
+    color: #ffffff ;
 }
