@@ -3,13 +3,12 @@ html{
 }
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #FFFFFF; /* Background Color */
-    color: #30443b; /* Text Color */
+    background-color: #FFFFFF; 
+    color: #30443b; 
 }
-#bilan p{
+p{
     text-align: justify;
 }
-
 a{
     color: #30443b;
     text-decoration: none;
@@ -18,123 +17,18 @@ a:hover{
     color: #1d2722;
     text-decoration: underline;
 }
-.header-content {
+.header-style {
     padding: 50px 0;
     background-color: #30443b;
     color: #FFFFFF;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
-
-.header-content h1 {
+.header-style h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 3rem;
     font-weight: 700;
 }
-
-.content {
-    padding: 20px;
-}
-.empimage img {
-    width: 100%;
-    height: auto;
-}
-.zonetextDroite, .zonetextGauche {
-    margin-bottom: 20px;
-}
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #30443b; /* Secondary Color */
-    color: #ffffff; /* Text Color */
-}
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
-}
-.scroll-down {
-    animation: bounce 2s infinite;
-}
-
-.project-details {
-    display: none;
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px; 
-}
-
-.project-details.visible {
-    display: block;
-}
-
-.project-details .close {
-    font-size: 40px;
-    cursor: pointer;
-}
-.image-project {
-    border: 2px solid #222222;
-    border-radius: 5%;
-    background-size: cover;
-    background-position: -15px;
-}
-.group-member {
-    border-bottom: 1px solid rgb(180, 180, 180);
-    
-}
-.group-member ul{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.group-member ul li {
-    margin: 0 1rem;
-}
-
-.title {
-    text-align: center;
-}
-.text-details {
-    text-align: justify;
-}
-
-.pdf-responsive {
-    width: 100%;
-    height: 95%;
-    min-height: 200px;
-    max-height: 800px;
-}
-
-@media (min-width: 768px) {
-    .pdf-responsive {
-        max-height: 1000px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .pdf-responsive {
-        max-height: 1200px;
-    }
-}
-
-.vert{
-    background-color: #30443b;
-    color: rgb(230, 230, 230);
-}
-
-.vert a{
-    color: rgb(230, 230, 230);
-}
-
-.cont {
+.header-contact {
     background-color: #ffffff;
     color: #30443b !important;
     font-weight: 700;
@@ -142,10 +36,98 @@ footer {
     padding: 10px 20px;
     border-radius: 5px;
 }
-.cont:hover {
+.header-contact:hover {
     background-color: #1d2722;
     color: #ffffff !important;
 }
 .navbar-nav .nav-link {
+    font-size: 1.15rem;
     color: #ffffff ;
+}
+.navbar-nav .dropdown-item {
+    font-size: 1,15rem;
+}
+.dropdown-item:focus {
+    background-color: #1d2722;
+    color: #ffffff;
+}
+.vert{
+    background-color: #30443b;
+    color: rgb(230, 230, 230);
+}
+.vert a{
+    color: rgb(230, 230, 230);
+}
+.contenu {
+    padding: 20px;
+}
+.popup-details {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; 
+}
+.popup-details.visible {
+    display: block;
+}
+.popup-details .close {
+    font-size: 40px;
+    cursor: pointer;
+}
+.membres {
+    border-bottom: 1px solid rgb(180, 180, 180);  
+}
+.membres ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.membres ul li {
+    margin: 0 1rem;
+}
+.titre {
+    text-align: center;
+}
+.popup-text {
+    text-align: justify;
+}
+.popup-pdf {
+    border: 2px solid #222222;
+    border-radius: 5%;
+    background-size: cover;
+    background-position: -15px;
+}
+.popup-pdf-responsive {
+    width: 100%;
+    height: 95%;
+    min-height: 200px;
+    max-height: 800px;
+}
+
+@media (min-width: 768px) {
+    .popup-pdf-responsive {
+        max-height: 1000px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .popup-pdf-responsive {
+        max-height: 1200px;
+    }
+}
+
+.contacter {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #30443b;
+    text-align: center;
+}
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #30443b;
+    color: #ffffff; 
 }
