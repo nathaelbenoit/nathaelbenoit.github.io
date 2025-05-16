@@ -14,10 +14,15 @@
         <div class="header-style">
             <div class="container">
                 <div class="row contenu">
-                    <div class="col-md-6 ">
+                    <div class="col-md-4 order-md-1 order-1">
                         <h1>PORTFOLIO</h1><h2>Nathaël BENOIT</h2><br><br>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-1 order-md-3 order-2">
+                        <button id="theme-toggle" class="theme-toggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+                    <div class="col-md-7 order-md-2 order-3">
                         <nav class="navbar navbar-expand-xl navbar-dark">
                             <div class="container-fluid">
                                 <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,18 +30,18 @@
                                 </button>
                                 <div class="collapse navbar-collapse" id="navbarNav">
                                     <ul class="navbar-nav justify-content-center w-100">                    
-                                        <li class="nav-item"><a class="nav-link" href="./../index.html#about">À propos de moi</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="./../index.html">À propos de moi</a></li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projets</a>
                                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <li><a class="dropdown-item" href="./../pages/ExpPro.html#projects">Expériences pro</a></li>
+                                                <li><a class="dropdown-item" href="./../pages/ExpPro.html">Expériences pro</a></li>
                                                 <li><a class="dropdown-item" href="#projects">BUT SD 1</a></li>
-                                                <li><a class="dropdown-item" href="./../pages/BUT2.html#projects">BUT SD 2</a></li>
-                                                <li><a class="dropdown-item" href="./../pages/BUT3.html#projects">BUT SD 3</a></li>
+                                                <li><a class="dropdown-item" href="./../pages/BUT2.html">BUT SD 2</a></li>
+                                                <li><a class="dropdown-item" href="./../pages/BUT3.html">BUT SD 3</a></li>
                                             </ul>
                                         </li>
-                                        <li class="nav-item"><a class="nav-link" href="./../pages/Bilan.html#bilan">Bilan Personnel</a></li>
-                                        <li class="nav-item"><a class="nav-link header-contact" href="./../pages/Contact.html#contact">Contactez-moi</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="./../pages/Bilan.html">Bilan Personnel</a></li>
+                                        <li class="nav-item"><a class="nav-link header-contact" href="./../pages/Contact.html">Contactez-moi</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -46,6 +51,16 @@
             </div>
         </div>
     </header>
+    <div class="stats">
+        <div>
+            <h2 class="counter" data-target="8">0</h2>
+            <p>Projets réalisés</p>
+        </div>
+        <div>
+            <h2 class="counter" data-target="800">0</h2>
+            <p>Heures de formation</p>
+        </div>
+    </div>
     <div id="projects" class="container">
         <div class="row contenu">
             <div class="col-md-6">
@@ -153,9 +168,9 @@
                 <p>Dans le cadre de nos cours de programmation nous devions extraire des données d'un fichier Json, les traiter
                     et en faire un fichier csv</p>
                 <br>
-                    <figcaption class="blockquote-footer">
-                        <a href="#details3" class="bouton" type="button" data-details="details3"> En savoir plus</a>
-                    </figcaption>
+                <figcaption class="blockquote-footer">
+                    <a href="#details3" class="bouton" type="button" data-details="details3"> En savoir plus</a>
+                </figcaption>
             </div>
             <div class="col-md-6">
                 <img src="./../images/jsonCsv.jpg" alt="JsonPythonCsv" class="img-fluid rounded">
@@ -205,9 +220,9 @@
                     <p>Dans le cadre de nos cours de programmation nous devions faire un reporting  qui nous permet de calculer nos 
                         moyennes en BUT 1 en avance </p>
                     <br>
-                        <figcaption class="blockquote-footer">
-                            <a href="#details4" class="bouton" type="button" data-details="details4"> En savoir plus</a>
-                        </figcaption>
+                    <figcaption class="blockquote-footer">
+                        <a href="#details4" class="bouton" type="button" data-details="details4"> En savoir plus</a>
+                    </figcaption>
                 </div>
                 <div class="col-md-6 order-md-1 order-2">
                     <img src="./../images/vba-excel.jpg" alt="Excel-VBA" class="img-fluid rounded">
