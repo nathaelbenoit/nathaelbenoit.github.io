@@ -38,8 +38,8 @@ body.dark-mode .loader p {
 body.dark-mode .membres {
     color: #b3583f
 }
-body.dark-mode .contact-page a:hover {
-    color: #a16255;
+body.dark-mode .contact-page a {
+    color: #ffffff;
 }
 p {
     text-align: justify;
@@ -89,7 +89,7 @@ a:hover {
 }
 .vert {
     background-color: #30443b;
-    color: rgb(230, 230, 230);
+    color: #ffffff;
 }
 .contenu {
     padding: 20px;
@@ -159,10 +159,10 @@ a:hover {
     }
 }
 .contact-page a {
-    color: #b3583f;
+    color: #30443b;
 }
 .contact-page a:hover {
-    color: #8a2e1c;
+    color: #1d2722;
 }
 .contacter {
     margin-top: 20px;
@@ -214,7 +214,7 @@ footer {
     font-size: 1.5rem;
     cursor: pointer;
     z-index: 1000;
-    color: white;
+    color: #FFFFFF;
     transition: color 0.3s ease;
 }
 .image-modal {
