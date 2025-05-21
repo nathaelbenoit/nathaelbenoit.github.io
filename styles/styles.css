@@ -91,6 +91,9 @@ a:hover {
     background-color: #30443b;
     color: #ffffff;
 }
+.but1-page #projects.container {
+    min-height: 400px;
+}
 .contenu {
     padding: 20px;
     opacity: 0;
@@ -170,12 +173,6 @@ a:hover {
     font-weight: 700;
     color: #30443b;
     text-align: center;
-}
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #30443b;
-    color: #ffffff;
 }
 .loader p {
     font-size: 1.5rem;
@@ -277,4 +274,10 @@ footer {
 }
 .scroll-to-top svg {
     display: block;
+}
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #30443b;
+    color: #ffffff;
 }
