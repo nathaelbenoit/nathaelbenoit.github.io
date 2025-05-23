@@ -41,6 +41,9 @@ body.dark-mode .membres {
 body.dark-mode .contact-page a {
     color: #ffffff;
 }
+body.dark-mode h5 {
+    color: #ffffff;
+}
 p {
     text-align: justify;
 }
@@ -51,6 +54,10 @@ a {
 a:hover {
     color: #8a2e1c;
     text-decoration: underline;
+}
+h5 {
+    text-decoration: overline;
+    color: #30443b;
 }
 .header-style {
     padding: 50px 0;
