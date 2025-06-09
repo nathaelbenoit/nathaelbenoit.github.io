@@ -44,6 +44,9 @@ body.dark-mode .contact-page a {
 body.dark-mode h5 {
     color: #ffffff;
 }
+body.dark-mode .projcompetences {
+    color: #fff;
+}
 p {
     text-align: justify;
 }
@@ -167,6 +170,11 @@ h5 {
     .popup-pdf-responsive {
         max-height: 1200px;
     }
+}
+.projcompetences {
+    margin-left: 15px;
+    color: #000;
+    transition: color 0.2s;
 }
 .contact-page a {
     color: #30443b;
