@@ -11,47 +11,33 @@
 </head>
 <body>
     <header>
-        <div class="header-style">
+        <div class="header-style hero">
             <div class="container">
-                <div class="row contenu">
-                    <div class="col-md-4 order-md-1 order-1">
-                        <h1>PORTFOLIO</h1><h2>Nathaël BENOIT</h2><br><br>
-                    </div>
-                    <div class="col-md-1 order-md-3 order-2">
-                        <button id="theme-toggle" class="theme-toggle">
+                <div class="row align-items-center">
+                    <div class="col-12 d-flex justify-content-end">
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Basculer thème">
                             <i class="fas fa-moon"></i>
                         </button>
                     </div>
-                    <div class="col-md-7 order-md-2 order-3">
-                        <nav class="navbar navbar-expand-xl navbar-dark">
-                            <div class="container-fluid">
-                                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                                <div class="collapse navbar-collapse" id="navbarNav">
-                                    <ul class="navbar-nav justify-content-center w-100">                    
-                                        <li class="nav-item"><a class="nav-link" href="./../index.html">À propos de moi</a></li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projets</a>
-                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <li><a class="dropdown-item" href="./../pages/ExpPro.html">Expériences pro</a></li>
-                                                <li><a class="dropdown-item" href="./../pages/BUT1.html">BUT SD 1</a></li>
-                                                <li><a class="dropdown-item" href="#projects">BUT SD 2</a></li>
-                                                <li><a class="dropdown-item" href="./../pages/BUT3.html">BUT SD 3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link" href="./../pages/Bilan.html">Bilan Personnel</a></li>
-                                        <li class="nav-item"><a class="nav-link header-contact" href="./../pages/Contact.html">Contactez-moi</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </nav>
+                    <div class="col-lg-7">
+                        <h1 class="hero-title">Nathaël BENOIT</h1>
+                        <p class="hero-subtitle mt-2">Étudiant en BUT Science des données à l'Université de Poitiers. Passionné par l'analyse, la visualisation et les projets qui donnent vie aux données.</p>
+                        <a class="btn btn-primary-soft" href="./../index.html#about">Découvrir mon profil</a>
+                        <a class="btn btn-outline-light" href="./Contact.html#contact">Contactez-moi</a><br><br>
+                        <a class="btn btn-outline-light " href="./ExpPro.html#stats"><i class="fas fa-briefcase me-1"></i> Expériences pro</a>
+                        <a class="btn btn-outline-light " href="./BUT1.html#stats"><i class="fas fa-graduation-cap me-1"></i> BUT SD 1</a>
+                        <a class="btn btn-outline-light " href="./BUT2.html#stats"><i class="fas fa-graduation-cap me-1"></i> BUT SD 2</a>
+                        <a class="btn btn-outline-light " href="./BUT3.html#stats"><i class="fas fa-graduation-cap me-1"></i> BUT SD 3</a>
+                        <a class="btn btn-outline-light " href="./Bilan.html#bilan"><i class="fas fa-heart me-1"></i> Bilan</a>
+                    </div> 
+                    <div class="col-lg-5 mt-4 mt-lg-0 text-center">
+                        <img src=".././images/profil.png" alt="Profil de Nathaël BENOIT" class="img-fluid" >
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <div class="stats">
+    <div class="stats" id="stats">
         <div>
             <h2 class="counter" data-target="0">0</h2>
             <p>Projets réalisés</p>

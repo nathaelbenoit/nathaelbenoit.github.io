@@ -11,76 +11,126 @@
 </head>
 <body>
     <header>
-        <div class="header-style">
+        <div class="header-style hero">
             <div class="container">
-                <div class="row contenu">
-                    <div class="col-md-4 order-md-1 order-1">
-                        <h1>PORTFOLIO</h1><h2>Nathaël BENOIT</h2><br><br>
-                    </div>
-                    <div class="col-md-1 order-md-3 order-2">
-                        <button id="theme-toggle" class="theme-toggle">
+                <div class="row align-items-center">
+                    <div class="col-12 d-flex justify-content-end">
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Basculer thème">
                             <i class="fas fa-moon"></i>
                         </button>
                     </div>
-                    <div class="col-md-7 order-md-2 order-3">
-                        <nav class="navbar navbar-expand-xl navbar-dark">
-                            <div class="container-fluid">
-                                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                                <div class="collapse navbar-collapse" id="navbarNav">
-                                    <ul class="navbar-nav justify-content-center w-100">                    
-                                        <li class="nav-item"><a class="nav-link" href="./../index.html">À propos de moi</a></li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projets</a>
-                                            <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
-                                                <li><a class="dropdown-item" href="./../pages/ExpPro.html">Expériences pro</a></li>
-                                                <li><a class="dropdown-item" href="./../pages/BUT1.html">BUT SD 1</a></li>
-                                                <li><a class="dropdown-item" href="./../pages/BUT2.html">BUT SD 2</a></li>
-                                                <li><a class="dropdown-item" href="./../pages/BUT3.html">BUT SD 3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link" href="./../pages/Bilan.html">Bilan Personnel</a></li>
-                                        <li class="nav-item"><a class="nav-link header-contact" href="#contact">Contactez-moi</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </nav>
+                    <div class="col-lg-7">
+                        <h1 class="hero-title">Nathaël BENOIT</h1>
+                        <p class="hero-subtitle mt-2">Étudiant en BUT Science des données à l'Université de Poitiers. Passionné par l'analyse, la visualisation et les projets qui donnent vie aux données.</p>
+                        <a class="btn btn-primary-soft" href="./../index.html#about">Découvrir mon profil</a>
+                        <a class="btn btn-outline-light" href="./Contact.html#contact">Contactez-moi</a><br><br>
+                        <a class="btn btn-outline-light " href="./ExpPro.html#stats"><i class="fas fa-briefcase me-1"></i> Expériences pro</a>
+                        <a class="btn btn-outline-light " href="./BUT1.html#stats"><i class="fas fa-graduation-cap me-1"></i> BUT SD 1</a>
+                        <a class="btn btn-outline-light " href="./BUT2.html#stats"><i class="fas fa-graduation-cap me-1"></i> BUT SD 2</a>
+                        <a class="btn btn-outline-light " href="./BUT3.html#stats"><i class="fas fa-graduation-cap me-1"></i> BUT SD 3</a>
+                        <a class="btn btn-outline-light " href="./Bilan.html#bilan"><i class="fas fa-heart me-1"></i> Bilan</a>
+                    </div> 
+                    <div class="col-lg-5 mt-4 mt-lg-0 text-center">
+                        <img src=".././images/profil.png" alt="Profil de Nathaël BENOIT" class="img-fluid" >
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <div id="contact" class="container">
-        <div class="row contenu">
-            <div class="col-md-6 order-md-1 order-2">
-                <embed src="./../images/CV Nathaël-BENOIT 2025.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
-                <br><br>
-                <figcaption class="blockquote-footer">
-                    <a href="./../images/CV Nathaël-BENOIT 2025.pdf" target="_blank" class="bouton ">Télécharger mon CV</a>
-                </figcaption>
+
+    <section id="contact" class="contact-section container">
+        <div class="contact-intro reveal">
+            <h1>Me contacter</h1>
+            <p>Pour une opportunité, une collaboration ou simplement échanger, vous pouvez utiliser le formulaire ci-dessous ou un des moyens directs. Je réponds rapidement.</p>
+        </div>
+        <div class="contact-cards reveal">
+            <div class="contact-card">
+                <div class="icon"><i class="fas fa-envelope"></i></div>
+                <h3>Email</h3>
+                <p><a href="mailto:benoitnathael@gmail.com">benoitnathael@gmail.com</a></p>
             </div>
-            <div class="col-md-6 order-md-2 order-1 contact-page">
-                <div class="col-12 text-center contacter">
-                    <a href="mailto:benoitnathael@gmail.com"><i class="fas fa-envelope"></i></a> <a href="mailto:benoitnathael@gmail.com">benoitnathael@gmail.com</a>
-                </div>
-                <div class="col-12 text-center contacter">
-                    <a href="tel:0627287719"><i class="fas fa-phone"></i></a> <a href="tel:0627287719">06.27.28.77.19</a>
-                </div>
-                <div class="col-12 text-center contacter">
-                    <a href="https://www.linkedin.com/in/nathael-benoit/" target="_blank"><i class="fab fa-linkedin"></i></a><a href="https://www.linkedin.com/in/nathael-benoit/" target="_blank">LinkedIn</a>
-                </div>
-                <div class="col-12 text-center contacter">
-                    <a href="https://github.com/Nat2ume" target="_blank"><i class="fab fa-github"></i></a><a href="https://github.com/nathaelbenoit" target="_blank">GitHub</a>
+            <div class="contact-card">
+                <div class="icon"><i class="fas fa-phone"></i></div>
+                <h3>Téléphone</h3>
+                <p><a href="tel:0627287719">06 27 28 77 19</a></p>
+            </div>
+            <div class="contact-card">
+                <div class="icon"><i class="fab fa-linkedin"></i></div>
+                <h3>LinkedIn</h3>
+                <p><a href="https://www.linkedin.com/in/nathael-benoit/" target="_blank" rel="noopener">Profil</a></p>
+            </div>
+            <div class="contact-card">
+                <div class="icon"><i class="fab fa-github"></i></div>
+                <h3>GitHub</h3>
+                <p><a href="https://github.com/nathaelbenoit" target="_blank" rel="noopener">Repos</a></p>
+            </div>
+            <div class="contact-card">
+                <div class="icon"><i class="fas fa-file-alt"></i></div>
+                <h3>CV</h3>
+                <p><a href="./../images/CV Nathaël-BENOIT 2025.pdf" target="_blank" rel="noopener">Télécharger PDF</a></p>
+            </div>
+        </div>
+        <div class="contact-content row g-5">
+            <div class="col-lg-6 order-lg-1 order-2 form-col">
+                <form class="contact-form" id="contactForm" action="mailto:benoitnathael@gmail.com" method="post" enctype="text/plain">
+                    <h2>Formulaire</h2>
+                    <div class="form-group">
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="Nom" placeholder="Votre nom" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="Email" placeholder="votre@mail.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="objet">Objet</label>
+                        <input type="text" id="objet" name="Objet" placeholder="Sujet du message" />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="Message" rows="6" placeholder="Votre message..." required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary-soft">Envoyer</button>
+                        <button type="reset" class="btn btn-outline-light">Réinitialiser</button>
+                    </div>
+                    <p class="form-note">Envoi via votre client mail configuré (mailto).</p>
+                    <div class="form-feedback" id="formFeedback" aria-live="polite"></div>
+                </form>
+            </div>
+            <div class="col-lg-6 order-lg-2 order-1 pdf-col">
+                <div class="cv-preview">
+                    <embed src="./../images/CV Nathaël-BENOIT 2025.pdf" type="application/pdf" class="cv-embed" />
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <br>
     <footer>
         &copy; 2025 Portfolio BENOIT Nathaël
     </footer>
     <script src="./../scripts/script.js"></script>
+    <script>
+    // Feedback visuel après tentative d'envoi (mailto ouvre client, on affiche un message)
+    document.getElementById('contactForm').addEventListener('submit', function(){
+        const box = document.getElementById('formFeedback');
+        box.textContent = 'Merci ! Si votre client mail est ouvert, le message peut être finalisé.';
+        box.classList.add('visible');
+        ajusterPdf();
+    });
+    function ajusterPdf(){
+        const form = document.querySelector('.contact-form');
+        const pdf = document.querySelector('.cv-preview embed.cv-embed');
+        const preview = document.querySelector('.cv-preview');
+        if(form && pdf && preview){
+            const h = form.offsetHeight;
+            preview.style.height = h + 'px';
+            pdf.style.height = '100%';
+        }
+    }
+    window.addEventListener('load', ajusterPdf);
+    window.addEventListener('resize', ajusterPdf);
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

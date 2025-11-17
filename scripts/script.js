@@ -1,4 +1,4 @@
-
+// Détails contextuels (si présents dans certaines pages)
 document.querySelectorAll('.bouton').forEach(button => {
     button.addEventListener('click', function() {
         var targetDetails = document.getElementById(this.getAttribute('data-details'));
@@ -20,43 +20,58 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
-        });
+        }); 
     });
 });
 
-// Animation d'apparition au défilement
-const observer = new IntersectionObserver(entries => {
+// Animation d'apparition au défilement (reveal)
+const revealObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
         }
     });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.reveal, .contenu').forEach(section => {
+    revealObserver.observe(section);
 });
 
-document.querySelectorAll('.contenu').forEach(section => {
-    observer.observe(section);
-});
-
-// Mode sombre / clair
+// Mode sombre / clair (classe appliquée sur <html>)
 const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
+const root = document.documentElement;
 
 // Vérifier le mode actuel dans le stockage local
 const currentTheme = localStorage.getItem('theme');
 if (currentTheme === 'dark') {
-    body.classList.add('dark-mode');
-    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    root.classList.add('dark-mode');
 }
 
-// Basculer entre les modes
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    const isDarkMode = body.classList.contains('dark-mode');
+// Fonction pour mettre à jour l'icône
+function updateThemeIcon() {
+    if (!themeToggle) return;
+    const isDarkMode = root.classList.contains('dark-mode');
     themeToggle.innerHTML = isDarkMode
         ? '<i class="fas fa-sun"></i>'
         : '<i class="fas fa-moon"></i>';
-    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-});
+}
+updateThemeIcon();
+
+// Basculer entre les modes
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        root.classList.toggle('dark-mode');
+        const isDarkMode = root.classList.contains('dark-mode');
+        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        updateThemeIcon();
+    });
+}
+
+// Nettoyage éventuel : retirer ancienne classe sur body si présente
+if (document.body.classList.contains('dark-mode')) {
+    document.body.classList.remove('dark-mode');
+}
 
 // Compteur dynamique
 const counters = document.querySelectorAll('.counter');
@@ -103,4 +118,6 @@ document.addEventListener('DOMContentLoaded', function() {
     scrollToTopBtn.addEventListener('click', function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+    
+
 });
