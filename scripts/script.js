@@ -45,13 +45,13 @@ const root = document.documentElement;
 // Vérifier le mode actuel dans le stockage local
 const currentTheme = localStorage.getItem('theme');
 if (currentTheme === 'dark') {
-    root.classList.add('dark-mode');
+    root.classList.add('blue-mode');
 }
 
 // Fonction pour mettre à jour l'icône
 function updateThemeIcon() {
     if (!themeToggle) return;
-    const isDarkMode = root.classList.contains('dark-mode');
+    const isDarkMode = root.classList.contains('blue-mode');
     themeToggle.innerHTML = isDarkMode
         ? '<i class="fas fa-sun"></i>'
         : '<i class="fas fa-moon"></i>';
@@ -61,16 +61,16 @@ updateThemeIcon();
 // Basculer entre les modes
 if (themeToggle) {
     themeToggle.addEventListener('click', () => {
-        root.classList.toggle('dark-mode');
-        const isDarkMode = root.classList.contains('dark-mode');
+        root.classList.toggle('blue-mode');
+        const isDarkMode = root.classList.contains('blue-mode');
         localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
         updateThemeIcon();
     });
 }
 
 // Nettoyage éventuel : retirer ancienne classe sur body si présente
-if (document.body.classList.contains('dark-mode')) {
-    document.body.classList.remove('dark-mode');
+if (document.body.classList.contains('blue-mode')) {
+    document.body.classList.remove('blue-mode');
 }
 
 // Compteur dynamique

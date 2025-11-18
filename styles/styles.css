@@ -16,7 +16,7 @@
 }
 
 /* Mode sombre */
-html.dark-mode {
+html.blue-mode {
     --bg: #ffffff;
     --text: #ffffff;
     --muted: #5b677a;
@@ -32,7 +32,7 @@ html.dark-mode {
     --section-gradient-bg: linear-gradient(140deg, rgba(27,42,38,0.65) 0%, rgba(15,22,19,0.85) 20%);
 }
 
-html.dark-mode body {
+html.blue-mode body {
     background:
         radial-gradient(circle at 50% 18%, rgba(77,212,191,0.18), transparent 60%),
         radial-gradient(circle at 85% 70%, rgba(138,92,255,0.20), transparent 68%),
@@ -346,7 +346,7 @@ footer {
     overflow: hidden; 
     transition: transform .3s, box-shadow .3s; 
 }
-html.dark-mode .contact-card { background: #172520; color: #ffffff; box-shadow: 0 6px 24px rgba(0,0,0,0.4); }
+html.blue-mode .contact-card { background: #172520; color: #ffffff; box-shadow: 0 6px 24px rgba(0,0,0,0.4); }
 .contact-card:hover { transform: translateY(-6px); }
 .contact-card .icon { font-size: 1.8rem; margin-bottom: 8px; color: var(--primary); }
 .contact-card h3 { font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
@@ -360,7 +360,7 @@ html.dark-mode .contact-card { background: #172520; color: #ffffff; box-shadow: 
     box-shadow: inset 0 0 12px rgba(255,255,255,0.06), 0 10px 30px rgba(0,0,0,0.4); 
     color: #ffffff; 
 }
-html.dark-mode .contact-form { background: linear-gradient(145deg,#0f1613,#1b2a26); }
+html.blue-mode .contact-form { background: linear-gradient(145deg,#0f1613,#1b2a26); }
 .contact-form h2 { font-family: 'Montserrat', sans-serif; font-weight: 700; margin-bottom: 24px; }
 .form-group { margin-bottom: 18px; }
 .form-group label { display: block; font-weight: 600; margin-bottom: 6px; font-size: .9rem; letter-spacing: .5px; }
@@ -383,10 +383,10 @@ html.dark-mode .contact-form { background: linear-gradient(145deg,#0f1613,#1b2a2
 .form-feedback.visible { opacity:1; }
 
 .cv-preview { border-radius: 18px; overflow: hidden; box-shadow: 0 6px 24px rgba(0,0,0,0.45); }
-html.dark-mode .cv-preview { box-shadow: 0 6px 28px rgba(0,0,0,0.6); }
+html.blue-mode .cv-preview { box-shadow: 0 6px 28px rgba(0,0,0,0.6); }
 
 .cv-embed { width:100%; display:block; border:2px solid #222; border-radius:16px; background:#1b2a26; }
-html.dark-mode .cv-embed { background:#0f1613; }
+html.blue-mode .cv-embed { background:#0f1613; }
 
 @media (min-width: 992px){
     .contact-content { display:flex; flex-wrap:wrap; align-items:stretch; }
@@ -403,9 +403,23 @@ html.dark-mode .cv-embed { background:#0f1613; }
     .hero-title { font-size: clamp(2rem, 9vw, 3.2rem); }
     .popup-details { margin: 30px 10px; padding: 18px; }
     .contact-intro p { font-size: .95rem; }
-    .stats { flex-direction: column; gap: 30px; }
+    .contact-intro { padding-left: 1rem; padding-right: 1rem; }
+    .contact-cards { padding-left: 1rem; padding-right: 1rem; }
+    #bilan { padding-left: 1rem; padding-right: 1rem; }
+    .stats { flex-direction: column; gap: 30px; padding-left: 1rem; padding-right: 1rem; }
+    .stats > div { display: flex; flex-direction: column; align-items: center; }
     .header-style img { width: clamp(220px, 55vw, 400px); }
+    /* Plus d'air sur les colonnes sans casser la grille Bootstrap */
+    .row > [class^="col-"],
+    .row > [class*=" col-"],
+    .row > .col { padding-left: .75rem; padding-right: .75rem; }
 }
+
+/* Empêche toute barre de défilement horizontale parasite */
+html, body { overflow-x: hidden; }
+
+/* S'assure que les médias ne débordent pas */
+embed, iframe, video { max-width: 100%; display: block; }
 
 @media (max-width: 768px) {
     .hero-title { font-size: clamp(2.2rem, 6.5vw, 3.6rem); }
