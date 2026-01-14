@@ -3,838 +3,827 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio BENOIT Nathaël</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>BUT 1 - Nathaël BENOIT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./../styles/styles.css">
 </head>
-<body class="but1-page">
-    <header>
-        <div class="header-style hero">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-12 d-flex justify-content-end">
-                        <button id="theme-toggle" class="theme-toggle" aria-label="Basculer thème">
-                            <i class="fas fa-moon"></i>
-                        </button>
-                    </div>
-                    <div class="col-lg-7">
-                        <h1 class="hero-title">Nathaël BENOIT</h1>
-                        <p class="hero-subtitle mt-2">Étudiant en BUT Science des données à l'Université de Poitiers. Passionné par l'analyse, la visualisation et les projets qui donnent vie aux données.</p>
-                        <a class="btn btn-primary-soft" href="./../index.html#about">Découvrir mon profil</a>
-                        <a class="btn btn-outline-light" href="./Contact.html#contact">Contactez-moi</a><br><br>
-                        <a class="btn btn-outline-light " href="./ExpPro.html#stats"><i class="fas fa-briefcase me-1"></i> Expériences pro</a>
-                        <a class="btn btn-outline-light " href="./BUT1.html#stats"><i class="fas fa-graduation-cap me-1"></i> BUT SD 1</a>
-                        <a class="btn btn-outline-light " href="./BUT2.html#stats"><i class="fas fa-graduation-cap me-1"></i> BUT SD 2</a>
-                        <a class="btn btn-outline-light " href="./BUT3.html#stats"><i class="fas fa-graduation-cap me-1"></i> BUT SD 3</a>
-                        <a class="btn btn-outline-light " href="./Bilan.html#bilan"><i class="fas fa-heart me-1"></i> Bilan</a>
-                    </div> 
-                    <div class="col-lg-5 mt-4 mt-lg-0 text-center">
-                        <img src=".././images/profil.png" alt="Profil de Nathaël BENOIT" class="img-fluid" >
-                    </div>
-                </div>
-            </div>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html#accueil" class="navbar-brand">NB</a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-nav">
+                <li><a href="../index.html#accueil" class="active">Accueil</a></li>
+                <li><a href="../index.html#a-propos">À propos</a></li>
+                <li><a href="../index.html#projets">Projets</a></li>
+                <li><a href="../index.html#bilan">Bilan</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
         </div>
-    </header>
-    <div class="stats" id="stats">
-        <div>
-            <h2 class="counter" data-target="12">0</h2>
-            <p>Projets réalisés</p>
-        </div>
-        <div>
-            <h2 class="counter" data-target="800">0</h2>
-            <p>Heures de formation</p>
-        </div>
-    </div>
-    <div id="projects" class="container">
-        <div class="row contenu">
-            <div class="col-md-6">
-                <h1>Oral & Anglais</h1>
-                <p>Dans le cadre de nos cours de Communication et d'Anglais, nous devions faire un exposé sur une
-                    ville hôte des Jeux Olympiques.</p><br>
-                <figcaption class="blockquote-footer">
-                    <a href="#details1" class="bouton" type="button" data-details="details1"> En savoir plus</a>
-                </figcaption>
-            </div>
-            <div class="col-md-6">
-                <img src="./../images/montreal.jpg" alt="photo de Montréal" class="img-fluid rounded">
-            </div>
-        </div>
-    </div>
+    </nav>
 
-    <div id="details1" class="popup-details container" >
-        <span class="close">&times;</span>
-        <div class="row contenu">
-            <div class="col-md-6">
-                <div class="titre">
-                    <h1> Projet Universitaire - Présentation en anglais d'un territoire économique et culturel</h1>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="hero-title">BUT 1 - Science des données</h1>
+            <p class="hero-subtitle">Projets et apprentissages de première année</p>
+            <div class="hero-badges">
+                <span class="hero-badge">
+                    <i class="fas fa-project-diagram"></i> 12 Projets réalisés
+                </span>
+                <span class="hero-badge">
+                    <i class="fas fa-clock"></i> 800 Heures de formation
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Projects Grid -->
+    <section class="section-projects">
+        <div class="container">
+            <div class="projects-grid">
+                <!-- Projet 1 -->
+                <div class="project-card-item" onclick="openModal('details1')">
+                    <img src="./../images/montreal.jpg" alt="photo de Montréal">
+                    <div class="project-card-content">
+                        <h3>Oral & Anglais</h3>
+                        <p>Dans le cadre de nos cours de Communication et d'Anglais, nous devions faire un exposé sur une ville hôte des Jeux Olympiques.</p>
+                        <button class="bouton">En savoir plus</button>
+                    </div>
                 </div>
-                <div class="membres">
-                    <ul>
-                        <li>BENOIT Nathaël</li>
-                        ⋅
-                        <li>PITON Jérémy</li>
-                        ⋅
-                        <li>GASSE Armand-Valentin</li>
-                    </ul>
-                <br>
-                <h5 style="display: inline;">
-                    Novembre 2024
-                </h5>
-                <span class="projcompetences">PowerPoint</span>
+
+                <!-- Projet 2 -->
+                <div class="project-card-item" onclick="openModal('details2')">
+                    <img src="./../images/hautevienneNFP.jpg" alt="photo Haute-Vienne">
+                    <div class="project-card-content">
+                        <h3>Écrit & Économie</h3>
+                        <p>Dans le cadre de nos cours d'économie, nous devions faire une étude économique, démographique et sociale d'un département.</p>
+                        <button class="bouton">En savoir plus</button>
+                    </div>
                 </div>
-                <div class="popup-text">
-                    Lors de ce projet, nous avons décrit un territoire économique et culturel en travaillant sur les Jeux Olympiques de Montréal 1976. <br><br>
-                    Nous avons <u>recherché</u> des données pour identifier les informations clés et fait une présentation orale en anglais. <br><br>
+
+                <div id="details1" class="popup-details">
+                    <div class="container">
+                        <span class="close">&times;</span>
+                        <div class="row contenu">
+                        <div class="col-md-6">
+                            <div class="titre">
+                                <h1> Projet Universitaire - Présentation en anglais d'un territoire économique et culturel</h1>
+                            </div>
+                            <div class="membres">
+                                <ul>
+                                    <li>BENOIT Nathaël</li>
+                                    ⋅
+                                    <li>PITON Jérémy</li>
+                                    ⋅
+                                    <li>GASSE Armand-Valentin</li>
+                                </ul>
+                            <br>
+                            <h5 class="project-date">
+                                Novembre 2024
+                            </h5>
+                            <span class="projcompetences">PowerPoint</span>
+                            </div>
+                            <div class="popup-text">
+                                Lors de ce projet, nous avons décrit un territoire économique et culturel en travaillant sur les Jeux Olympiques de Montréal 1976. <br><br>
+                                Nous avons <u>recherché</u> des données pour identifier les informations clés et fait une présentation orale en anglais. <br><br>
+                            
+                                <h3>Organisation du projet</h3>
+                                Nous avons exploré la géographie, la démographie et l'économie de Montréal, comparé les données climatiques de 1976 et 2023. Nous avons également présenté l'histoire et l'architecture de Montréal, ainsi que les impacts culturels et sportifs des Jeux Olympiques sur la ville. <br><br>
+                                
+                                <h3>Apprentissages critiques</h3>
+                                <ul>
+                                    <li>AC13.04 | Lors de la restitution des résultats, mesurer l’importance d’expliciter également la démarche suivie</li>
+                                    <li>AC13.06 | Mesurer l’importance d’une expression précise et nuancée dans la communication en français et dans une langue étrangère des résultats</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <embed src="./../projets/Projet_Territoire.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="details2" class="popup-details">
+                    <div class="container">
+                        <span class="close">&times;</span>
+                        <div class="row contenu">
+                        <div class="col-md-6">
+                            <div class="titre">
+                                <h1> Projet Universitaire - Apprendre en situation la production de données en entreprise</h1>
+                            </div>
+                            <div class="membres">
+                                <ul>
+                                    <li>BENOIT Nathaël</li>
+                                </ul>
+                            <br><h5 class="project-date">
+                                Novembre 2024
+                            </h5>
+                            <span class="projcompetences">Word / Excel</span>
+                            </div>
+                            <div class="popup-text">
+                                
+                                Lors de ce projet, j'ai utilisé des données libres provenant du site de l'INSEE afin de faire une description économique du département de la Haute-Vienne en France. <br><br>
+                                Ce projet universitaire m'a mené à <u>rechercher</u> ce que le commanditaire nous demandait et à le <u>décomposer</u> en plusieurs parties. 
+                                Après avoir bien compris ce que le commanditaire nous a demandé, cela nous a aussi menés à faire une <u>synthèse écrite</u> reformulant les indicateurs clés. <br><br>
                 
-                    <h3>Organisation du projet</h3>
-                    Nous avons exploré la géographie, la démographie et l'économie de Montréal, comparé les données climatiques de 1976 et 2023. Nous avons également présenté l'histoire et l'architecture de Montréal, ainsi que les impacts culturels et sportifs des Jeux Olympiques sur la ville. <br><br>
-                    
-                    <h3>Apprentissages critiques</h3>
-                    <ul>
-                        <li>AC13.04 | Lors de la restitution des résultats, mesurer l’importance d’expliciter également la démarche suivie</li>
-                        <li>AC13.06 | Mesurer l’importance d’une expression précise et nuancée dans la communication en français et dans une langue étrangère des résultats</li>
-                    </ul>
+                                <h3>Organisation du projet</h3>
+                                Lors de notre projet universitaire sur la Haute-Vienne, nous avons réalisé une étude statistique pour le Nouveau Front Populaire (NFP) afin de mieux comprendre l'électorat du département. Nous avons analysé les données démographiques, économiques et sociales fournies par l'INSEE. Cette analyse comprenait la répartition de la population par âge, le ratio de dépendance économique et le taux de chômage. Nous avons dressé un portrait détaillé de la population de la Haute-Vienne en 2021, en mettant en évidence les caractéristiques clés telles que l'âge moyen, l'âge médian et les taux de chômage par commune. Nous avons analysé ces dernières et nous avons réalisé des graphiques grâce à Excel. Enfin, nous avons rédigé un document argumenté afin d'orienter le donneur d’ordre. <br><br>
+                                
+                                <h3>Apprentissages critiques</h3>
+                                <ul>
+                                    <li>AC13.02 | Identifier l’importance de contextualiser ses données</li>
+                                    <li>AC13.03 | Mesurer l’importance de mettre en évidence des résultats clés par l’utilisation d’indicateurs pertinents</li>
+                                    <li>AC13.04 | Lors de la restitution des résultats, mesurer l’importance d’expliciter également la démarche suivie</li>
+                                </ul>
+                            
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <embed src="./../projets/Projet_Economie.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
+                        </div>
+                    </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <embed src="./../projets/Projet_Territoire.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
-            </div>
-        </div>
-    </div>
 
-    <div class="vert">
-        <div id="projects" class="container">
-            <div class="row contenu">
-                <div class="col-md-6 order-md-2 order-1">
-                    <h1>Écrit & Économie</h1>
-                    <p>Dans le cadre de nos cours d'économie, nous devions faire une étude économique, démographique et sociale d'un département.</p>
-                    <br>
-                        <figcaption class="blockquote-footer">
-                            <a href="#details2" class="bouton" type="button" data-details="details2"> En savoir plus</a>
-                        </figcaption>
+                <!-- Projet 3 -->
+                <div class="project-card-item" onclick="openModal('details3')">
+                    <img src="./../images/jsonCsv.jpg" alt="JsonPythonCsv">
+                    <div class="project-card-content">
+                        <h3>Python & JSON</h3>
+                        <p>Dans le cadre de nos cours de programmation, nous devions extraire des données d'un fichier JSON, les traiter et en faire un fichier CSV.</p>
+                        <button class="bouton">En savoir plus</button>
+                    </div>
                 </div>
-                <div class="col-md-6 order-md-1 order-2">
-                    <img src="./../images/hautevienneNFP.jpg" alt="photo Haute-Vienne" class="img-fluid rounded">
+                
+                <!-- Projet 4 -->
+                <div class="project-card-item" onclick="openModal('details4')">
+                    <img src="./../images/vba-excel.jpg" alt="Excel-VBA">
+                    <div class="project-card-content">
+                        <h3>Excel & VBA</h3>
+                        <p>Dans le cadre de nos cours de programmation, nous devions faire un reporting qui nous permet de calculer nos moyennes en BUT 1 en avance.</p>
+                        <button class="bouton">En savoir plus</button>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>  
 
-    <div id="details2" class="popup-details container" >
-        <span class="close">&times;</span>
-        <div class="row contenu">
-            <div class="col-md-6">
-                <div class="titre">
-                    <h1> Projet Universitaire - Apprendre en situation la production de données en entreprise</h1>
+                <div id="details3" class="popup-details">
+                    <div class="container">
+                        <span class="close">&times;</span>
+                        <div class="row contenu">
+                        <div class="col-md-6">
+                            <div class="titre">
+                                <h1> Projet Universitaire - Gestion de fichiers en PYTHON</h1>
+                            </div>
+                            <div class="membres">
+                                <ul>
+                                    <li>BENOIT Nathaël</li>
+                                    . 
+                                    <li>GASSE Armand-Valentin</li>
+                                </ul>
+                            <br><h5 class="project-date">
+                                Décembre 2024
+                            </h5>
+                            <span class="projcompetences">Python</span>
+                            </div>
+                            <div class="popup-text">
+                                Lors de ce projet, nous avons utilisé des données provenant d'un fichier JSON afin de les traiter et de les convertir en un fichier CSV. <br><br>
+                                Ce projet universitaire nous a menés à <u>extraire</u> les données du fichier JSON, à les <u>traiter</u> pour les nettoyer et les organiser, et à les <u>convertir</u> en un format CSV pour une utilisation ultérieure.
+                                <br><br>
+                
+                                <h3>Organisation du projet</h3>
+                                Lors de notre projet universitaire, nous avons structuré notre travail en plusieurs étapes. Nous avons commencé par extraire les données du fichier JSON et les stocker dans une liste Python. Nous avons ensuite nettoyé les données en supprimant les dictionnaires non voulus. Nous avons ensuite organisé les données dans une liste de dictionnaires Python et les avons converties en un fichier CSV. <br><br>        
+                
+                                <h3>Apprentissages critiques </h3>
+                                <ul>
+                                    <li>AC11.01 | Correctement interpréter et prendre en compte le besoin du commanditaire ou du client</li>
+                                    <li>AC11.02 | Respecter les formalismes de notation</li>
+                                    <li>AC11.03 | Connaître la syntaxe des langages et savoir l’utiliser</li>
+                                    <li>AC11.04 | Mesurer l’importance de maîtriser la structure des données à exploiter</li>
+                                    <li>AC11.05 | Comprendre les structures algorithmiques de base et leur contexte d’usage</li>
+                                    <li>AC11.06 | Prendre conscience de l’intérêt de la programmation</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <embed src="./../projets/Projet_GestionDeFichiers.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
+                            <a href="./../projets/Projet_Gestion-de-fichiers.rar" class="bouton">Télécharger les fichiers</a>
+                        </div>
+                    </div>
+                    </div>
                 </div>
-                <div class="membres">
-                    <ul>
-                        <li>BENOIT Nathaël</li>
-                    </ul>
-                <br><h5 style="display: inline;">
-                    Novembre 2024
-                </h5>
-                <span class="projcompetences">Word / Excel</span>
-                </div>
-                <div class="popup-text">
-                    
-                    Lors de ce projet, j'ai utilisé des données libres provenant du site de l'INSEE afin de faire une description économique du département de la Haute-Vienne en France. <br><br>
-                    Ce projet universitaire m'a mené à <u>rechercher</u> ce que le commanditaire nous demandait et à le <u>décomposer</u> en plusieurs parties. 
-                    Après avoir bien compris ce que le commanditaire nous a demandé, cela nous a aussi menés à faire une <u>synthèse écrite</u> reformulant les indicateurs clés. <br><br>
-    
-                    <h3>Organisation du projet</h3>
-                    Lors de notre projet universitaire sur la Haute-Vienne, nous avons réalisé une étude statistique pour le Nouveau Front Populaire (NFP) afin de mieux comprendre l'électorat du département. Nous avons analysé les données démographiques, économiques et sociales fournies par l'INSEE. Cette analyse comprenait la répartition de la population par âge, le ratio de dépendance économique et le taux de chômage. Nous avons dressé un portrait détaillé de la population de la Haute-Vienne en 2021, en mettant en évidence les caractéristiques clés telles que l'âge moyen, l'âge médian et les taux de chômage par commune. Nous avons analysé ces dernières et nous avons réalisé des graphiques grâce à Excel. Enfin, nous avons rédigé un document argumenté afin d'orienter le donneur d’ordre. <br><br>
-                    
-                    <h3>Apprentissages critiques</h3>
-                    <ul>
-                        <li>AC13.02 | Identifier l’importance de contextualiser ses données</li>
-                        <li>AC13.03 | Mesurer l’importance de mettre en évidence des résultats clés par l’utilisation d’indicateurs pertinents</li>
-                        <li>AC13.04 | Lors de la restitution des résultats, mesurer l’importance d’expliciter également la démarche suivie</li>
-                    </ul>
-                   
-                </div>
-            </div>
-            <div class="col-md-6">
-                <embed src="./../projets/Projet_Economie.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
-            </div>
-        </div>
-    </div>
 
-    <div id="projects" class="container">
-        <div class="row contenu">
-            <div class="col-md-6">
-                <h1>Python & JSON</h1>
-                <p>Dans le cadre de nos cours de programmation, nous devions extraire des données d'un fichier JSON, les traiter et en faire un fichier CSV.</p><br>
-                <figcaption class="blockquote-footer">
-                    <a href="#details3" class="bouton" type="button" data-details="details3"> En savoir plus</a>
-                </figcaption>
-            </div>
-            <div class="col-md-6">
-                <img src="./../images/jsonCsv.jpg" alt="JsonPythonCsv" class="img-fluid rounded">
-            </div>
-        </div>
-    </div>
+                <div id="details4" class="popup-details">
+                    <div class="container">
+                        <span class="close">&times;</span>
+                        <div class="row contenu">
+                        <div class="col-md-6">
+                            <div class="titre">
+                                <h1> Projet Universitaire - Création d'un reporting EXCEL VBA</h1>
+                            </div>
+                            <div class="membres">
+                                <ul>
+                                    <li>BENOIT Nathaël</li>
+                                    . 
+                                    <li>PITON Jérémy</li>
+                                </ul>
+                            <br><h5 class="project-date">
+                                Décembre 2024
+                            </h5>
+                            <span class="projcompetences">Excel / VBA</span>
+                            </div>
+                            <div class="popup-text">
+                                Lors de ce projet, nous avons utilisé des données provenant du barème des notes par compétences et par matière de BUT SD première année que nous avons mises dans un fichier Excel afin de créer un reporting automatisé en VBA pour ajouter, modifier et supprimer les notes. <br><br>
+                                Ce projet universitaire nous a menés à <u>automatiser</u> les calculs en utilisant de multiples fonctions Excel et VBA pour <u>analyser</u> les données. Cela nous a aussi menés à présenter notre projet à l'oral pour expliquer notre démarche. <br><br>
+                
+                                <h3>Organisation du projet</h3>
+                                Lors de notre projet universitaire, nous avons structuré notre reporting en plusieurs parties. Nous avons commencé par importer les données du barème des notes dans un fichier Excel et les avons organisées en fonction des compétences et des matières. Nous avons ensuite utilisé des formules Excel simples pour calculer des moyennes par matière. Nous avons ensuite créé nous-mêmes certaines fonctions en VBA pour calculer les moyennes en fonction des coefficients associés. Nous avons créé des graphiques dynamiques pour visualiser les résultats. Ayant créé une application fonctionnelle, nous avons créé une IHM avec des boutons pour réaliser les actions souhaitées. <br><br>
+                                
+                                <h3>Apprentissages critiques</h3>
+                                <ul>
+                                    <li>AC11.01 | Correctement interpréter et prendre en compte le besoin du commanditaire ou du client</li>
+                                    <li>AC11.02 | Respecter les formalismes de notation</li>
+                                    <li>AC11.03 | Connaître la syntaxe des langages et savoir l’utiliser</li>
+                                    <li>AC11.04 | Mesurer l’importance de maîtriser la structure des données à exploiter</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <embed src="./../projets/Projet_AplicationVBA.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
+                            <a href="./../projets/Projet_AplicationVBA.xlsm" class="bouton">Télécharger les fichiers</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
 
-    <div id="details3" class="popup-details container" >
-        <span class="close">&times;</span>
-        <div class="row contenu">
-            <div class="col-md-6">
-                <div class="titre">
-                    <h1> Projet Universitaire - Gestion de fichiers en PYTHON</h1>
+                <!-- Projet 5 -->
+                <div class="project-card-item" onclick="openModal('details5')">
+                    <img src="./../images/enquete.jpeg" alt="Enquête Sport">
+                    <div class="project-card-content">
+                        <h3>Enquête & Sport</h3>
+                        <p>Dans le cadre de nos cours de gestion, nous devions extraire des données d'une enquête, les analyser et en faire un document de synthèse.</p>
+                        <button class="bouton">En savoir plus</button>
+                    </div>
                 </div>
-                <div class="membres">
-                    <ul>
-                        <li>BENOIT Nathaël</li>
-                        . 
-                        <li>GASSE Armand-Valentin</li>
-                    </ul>
-                <br><h5 style="display: inline;">
-                    Décembre 2024
-                </h5>
-                <span class="projcompetences">Python</span>
-                </div>
-                <div class="popup-text">
-                    Lors de ce projet, nous avons utilisé des données provenant d'un fichier JSON afin de les traiter et de les convertir en un fichier CSV. <br><br>
-                    Ce projet universitaire nous a menés à <u>extraire</u> les données du fichier JSON, à les <u>traiter</u> pour les nettoyer et les organiser, et à les <u>convertir</u> en un format CSV pour une utilisation ultérieure.
-                    <br><br>
-    
-                    <h3>Organisation du projet</h3>
-                    Lors de notre projet universitaire, nous avons structuré notre travail en plusieurs étapes. Nous avons commencé par extraire les données du fichier JSON et les stocker dans une liste Python. Nous avons ensuite nettoyé les données en supprimant les dictionnaires non voulus. Nous avons ensuite organisé les données dans une liste de dictionnaires Python et les avons converties en un fichier CSV. <br><br>        
-    
-                    <h3>Apprentissages critiques </h3>
-                    <ul>
-                        <li>AC11.01 | Correctement interpréter et prendre en compte le besoin du commanditaire ou du client</li>
-                        <li>AC11.02 | Respecter les formalismes de notation</li>
-                        <li>AC11.03 | Connaître la syntaxe des langages et savoir l’utiliser</li>
-                        <li>AC11.04 | Mesurer l’importance de maîtriser la structure des données à exploiter</li>
-                        <li>AC11.05 | Comprendre les structures algorithmiques de base et leur contexte d’usage</li>
-                        <li>AC11.06 | Prendre conscience de l’intérêt de la programmation</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <embed src="./../projets/Projet_GestionDeFichiers.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
-                <a href="./../projets/Projet_Gestion-de-fichiers.rar">Télécharger les fichiers</a>
-            </div>
-        </div>
-    </div>
 
-    <div class="vert">
-        <div id="projects" class="container">
-            <div class="row contenu">
-                <div class="col-md-6 order-md-2 order-1">
-                    <h1>Excel & VBA</h1>
-                    <p>Dans le cadre de nos cours de programmation, nous devions faire un reporting qui nous permet de calculer nos 
-                        moyennes en BUT 1 en avance.</p>
-                    <br>
-                    <figcaption class="blockquote-footer">
-                        <a href="#details4" class="bouton" type="button" data-details="details4"> En savoir plus</a>
-                    </figcaption>
+                <!-- Projet 6 -->
+                <div class="project-card-item" onclick="openModal('details6')">
+                    <img src="./../images/portfolio.jpg" alt="portfolio">
+                    <div class="project-card-content">
+                        <h3>Portfolio</h3>
+                        <p>Dans le cadre de nos cours de programmation et de communication, nous devions faire un portfolio pour nous présenter et décrire les projets.</p>
+                        <button class="bouton">En savoir plus</button>
+                    </div>
                 </div>
-                <div class="col-md-6 order-md-1 order-2">
-                    <img src="./../images/vba-excel.jpg" alt="Excel-VBA" class="img-fluid rounded">
-                </div>
-            </div>
-        </div>
-    </div>  
 
-    <div id="details4" class="popup-details container" >
-        <span class="close">&times;</span>
-        <div class="row contenu">
-            <div class="col-md-6">
-                <div class="titre">
-                    <h1> Projet Universitaire - Création d'un reporting EXCEL VBA</h1>
+                <div id="details5" class="popup-details">
+                    <div class="container">
+                        <span class="close">&times;</span>
+                        <div class="row contenu">
+                        <div class="col-md-6">
+                            <div class="titre">
+                                <h1> Projet Universitaire - Mise en œuvre d'une enquête</h1>
+                            </div>
+                            <div class="membres">
+                                <ul>
+                                    <li>BENOIT Nathaël</li>
+                                    . 
+                                    <li>GASSE Armand-Valentin</li>
+                                </ul>
+                            <br><h5 class="project-date">
+                                Janvier 2025
+                            </h5>
+                            <span class="projcompetences">Word / Excel / Sphinx iq3</span>
+                            </div>
+                            <div class="popup-text">
+                                Lors de ce projet, nous avons utilisé des données d'une enquête réalisée au préalable afin de décrire les étudiants de l'Université de Poitiers Campus de Niort. <br><br>
+                                Ce projet universitaire nous a menés à <u>interpréter</u>, <u>analyser</u> et <u>synthétiser</u> les données de l'enquête. Cela nous a aussi menés à faire un document de synthèse reformulant les indicateurs clés mais aussi un tableau de bord. <br><br>
+                
+                                <h3>Organisation du projet</h3>
+                                Lors de notre projet universitaire, nous avons structuré l'enquête autour de plusieurs axes : le sexe, le département géographique, le département de formation, le niveau de formation, le type de logement, et la situation d'alternance ou de bourse. Nous avons interrogé les étudiants sur leurs habitudes sportives actuelles et passées, les raisons de l'arrêt éventuel du sport, et l'influence de la COVID-19 sur leurs comportements. 
+                                Nous avons utilisé sphinx iq3 afin de collecter et d'analyser les données pour identifier les tendances et les motivations des étudiants à pratiquer ou non une activité sportive. <br><br>
+                
+                                <h3>Apprentissages critiques</h3>
+                                <ul>
+                                    <li>AC13.01 | Prendre connaissance des biais rencontrés dans la mise en place d’une enquête</li>
+                                    <li>AC13.02 | Identifier l’importance de contextualiser ses données</li>
+                                    <li>AC13.04 | Lors de la restitution des résultats, mesurer l’importance d’expliciter également la démarche suivie</li>
+                                    <li>AC13.05 | Comprendre les intérêts de la data visualisation et de l’infographie</li>
+                                </ul>              
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <embed src="./../projets/Projet_Enquete.pdf" type="application/pdf"  class="popup-pdf popup-pdf-responsive" />
+                        </div>
+                    </div>
+                    </div>
                 </div>
-                <div class="membres">
-                    <ul>
-                        <li>BENOIT Nathaël</li>
-                        . 
-                        <li>PITON Jérémy</li>
-                    </ul>
-                <br><h5 style="display: inline;">
-                    Décembre 2024
-                </h5>
-                <span class="projcompetences">Excel / VBA</span>
-                </div>
-                <div class="popup-text">
-                    Lors de ce projet, nous avons utilisé des données provenant du barème des notes par compétences et par matière de BUT SD première année que nous avons mises dans un fichier Excel afin de créer un reporting automatisé en VBA pour ajouter, modifier et supprimer les notes. <br><br>
-                    Ce projet universitaire nous a menés à <u>automatiser</u> les calculs en utilisant de multiples fonctions Excel et VBA pour <u>analyser</u> les données. Cela nous a aussi menés à présenter notre projet à l'oral pour expliquer notre démarche. <br><br>
-    
-                    <h3>Organisation du projet</h3>
-                    Lors de notre projet universitaire, nous avons structuré notre reporting en plusieurs parties. Nous avons commencé par importer les données du barème des notes dans un fichier Excel et les avons organisées en fonction des compétences et des matières. Nous avons ensuite utilisé des formules Excel simples pour calculer des moyennes par matière. Nous avons ensuite créé nous-mêmes certaines fonctions en VBA pour calculer les moyennes en fonction des coefficients associés. Nous avons créé des graphiques dynamiques pour visualiser les résultats. Ayant créé une application fonctionnelle, nous avons créé une IHM avec des boutons pour réaliser les actions souhaitées. <br><br>
-                    
-                    <h3>Apprentissages critiques</h3>
-                    <ul>
-                        <li>AC11.01 | Correctement interpréter et prendre en compte le besoin du commanditaire ou du client</li>
-                        <li>AC11.02 | Respecter les formalismes de notation</li>
-                        <li>AC11.03 | Connaître la syntaxe des langages et savoir l’utiliser</li>
-                        <li>AC11.04 | Mesurer l’importance de maîtriser la structure des données à exploiter</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <embed src="./../projets/Projet_AplicationVBA.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
-                <a href="./../projets/Projet_AplicationVBA.xlsm">Télécharger les fichiers</a>
-            </div>
-        </div>
-    </div>
 
-    <div id="projects" class="container">
-        <div class="row contenu">
-            <div class="col-md-6">
-                <h1>Enquête & Sport</h1>
-                <p>Dans le cadre de nos cours de gestion, nous devions extraire des données d'une enquête, les analyser et en faire 
-                    un document de synthèse.</p>
-                <br>
-                <figcaption class="blockquote-footer">
-                    <a href="#details5" class="bouton" type="button" data-details="details5"> En savoir plus</a>
-                </figcaption>
-            </div>
-            <div class="col-md-6">
-                <img src="./../images/enquete.jpeg" alt="JsonPythonCsv" class="img-fluid rounded">
-            </div>
-        </div>
-    </div>
+                <div id="details6" class="popup-details">
+                    <div class="container">
+                        <span class="close">&times;</span>
+                        <div class="row contenu">
+                        <div class="col-md-6">
+                            <div class="titre">
+                                <h1> Projet Universitaire - Portfolio</h1>
+                            </div>
+                            <div class="membres">
+                                <ul>
+                                    <li>BENOIT Nathaël</li>
+                                </ul>
+                                <br><h5 class="project-date">
+                                    Janvier-Juin 2025
+                                </h5>
+                                <span class="projcompetences">HTML / CSS / JavaScript</span>
+                            </div>
+                            <div class="popup-text">
+                                Lors de ce projet, j'ai utilisé nos projets universitaires afin de les synthétiser et de les présenter dans un portfolio. <br><br>
+                                Ce projet universitaire m'a mené à <u>synthétiser</u> les informations clés de nos projets, à les <u>organiser</u> de manière logique et à les <u>présenter</u> de façon claire et professionnelle. Cela m'a aussi mené à <u>réfléchir</u> sur nos compétences et nos acquis. <br><br>
+                
+                                <h3>Organisation du projet</h3>
+                                Lors de notre projet universitaire au fil de l'eau, j'ai structuré mon portfolio en plusieurs pages. J'ai commencé par rédiger une présentation de moi qui présente mon parcours et mes passions. J'ai ensuite présenté nos projets universitaires en les décrivant et expliquant la réalisation et les compétences. J'ai également réalisé un bilan personnel pour réfléchir sur cette année universitaire et sur mes projets futurs. Et enfin, j'ai créé une page de contact pour permettre aux visiteurs de me contacter. <br><br>    
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <embed src="./../projets/Projet_Portfolio.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
+                        </div>
+                    </div>
+                    </div>
+                </div>
 
-    <div id="details5" class="popup-details container" >
-        <span class="close">&times;</span>
-        <div class="row contenu">
-            <div class="col-md-6">
-                <div class="titre">
-                    <h1> Projet Universitaire - Mise en œuvre d'une enquête</h1>
+                <!-- Projet 7 -->
+                <div class="project-card-item" onclick="openModal('details7')">
+                    <img src="./../images/baseDeDonnée.jpg" alt="Base de données">
+                    <div class="project-card-content">
+                        <h3>Base de données & IHM</h3>
+                        <p>Dans le cadre de nos cours de programmation, nous devions créer et organiser une base de données ainsi qu'une IHM pour l'utiliser.</p>
+                        <button class="bouton">En savoir plus</button>
+                    </div>
                 </div>
-                <div class="membres">
-                    <ul>
-                        <li>BENOIT Nathaël</li>
-                        . 
-                        <li>GASSE Armand-Valentin</li>
-                    </ul>
-                <br><h5 style="display: inline;">
-                    Janvier 2025
-                </h5>
-                <span class="projcompetences">Word / Excel / Sphinx iq3</span>
-                </div>
-                <div class="popup-text">
-                    Lors de ce projet, nous avons utilisé des données d'une enquête réalisée au préalable afin de décrire les étudiants de l'Université de Poitiers Campus de Niort. <br><br>
-                    Ce projet universitaire nous a menés à <u>interpréter</u>, <u>analyser</u> et <u>synthétiser</u> les données de l'enquête. Cela nous a aussi menés à faire un document de synthèse reformulant les indicateurs clés mais aussi un tableau de bord. <br><br>
-    
-                    <h3>Organisation du projet</h3>
-                    Lors de notre projet universitaire, nous avons structuré l'enquête autour de plusieurs axes : le sexe, le département géographique, le département de formation, le niveau de formation, le type de logement, et la situation d'alternance ou de bourse. Nous avons interrogé les étudiants sur leurs habitudes sportives actuelles et passées, les raisons de l'arrêt éventuel du sport, et l'influence de la COVID-19 sur leurs comportements. 
-                    Nous avons utilisé sphinx iq3 afin de collecter et d'analyser les données pour identifier les tendances et les motivations des étudiants à pratiquer ou non une activité sportive. <br><br>
-    
-                    <h3>Apprentissages critiques</h3>
-                    <ul>
-                        <li>AC13.01 | Prendre connaissance des biais rencontrés dans la mise en place d’une enquête</li>
-                        <li>AC13.02 | Identifier l’importance de contextualiser ses données</li>
-                        <li>AC13.04 | Lors de la restitution des résultats, mesurer l’importance d’expliciter également la démarche suivie</li>
-                        <li>AC13.05 | Comprendre les intérêts de la data visualisation et de l’infographie</li>
-                    </ul>              
-                </div>
-            </div>
-            <div class="col-md-6">
-                <embed src="./../projets/Projet_Enquete.pdf" type="application/pdf"  class="popup-pdf popup-pdf-responsive" />
-            </div>
-        </div>
-    </div>
 
-    <div class="vert">
-        <div id="projects" class="container">
-            <div class="row contenu">
-                <div class="col-md-6 order-md-2 order-1">
-                    <h1>Portfolio</h1>
-                    <p>Dans le cadre de nos cours de programmation et de communication, nous devions faire un portfolio 
-                        pour nous présenter et décrire les projets.</p>
-                    <br>
-                    <figcaption class="blockquote-footer">
-                        <a href="#details6" class="bouton" type="button" data-details="details6"> En savoir plus</a>
-                    </figcaption>
+                <!-- Projet 8 -->
+                <div class="project-card-item" onclick="openModal('details8')">
+                    <img src="./../images/regression.png" alt="Régression">
+                    <div class="project-card-content">
+                        <h3>Logements & Régression</h3>
+                        <p>Dans le cadre de nos cours de statistiques et d'informatique, nous devions récupérer des données concernant les ventes de logements du département pour estimer le prix en faisant une régression.</p>
+                        <button class="bouton">En savoir plus</button>
+                    </div>
                 </div>
-                <div class="col-md-6 order-md-1 order-2">
-                    <img src="./../images/portfolio.jpg" alt="portfolio" class="img-fluid rounded">
-                </div>
-            </div>
-        </div>
-    </div>  
 
-    <div id="details6" class="popup-details container" >
-        <span class="close">&times;</span>
-        <div class="row contenu">
-            <div class="col-md-6">
-                <div class="titre">
-                    <h1> Projet Universitaire - Portfolio</h1>
+                <div id="details7" class="popup-details">
+                    <div class="container">
+                        <span class="close">&times;</span>
+                        <div class="row contenu">
+                        <div class="col-md-6">
+                            <div class="titre">
+                                <h1> Projet Universitaire - Conception et implémentation d'une base de données</h1>
+                            </div>
+                            <div class="membres">
+                                <ul>
+                                    <li>BENOIT Nathaël</li>
+                                    . 
+                                    <li>BABIN Paul</li>
+                                </ul>
+                                <br><h5 class="project-date">
+                                    Mars 2025
+                                </h5>
+                                <span class="projcompetences">Word / SQL / phpMyAdmin / Python</span>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="popup-text">
+                                Lors de ce projet, nous avons utilisé des données provenant d'un fichier Excel afin de créer une base de données et une IHM pour l'utiliser. <br><br>
+                                Ce projet universitaire nous a menés à <u>concevoir</u> la base de données, à <u>l'implémenter</u> et à <u>la tester</u>. Cela nous a aussi menés à créer une IHM pour utiliser la base de donnée. <br><br>
+                
+                                <h3>Organisation du projet</h3>
+                                Lors de notre projet universitaire, nous avons structuré notre travail en plusieurs étapes. Nous avons commencé par concevoir la base de données en réalisant un MLD et en récupérent le code SQL correspondant. Nous avons ensuite créé les tables et vérifié les relations entre elles sur PhpMyAdmin. Nous avons ensuite créé une IHM pour interagir avec la base de données. Nous avons ensuite testé la base de données et créer l'IHM pour tester la base facilement. <br><br>
+                                
+                                <h3>Apprentissages critiques</h3>
+                                <ul>
+                                    <li>AC11.01 | Correctement interpréter et prendre en compte le besoin du commanditaire ou du client</li>
+                                    <li>AC11.02 | Respecter les formalismes de notation</li>
+                                    <li>AC11.03 | Connaître la syntaxe des langages et savoir l’utiliser</li>
+                                    <li>AC11.04 | Mesurer l’importance de maîtriser la structure des données à exploiter</li>
+                                    <li>AC11.05 | Comprendre les structures algorithmiques de base et leur contexte d’usage</li>
+                                    <li>AC11.06 | Prendre conscience de l’intérêt de la programmation</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <embed src="./../projets/Projet_Base_de_donnees.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
+                            <a href="./../projets/Projet_Base_de_donnees.zip" class="bouton">Télécharger les fichiers</a>
+                        </div>
+                    </div>
+                    </div>
                 </div>
-                <div class="membres">
-                    <ul>
-                        <li>BENOIT Nathaël</li>
-                    </ul>
-                    <br><h5 style="display: inline;">
-                        Janvier-Juin 2025
-                    </h5>
-                    <span class="projcompetences">HTML / CSS / JavaScript</span>
-                </div>
-                <div class="popup-text">
-                    Lors de ce projet, j'ai utilisé nos projets universitaires afin de les synthétiser et de les présenter dans un portfolio. <br><br>
-                    Ce projet universitaire m'a mené à <u>synthétiser</u> les informations clés de nos projets, à les <u>organiser</u> de manière logique et à les <u>présenter</u> de façon claire et professionnelle. Cela m'a aussi mené à <u>réfléchir</u> sur nos compétences et nos acquis. <br><br>
-    
-                    <h3>Organisation du projet</h3>
-                    Lors de notre projet universitaire au fil de l'eau, j'ai structuré mon portfolio en plusieurs pages. J'ai commencé par rédiger une présentation de moi qui présente mon parcours et mes passions. J'ai ensuite présenté nos projets universitaires en les décrivant et expliquant la réalisation et les compétences. J'ai également réalisé un bilan personnel pour réfléchir sur cette année universitaire et sur mes projets futurs. Et enfin, j'ai créé une page de contact pour permettre aux visiteurs de me contacter. <br><br>    
-                </div>
-            </div>
-            <div class="col-md-6">
-                <embed src="./../projets/Projet_Portfolio.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
-            </div>
-        </div>
-    </div>
 
-    <div id="projects" class="container">
-        <div class="row contenu">
-            <div class="col-md-6">
-                <h1>Base de données & IHM</h1>
-                <p>Dans le cadre de nos cours de programmation, nous devions créer et organiser une base de données ainsi
-                    qu'une IHM pour l'utiliser.</p>
-                <br>
-                <figcaption class="blockquote-footer">
-                    <a href="#details7" class="bouton" type="button" data-details="details7"> En savoir plus</a>
-                </figcaption>       
-            </div>
-            <div class="col-md-6">
-                <img src="./../images/baseDeDonnée.jpg" alt="JsonPythonCsv" class="img-fluid rounded">
-            </div>
-        </div>
-    </div>
+                <div id="details8" class="popup-details">
+                    <div class="container">
+                        <span class="close">&times;</span>
+                        <div class="row contenu">
+                        <div class="col-md-6">
+                            <div class="titre">
+                                <h1> Projet Universitaire - Régression sur des données réelles</h1>
+                            </div>
+                            <div class="membres">
+                                <ul>
+                                    <li>BENOIT Nathaël</li>
+                                    . 
+                                    <li>GASSE Armand-Valentin</li>
+                                </ul>
+                                <br><h5 class="project-date">
+                                    Avril 2025
+                                </h5>
+                                <span class="projcompetences">Word / Excel / R</span>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="popup-text">
+                                Lors de ce projet, nous avons utilisé des données provenant du site de l'INSEE, fournies et organisées au préalable, afin de faire une régression sur les prix des logements dans les Deux-Sèvres. <br><br>
+                                Ce projet universitaire nous a menés à <u>traiter</u> les données et à <u>faire une régression</u>. Cela nous a aussi menés à créer un document de synthèse reformulant les indicateurs clés. <br><br>
+                
+                                <h3>Organisation du projet</h3>
+                                Lors de notre projet universitaire, nous avons récupéré un fichier de test et un fichier d'entraînement pour tester nos modèles. Nous avons conçu les modèles à partir d'Excel pour avoir les estimateurs rapidement en réalisant des graphiques et en calculant le coefficient de détermination. Par la suite, nous avons réalisé un programme R pour réaliser la prédiction sur l'ensemble du fichier test et avoir une estimation du prix pour tous les logement acheté en Deux-Sèvres. <br><br>
+                                
+                                <h3>Apprentissages critiques</h3>
+                                <ul>
+                                    <li>AC12.03 | Comprendre l’intérêt des synthèses numériques et graphiques pour décrire une variable statistique</li>
+                                    <li>AC12.04 | Comprendre l’intérêt des synthèses numériques et graphiques pour mettre en évidence des liaisons entre variables</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <embed src="./../projets/Projet_regression.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
+                            <a href="./../projets/Projet_regression.rar" class="bouton">Télécharger les fichiers</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
 
-    <div id="details7" class="popup-details container" >
-        <span class="close">&times;</span>
-        <div class="row contenu">
-            <div class="col-md-6">
-                <div class="titre">
-                    <h1> Projet Universitaire - Conception et implémentation d'une base de données</h1>
+                <!-- Projet 9 -->
+                <div class="project-card-item" onclick="openModal('details9')">
+                    <img src="./../images/echantillonnage.jpeg" alt="échantillonnage">
+                    <div class="project-card-content">
+                        <h3>Échantillonnage & Estimation</h3>
+                        <p>Dans le cadre de nos cours de statistiques inférentielles et R, nous devions analyser une région précise afin de faire des estimations sur la population.</p>
+                        <button class="bouton">En savoir plus</button>
+                    </div>
                 </div>
-                <div class="membres">
-                    <ul>
-                        <li>BENOIT Nathaël</li>
-                        . 
-                        <li>BABIN Paul</li>
-                    </ul>
-                    <br><h5 style="display: inline;">
-                        Mars 2025
-                    </h5>
-                    <span class="projcompetences">Word / SQL / phpMyAdmin / Python</span>
-                </div>
-                <br>
-                <br>
-                <div class="popup-text">
-                    Lors de ce projet, nous avons utilisé des données provenant d'un fichier Excel afin de créer une base de données et une IHM pour l'utiliser. <br><br>
-                    Ce projet universitaire nous a menés à <u>concevoir</u> la base de données, à <u>l'implémenter</u> et à <u>la tester</u>. Cela nous a aussi menés à créer une IHM pour utiliser la base de donnée. <br><br>
-    
-                    <h3>Organisation du projet</h3>
-                    Lors de notre projet universitaire, nous avons structuré notre travail en plusieurs étapes. Nous avons commencé par concevoir la base de données en réalisant un MLD et en récupérent le code SQL correspondant. Nous avons ensuite créé les tables et vérifié les relations entre elles sur PhpMyAdmin. Nous avons ensuite créé une IHM pour interagir avec la base de données. Nous avons ensuite testé la base de données et créer l'IHM pour tester la base facilement. <br><br>
-                    
-                    <h3>Apprentissages critiques</h3>
-                    <ul>
-                        <li>AC11.01 | Correctement interpréter et prendre en compte le besoin du commanditaire ou du client</li>
-                        <li>AC11.02 | Respecter les formalismes de notation</li>
-                        <li>AC11.03 | Connaître la syntaxe des langages et savoir l’utiliser</li>
-                        <li>AC11.04 | Mesurer l’importance de maîtriser la structure des données à exploiter</li>
-                        <li>AC11.05 | Comprendre les structures algorithmiques de base et leur contexte d’usage</li>
-                        <li>AC11.06 | Prendre conscience de l’intérêt de la programmation</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <embed src="./../projets/Projet_Base_de_donnees.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
-                <a href="./../projets/Projet_Base_de_donnees.zip">Télécharger les fichiers</a>
-            </div>
-        </div>
-    </div>
 
-    <div class="vert">
-        <div id="projects" class="container">
-            <div class="row contenu">
-                <div class="col-md-6 order-md-2 order-1">
-                    <h1>Logements & Régression</h1>
-                    <p>Dans le cadre de nos cours de statistiques et d'informatique, nous devions récupérer des données 
-                        concernant les ventes de logements du département pour estimer le prix en faisant une régression.</p>
-                    <br>
-                    <figcaption class="blockquote-footer">
-                        <a href="#details8" class="bouton" type="button" data-details="details8"> En savoir plus</a>
-                    </figcaption>       
+                <!-- Projet 10 -->
+                <div class="project-card-item" onclick="openModal('details10')">
+                    <img src="./../images/insee.jpg" alt="insee">
+                    <div class="project-card-content">
+                        <h3>Concours & Projet 🏆</h3>
+                        <p>Dans le cadre de nos cours de Power BI, Excel et autres logiciels de datavisualisation, nous avons dû réaliser un concours entre tous les BUT SD de France.</p>
+                        <button class="bouton">En savoir plus</button>
+                    </div>
                 </div>
-                <div class="col-md-6 order-md-1 order-2">
-                    <img src="./../images/regression.png" alt="JsonPythonCsv" class="img-fluid rounded">
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div id="details8" class="popup-details container" >
-        <span class="close">&times;</span>
-        <div class="row contenu">
-            <div class="col-md-6">
-                <div class="titre">
-                    <h1> Projet Universitaire - Régression sur des données réelles</h1>
+                <div id="details9" class="popup-details">
+                    <div class="container">
+                        <span class="close">&times;</span>
+                        <div class="row contenu">
+                        <div class="col-md-6">
+                            <div class="titre">
+                                <h1> Projet Universitaire - Échantillonnage et Estimation</h1>
+                            </div>
+                            <div class="membres">
+                                <ul>
+                                    <li>BENOIT Nathaël</li>
+                                    . 
+                                    <li>GASSE Armand-Valentin</li>
+                                </ul>
+                                <br><h5 class="project-date">
+                                    Mai 2025
+                                </h5>
+                                <span class="projcompetences">Word / Excel / R</span>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="popup-text">
+                                <div class="popup-text">
+                                Lors de ce projet, nous avons utilisé des données sur le nombre de population dans chaques communes de Frances afin de réaliser des estimations sur la population de la région choisi <br><br>
+                                Ce projet universitaire nous a menés à réaliser un programme R afin de faire un échantillonnage de la population de la région choisie et à faire des estimations sur la population.<br><br>
+                                
+                                <h3>Organisation du projet</h3>
+                                Lors de notre projet universitaire, nous avons récupéré un fichier a disposition et nous avons choisi la région sur laquelle traviller. Nous avons choisi la Bretagne. Nous avons ensuite utilisé R pour réaliser des estimations sur la population de cette région en utilisant des méthodes statistiques appropriées : Echantillonnage aléatoire simple et stratifié
+                                Nous avons ensuite travailler sur les données du projet universitaire mise en œuvre d'une enquête afin de trouver des relations significatives entre la pratique sportive des étudiants et certaines de leurs caractéristiques.
+                                Tout ce travaille à été finalisé par la rédaction d'un document de synthèse. <br><br>
+                
+                                <h3>Apprentissages critiques</h3>
+                                <ul>
+                                    <li>AC12.01 | Réaliser que les sources de données ont des caractéristiques propres à considérer (variation, précision, mise à jour...)</li>
+                                    <li>AC12.02 | Comprendre qu’une analyse correcte ne peut émaner que de données propres et préparées</li>
+                                    <li>AC12.05 | Comprendre l’intérêt de l’utilisation d’un modèle probabiliste</li>
+                                    <li>AC12.06 | Appréhender la notion de fluctuation d’échantillonnage, notamment à l’aide de simulations probabilistes</li>
+                                </ul>      
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <embed src="./../projets/Projet_Estimation.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
+                        </div>
+                    </div>
+                    </div>
                 </div>
-                <div class="membres">
-                    <ul>
-                        <li>BENOIT Nathaël</li>
-                        . 
-                        <li>GASSE Armand-Valentin</li>
-                    </ul>
-                    <br><h5 style="display: inline;">
-                        Avril 2025
-                    </h5>
-                    <span class="projcompetences">Word / Excel / R</span>
-                </div>
-                <br>
-                <br>
-                <div class="popup-text">
-                    Lors de ce projet, nous avons utilisé des données provenant du site de l'INSEE, fournies et organisées au préalable, afin de faire une régression sur les prix des logements dans les Deux-Sèvres. <br><br>
-                    Ce projet universitaire nous a menés à <u>traiter</u> les données et à <u>faire une régression</u>. Cela nous a aussi menés à créer un document de synthèse reformulant les indicateurs clés. <br><br>
-    
-                    <h3>Organisation du projet</h3>
-                    Lors de notre projet universitaire, nous avons récupéré un fichier de test et un fichier d'entraînement pour tester nos modèles. Nous avons conçu les modèles à partir d'Excel pour avoir les estimateurs rapidement en réalisant des graphiques et en calculant le coefficient de détermination. Par la suite, nous avons réalisé un programme R pour réaliser la prédiction sur l'ensemble du fichier test et avoir une estimation du prix pour tous les logement acheté en Deux-Sèvres. <br><br>
-                    
-                    <h3>Apprentissages critiques</h3>
-                    <ul>
-                        <li>AC12.03 | Comprendre l’intérêt des synthèses numériques et graphiques pour décrire une variable statistique</li>
-                        <li>AC12.04 | Comprendre l’intérêt des synthèses numériques et graphiques pour mettre en évidence des liaisons entre variables</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <embed src="./../projets/Projet_regression.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
-                <a href="./../projets/Projet_regression.rar">Télécharger les fichiers</a>
-            </div>
-        </div>
-    </div>
 
-    <div id="projects" class="container">
-        <div class="row contenu">
-            <div class="col-md-6">
-                <h1>Échantillonnage & Estimation</h1>
-                <p>Dans le cadre de nos cours de statistiques inférentielles et R, nous devions analyser une région précise afin 
-                    de faire des estimations sur la population.</p>
-                <br>
-                <figcaption class="blockquote-footer">
-                    <a href="#details9" class="bouton" type="button" data-details="details9"> En savoir plus</a>
-                </figcaption>       
-            </div>
-            <div class="col-md-6">
-                <img src="./../images/echantillonnage.jpeg" alt="echantillonnage" class="img-fluid rounded">
-            </div>
-        </div>
-    </div>
+                <div id="details10" class="popup-details">
+                    <div class="container">
+                        <span class="close">&times;</span>
+                        <div class="row contenu">
+                        <div class="col-md-6">
+                            <div class="titre">
+                                <h1> Projet Universitaire - Concours Dataviz</h1>
+                            </div>
+                            <div class="membres">
+                                <ul>
+                                    <li>BENOIT Nathaël</li>
+                                    . 
+                                    <li>GASSE Armand-Valentin</li>
+                                    .
+                                    <li>PITON Jérémy</li>
+                                    . 
+                                    <li>NDJOYE Jérémie</li>
+                                    . 
+                                    <li>VION Antonin</li>
+                                </ul>
+                                <br><h5 class="project-date">
+                                    22 Mai 2025
+                                </h5>
+                                <span class="projcompetences">Excel / PowerBI / Canva</span>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="popup-text">
+                                Lors de ce concours national, d'une journée, avec l'ensemble des BUT Science des données et l'INSEE, nous avons utilisé des données 
+                                provenant du site de l'INSEE afin de faire une datavisualisation sur les jeunes de 15 à 29 ans. <br><br>
+                                Ce projet universitaire nous a permis de renforcer notre esprit d’équipe en collaborant dans une ambiance à la fois conviviale et stimulante tout en travaillant sur un projet concret.
+                                <h3>Organisation du projet</h3>
+                                Lors de ce concours, nous avons structuré notre travail en plusieurs étapes. Nous avons commencé par 
+                                choisir un thème et une problématique. Nous avons choisi de travailler sur la population dans la "diagonale du vide" pour voir des différences avec le reste de la France.
+                                Nous avons ensuite réalisé des graphiques pour illustrer les données que nous avons étudié. En fin nous avons réalisé une infographie pour répondre a notre problématique de manière visuelle. <br><br>
+                
+                                <h3>Apprentissages critiques</h3>
+                                <ul>
+                                    <li>AC11.01 | Correctement interpréter et prendre en compte le besoin du commanditaire ou du client</li>
+                                    <li>AC11.04 | Mesurer l’importance de maîtriser la structure des données à exploiter</li>
+                                    <li>AC12.02 | Comprendre qu’une analyse correcte ne peut émaner que de données propres et préparées</li>
+                                    <li>AC12.03 | Comprendre l’intérêt des synthèses numériques et graphiques pour décrire une variable statistique</li>
+                                    <li>AC12.04 | Comprendre l’intérêt des synthèses numériques et graphiques pour mettre en évidence des liaisons entre variables.</li>
+                                    <li>AC13.02 | Identifier l’importance de contextualiser ses données</li>
+                                    <li>AC13.02 | Identifier l’importance de contextualiser ses données</li>
+                                    <li>AC13.05 | Comprendre les intérêts de la data visualisation et de l’infographie</li>
+                                    <li>AC13.06 | Mesurer l’importance d’une expression précise et nuancée dans la communication en français et dans une langue étrangère des résultats</li>
+                                </ul>
+                                <h3>Victoire</h3>
+                                À la suite de la réalisation du projet, ce dernier a été notés. Nous avons remporté la victoire de la meilleure visualisation 
+                                de données au sein du BUT SD de Niort. Nous passons en national contre les autres gagnants des autres BUT SD de France.
+                                <button onclick="openModal('details10_2')" class="bouton">Passage national</button><br><br>
+                                
+                            </div>
+                            </div>
+                            <div class="col-md-6">
+                                <embed src="./../projets/Projet_concoursDataviz.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="details10_2" class="popup-details">
+                    <div class="container">
+                        <span class="close">&times;</span>
+                        <div class="row contenu">
+                        <div class="col-md-12">
+                            <video controls class="popup-video">
+                                <source src="./../projets/Projet_concoursDataviz.mp4" type="video/mp4">
+                                Votre navigateur ne supporte pas la lecture vidéo.
+                            </video>
+                            <br><br>
+                        </div>
+                        <hr>
+                        <div class="col-md-6">
+                            <br>
+                            <h3>Victoire en National</h3>
+                            <p> Le concours a publié ses résultats le 12 juin 2025. Notre équipe, victorieuse dans le cadre du BUT Science des données à Niort, a terminé en première position au niveau national devant Grenoble et Dole ! Ce projet a été pour nous une véritable aventure et exploration, tant sur le plan du projet que de la cohésion surprenante au sein de l'équipe.  </p>
+                        </div>
+                        <div class="col-md-6">
+                            <embed src="./../projets/Projet_concoursDataviz_victoire.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive popup-pdf-compact" />
+                        </div>
+                    </div>
+                    </div>
+                </div>
 
-    <div id="details9" class="popup-details container" >
-        <span class="close">&times;</span>
-        <div class="row contenu">
-            <div class="col-md-6">
-                <div class="titre">
-                    <h1> Projet Universitaire - Échantillonnage et Estimation</h1>
+                <!-- Projet 11 -->
+                <div class="project-card-item" onclick="openModal('details11')">
+                    <img src="./../images/indicateurs.jpg" alt="indicateurs">
+                    <div class="project-card-content">
+                        <h3>Indicateurs & Analyse</h3>
+                        <p>Dans le cadre de nos cours de gestion, nous devions faire une étude sur l'entreprise Fleury-Michon.</p>
+                        <button class="bouton">En savoir plus</button>
+                    </div>
                 </div>
-                <div class="membres">
-                    <ul>
-                        <li>BENOIT Nathaël</li>
-                        . 
-                        <li>GASSE Armand-Valentin</li>
-                    </ul>
-                    <br><h5 style="display: inline;">
-                        Mai 2025
-                    </h5>
-                    <span class="projcompetences">Word / Excel / R</span>
+
+                <!-- Projet 12 -->
+                <div class="project-card-item" onclick="openModal('details12')">
+                    <img src="./../images/final.png" alt="finalproject">
+                    <div class="project-card-content">
+                        <h3>Dataviz & Projet Final</h3>
+                        <p>Dans le cadre de tous les cours de l'année, nous devions réaliser un gros projet pour finir l'année universitaire.</p>
+                        <button class="bouton">En savoir plus</button>
+                    </div>
                 </div>
-                <br>
-                <br>
-                <div class="popup-text">
-                    <div class="popup-text">
-                    Lors de ce projet, nous avons utilisé des données sur le nombre de population dans chaques communes de Frances afin de réaliser des estimations sur la population de la région choisi <br><br>
-                    Ce projet universitaire nous a menés à réaliser un programme R afin de faire un échantillonnage de la population de la région choisie et à faire des estimations sur la population.<br><br>
-                    
-                    <h3>Organisation du projet</h3>
-                    Lors de notre projet universitaire, nous avons récupéré un fichier a disposition et nous avons choisi la région sur laquelle traviller. Nous avons choisi la Bretagne. Nous avons ensuite utilisé R pour réaliser des estimations sur la population de cette région en utilisant des méthodes statistiques appropriées : Echantillonnage aléatoire simple et stratifié
-                    Nous avons ensuite travailler sur les données du projet universitaire mise en œuvre d'une enquête afin de trouver des relations significatives entre la pratique sportive des étudiants et certaines de leurs caractéristiques.
-                    Tout ce travaille à été finalisé par la rédaction d'un document de synthèse. <br><br>
-       
-                    <h3>Apprentissages critiques</h3>
-                    <ul>
-                        <li>AC12.01 | Réaliser que les sources de données ont des caractéristiques propres à considérer (variation, précision, mise à jour...)</li>
-                        <li>AC12.02 | Comprendre qu’une analyse correcte ne peut émaner que de données propres et préparées</li>
-                        <li>AC12.05 | Comprendre l’intérêt de l’utilisation d’un modèle probabiliste</li>
-                        <li>AC12.06 | Appréhender la notion de fluctuation d’échantillonnage, notamment à l’aide de simulations probabilistes</li>
-                    </ul>      
+
+                <div id="details11" class="popup-details">
+                    <div class="container">
+                        <span class="close">&times;</span>
+                        <div class="row contenu">
+                        <div class="col-md-6">
+                            <div class="titre">
+                                <h1> Projet Universitaire - Construction et présentation d'indicateurs de performance</h1>
+                            </div>
+                            <div class="membres">
+                                <ul>
+                                    <li>BENOIT Nathaël</li>
+                                    . 
+                                    <li>PITON Jérémy</li>
+                                </ul>
+                                <br><h5 class="project-date">Mai 2025</h5>
+                                <span class="projcompetences">Word / Excel / Canva</span>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="popup-text">
+                                Lors de ce projet, nous avons utilisé des données fournies sur Fleury-Michon afin de faire une analyse des indicateurs de performance. <br><br>
+                                Ce projet universitaire nous a menés à <u>traiter</u> les données et à <u>faire une analyse</u>. Cela nous a aussi menés à créer un document de synthèse et un tableau de bord reformulant les indicateurs clés. <br><br>
+                
+                                <h3>Organisation du projet</h3>
+                                Lors de notre projet universitaire, nous avons structuré notre travail en plusieurs étapes. Nous avons commencé par calculer les indicateurs clés à partir de fichiers comptables de l'entreprise. Nous avons ensuite réalisé une analyse des indicateurs et nous avons créé un document de synthèse sur l'entreprise Fleury-Michon.
+                                Nous avons aussi étudié une filiale de cette entreprise : Fleury-Michon LS. Nous avons alors réalisé un tableau de bord sur cette filiale. <br><br>
+                                
+                                <h3>Apprentissages critiques</h3>
+                                <ul>
+                                    <li>AC13.02 | Identifier l’importance de contextualiser ses données</li>
+                                    <li>AC13.03 | Mesurer l’importance de mettre en évidence des résultats clés par l’utilisation d’indicateurs pertinents</li>
+                                    <li>AC13.04 | Lors de la restitution des résultats, mesurer l’importance d’expliciter également la démarche suivie</li>
+                                    <li>AC13.05 | Comprendre les intérêts de la data visualisation et de l’infographie</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <embed src="./../projets/Projet_indicateurs.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="details12" class="popup-details">
+                    <div class="container">
+                        <span class="close">&times;</span>
+                        <div class="row contenu">
+                        <div class="col-md-6">
+                            <div class="titre">
+                                <h1> Projet Universitaire - Analyse de données, reporting et datavisualisation</h1>
+                            </div>
+                            <div class="membres">
+                                <ul>
+                                    <li>BENOIT Nathaël</li>
+                                    . 
+                                    <li>BABIN Paul</li>
+                                    .
+                                    <li>GASSE Armand-Valentin</li>
+                                    . 
+                                    <li>DIOUF Mariama</li>
+                                </ul>
+                                <br><h5 class="project-date">Mai-Juin 2025</h5>
+                                <span class="projcompetences">Word / PowerPoint / Excel / Python / BigQuery</span>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="popup-text">
+                                Lors de ce projet final, nous avons utilisé des données fournies par Calyxis, l'observatoire MaVie, afin de faire 
+                                une analyse des données, un reporting et une datavisualisation. <br><br>
+                                Ce projet universitaire nous a menés à <u>traiter</u> les données, à <u>faire une interface utilisateur</u>, à 
+                                <u>faire une analyse</u> et à <u>faire une datavisualisation</u>. Ce projet nous a aussi menés à faire une présentation 
+                                orale de notre travail en anglais et à réaliser notre projet de façon agile.
+                                Cela nous a menés par la suite à créer des documents de synthèse et un bilan pour rédiger notre travail.<br><br>
+
+                                <h3>Organisation du projet</h3>
+                                Lors de notre projet universitaire, nous avons structuré notre travail en plusieurs étapes. 
+                                Nous avons commencé par récupérer les données fournies par Calyxis et les avons organisées. 
+                                Nous avons réparti les rôles entre les membres de l'équipe pour que chacun puisse se concentrer sur une partie du projet.
+                                Nous avons ensuite réalisé un programme Python pour traiter les données, arranger toutes les colonnes qui ne convenaient pas dans le dataframe,
+                                et créer une interface utilisateur pour interagir avec les données. Nous avons ensuite réalisé une analyse des données et créé des graphiques 
+                                pour visualiser les résultats. Enfin, nous avons rédigé un document de synthèse, une vidéo et un bilan pour présenter notre travail. 
+                                Cet outil que nous avons réalisé est un outil dynamique : pour chaque fichier ayant la même structure, le traitement des données 
+                                et le tableau de bord se feront automatiquement par rapport aux nouvelles données.<br><br>
+                                
+                                <h3>Apprentissages critiques</h3>
+
+                                <ul>
+                                    <li>Correctement interpréter et prendre en compte le besoin du commanditaire ou du client</li>
+                                    <li>Respecter les formalismes de notation</li>
+                                    <li>Connaître la syntaxe des langages et savoir l’utiliser</li>
+                                    <li>Mesurer l’importance de maîtriser la structure des données à exploiter</li>
+                                    <li>Comprendre les structures algorithmiques de base et leur contexte d’usage</li>
+                                    <li>Prendre conscience de l’intérêt de la programmation</li>
+                                    <li>Réaliser que les sources de données ont des caractéristiques propres à considérer (variation, précision, mise à jour...)</li>
+                                    <li>Comprendre qu’une analyse correcte ne peut émaner que de données propres et préparées</li>
+                                    <li>Comprendre l’intérêt des synthèses numériques et graphiques pour décrire une variable statistique</li>
+                                    <li>Comprendre l’intérêt des synthèses numériques et graphiques pour mettre en évidence des liaisons entre variables.</li>
+                                    <li>Comprendre l’intérêt de l’utilisation d’un modèle probabiliste</li>
+                                    <li>Appréhender la notion de fluctuation d’échantillonnage, notamment à l’aide de simulations probabilistes</li>
+                                    <li>Prendre connaissance des biais rencontrés dans la mise en place d’une enquête</li>
+                                    <li>Identifier l’importance de contextualiser ses données</li>
+                                    <li>Mesurer l’importance de mettre en évidence des résultats clés par l’utilisation d’indicateurs pertinents</li>
+                                    <li>Lors de la restitution des résultats, mesurer l’importance d’expliciter également la démarche suivie</li>
+                                    <li>Comprendre les intérêts de la data visualisation et de l’infographie</li>
+                                    <li>Mesurer l’importance d’une expression précise et nuancée dans la communication en français et dans une langue étrangère des résultats</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                <embed src="./../projets/Projet_final.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive popup-pdf-tall" />
+                            </div>
+                            <br><br>
+                            <div>
+                                <figcaption class="blockquote-footer popup-caption">
+                                    Tutoriel vidéo de l'outil mis en place
+                                </figcaption>
+                                <video controls class="popup-video">
+                                    <source src="./../projets/Projet_final.mp4" type="video/mp4">
+                                    Votre navigateur ne supporte pas la lecture vidéo.
+                                </video>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <embed src="./../projets/Projet_Estimation.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
-            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="vert">
-        <div id="projects" class="container">
-            <div class="row contenu">
-                <div class="col-md-6 order-md-2 order-1">
-                    <h1>Concours & Projet</h1>
-                    <p>Dans le cadre de nos cours de Power BI, Excel et autres logiciels de datavisualisation, nous avons dû réaliser
-                        un concours entre tous les BUT SD de France.</p>
-                    <br>
-                    <figcaption class="blockquote-footer">
-                        <a href="#details10" class="bouton" type="button" data-details="details10"> En savoir plus</a>
-                    </figcaption>       
-                </div>
-                <div class="col-md-6 order-md-1 order-2">
-                    <img src="./../images/insee.jpg" alt="insee" class="img-fluid rounded">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="details10" class="popup-details container" >
-        <span class="close">&times;</span>
-        <div class="row contenu">
-            <div class="col-md-6">
-                <div class="titre">
-                    <h1> Projet Universitaire - Concours Dataviz</h1>
-                </div>
-                <div class="membres">
-                    <ul>
-                        <li>BENOIT Nathaël</li>
-                        . 
-                        <li>GASSE Armand-Valentin</li>
-                        .
-                        <li>PITON Jérémy</li>
-                        . 
-                        <li>NDJOYE Jérémie</li>
-                        . 
-                        <li>VION Antonin</li>
-                    </ul>
-                    <br><h5 style="display: inline;">
-                        22 Mai 2025
-                    </h5>
-                    <span class="projcompetences">Excel / PowerBI / Canva</span>
-                </div>
-                <br>
-                <br>
-                <div class="popup-text">
-                    Lors de ce concours national, d'une journée, avec l'ensemble des BUT Science des données et l'INSEE, nous avons utilisé des données 
-                    provenant du site de l'INSEE afin de faire une datavisualisation sur les jeunes de 15 à 29 ans. <br><br>
-                    Ce projet universitaire nous a permis de renforcer notre esprit d’équipe en collaborant dans une ambiance à la fois conviviale et stimulante tout en travaillant sur un projet concret.
-                    <h3>Organisation du projet</h3>
-                    Lors de ce concours, nous avons structuré notre travail en plusieurs étapes. Nous avons commencé par 
-                    choisir un thème et une problématique. Nous avons choisi de travailler sur la population dans la "diagonale du vide" pour voir des différences avec le reste de la France.
-                    Nous avons ensuite réalisé des graphiques pour illustrer les données que nous avons étudié. En fin nous avons réalisé une infographie pour répondre a notre problématique de manière visuelle. <br><br>
-       
-                    <h3>Apprentissages critiques</h3>
-                    <ul>
-                        <li>AC11.01 | Correctement interpréter et prendre en compte le besoin du commanditaire ou du client</li>
-                        <li>AC11.04 | Mesurer l’importance de maîtriser la structure des données à exploiter</li>
-                        <li>AC12.02 | Comprendre qu’une analyse correcte ne peut émaner que de données propres et préparées</li>
-                        <li>AC12.03 | Comprendre l’intérêt des synthèses numériques et graphiques pour décrire une variable statistique</li>
-                        <li>AC12.04 | Comprendre l’intérêt des synthèses numériques et graphiques pour mettre en évidence des liaisons entre variables.</li>
-                        <li>AC13.02 | Identifier l’importance de contextualiser ses données</li>
-                        <li>AC13.02 | Identifier l’importance de contextualiser ses données</li>
-                        <li>AC13.05 | Comprendre les intérêts de la data visualisation et de l’infographie</li>
-                        <li>AC13.06 | Mesurer l’importance d’une expression précise et nuancée dans la communication en français et dans une langue étrangère des résultats</li>
-                    </ul>
-                    <h3>Victoire</h3>
-                    À la suite de la réalisation du projet, ce dernier a été notés. Nous avons remporté la victoire de la meilleure visualisation 
-                    de données au sein du BUT SD de Niort. Nous passons en national contre les autres gagnants des autres BUT SD de France.
-                    <a href="#details10_2" class="bouton" type="button" data-details="details10_2"> Passage national</a><br><br>
-                    
-                </div>
-                </div>
-                <div class="col-md-6">
-                    <embed src="./../projets/Projet_concoursDataviz.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="details10_2" class="popup-details container" >
-        <span class="close">&times;</span>
-        <div class="row contenu">
-            <div class="col-md-12">
-                <video controls style="width:100%; height: auto; border-radius: 16px;">
-                    <source src="./../projets/Projet_concoursDataviz.mp4" type="video/mp4">
-                    Votre navigateur ne supporte pas la lecture vidéo.
-                </video>
-                <br><br>
-            </div>
-            <hr>
-            <div class="col-md-6">
-                <br>
-                <h3>Victoire en National</h3>
-                <p> Le concours a publié ses résultats le 12 juin 2025. Notre équipe, victorieuse dans le cadre du BUT Science des données à Niort, a terminé en première position au niveau national devant Grenoble et Dole ! Ce projet a été pour nous une véritable aventure et exploration, tant sur le plan du projet que de la cohésion surprenante au sein de l'équipe.  </p>
-            </div>
-            <div class="col-md-6">
-                <embed src="./../projets/Projet_concoursDataviz_victoire.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" style="width:100%; height:400px;"/>
-            </div>
-        </div>
-    </div>
-
-    <div id="projects" class="container">
-        <div class="row contenu">
-            <div class="col-md-6">
-                <h1>Indicateurs & Analyse</h1>
-                <p>Dans le cadre de nos cours de gestion, nous devions faire une étude sur l'entreprise Fleury-Michon.</p>
-                <br>
-                <figcaption class="blockquote-footer">
-                    <a href="#details11" class="bouton" type="button" data-details="details11"> En savoir plus</a>
-                </figcaption>       
-            </div>
-            <div class="col-md-6">
-                <img src="./../images/indicateurs.jpg" alt="indicateurs" class="img-fluid rounded">
-            </div>
-        </div>
-    </div>
-
-    <div id="details11" class="popup-details container" >
-        <span class="close">&times;</span>
-        <div class="row contenu">
-            <div class="col-md-6">
-                <div class="titre">
-                    <h1> Projet Universitaire - Construction et présentation d'indicateurs de performance</h1>
-                </div>
-                <div class="membres">
-                    <ul>
-                        <li>BENOIT Nathaël</li>
-                        . 
-                        <li>PITON Jérémy</li>
-                    </ul>
-                    <br><h5 style="display: inline;">Mai 2025</h5>
-                    <span class="projcompetences">Word / Excel / Canva</span>
-                </div>
-                <br>
-                <br>
-                <div class="popup-text">
-                    Lors de ce projet, nous avons utilisé des données fournies sur Fleury-Michon afin de faire une analyse des indicateurs de performance. <br><br>
-                    Ce projet universitaire nous a menés à <u>traiter</u> les données et à <u>faire une analyse</u>. Cela nous a aussi menés à créer un document de synthèse et un tableau de bord reformulant les indicateurs clés. <br><br>
-    
-                    <h3>Organisation du projet</h3>
-                    Lors de notre projet universitaire, nous avons structuré notre travail en plusieurs étapes. Nous avons commencé par calculer les indicateurs clés à partir de fichiers comptables de l'entreprise. Nous avons ensuite réalisé une analyse des indicateurs et nous avons créé un document de synthèse sur l'entreprise Fleury-Michon.
-                    Nous avons aussi étudié une filiale de cette entreprise : Fleury-Michon LS. Nous avons alors réalisé un tableau de bord sur cette filiale. <br><br>
-                    
-                    <h3>Apprentissages critiques</h3>
-                    <ul>
-                        <li>AC13.02 | Identifier l’importance de contextualiser ses données</li>
-                        <li>AC13.03 | Mesurer l’importance de mettre en évidence des résultats clés par l’utilisation d’indicateurs pertinents</li>
-                        <li>AC13.04 | Lors de la restitution des résultats, mesurer l’importance d’expliciter également la démarche suivie</li>
-                        <li>AC13.05 | Comprendre les intérêts de la data visualisation et de l’infographie</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <embed src="./../projets/Projet_indicateurs.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
-            </div>
-        </div>
-    </div>
-
-    <div class="vert">
-        <div id="projects" class="container">
-            <div class="row contenu">
-                <div class="col-md-6 order-md-2 order-1">
-                    <h1>Dataviz & Projet Final</h1>
-                    <p>Dans le cadre de tous les cours de l'année, nous devions réaliser un gros projet pour finir l'année universitaire.</p>
-                    <br>
-                    <figcaption class="blockquote-footer">
-                        <a href="#details12" class="bouton" type="button" data-details="details12"> En savoir plus</a>
-                    </figcaption>       
-                </div>
-                <div class="col-md-6 order-md-1 order-2">
-                    <img src="./../images/final.png" alt="finalproject" class="img-fluid rounded">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="details12" class="popup-details container" >
-        <span class="close">&times;</span>
-        <div class="row contenu">
-            <div class="col-md-6">
-                <div class="titre">
-                    <h1> Projet Universitaire - Analyse de données, reporting et datavisualisation</h1>
-                </div>
-                <div class="membres">
-                    <ul>
-                        <li>BENOIT Nathaël</li>
-                        . 
-                        <li>BABIN Paul</li>
-                        .
-                        <li>GASSE Armand-Valentin</li>
-                        . 
-                        <li>DIOUF Mariama</li>
-                    </ul>
-                    <br><h5 style="display: inline;">Mai-Juin 2025</h5>
-                    <span class="projcompetences">Word / PowerPoint / Excel / Python / BigQuery</span>
-                </div>
-                <br>
-                <br>
-                <div class="popup-text">
-                    Lors de ce projet final, nous avons utilisé des données fournies par Calyxis, l'observatoire MaVie, afin de faire 
-                    une analyse des données, un reporting et une datavisualisation. <br><br>
-                    Ce projet universitaire nous a menés à <u>traiter</u> les données, à <u>faire une interface utilisateur</u>, à 
-                    <u>faire une analyse</u> et à <u>faire une datavisualisation</u>. Ce projet nous a aussi menés à faire une présentation 
-                    orale de notre travail en anglais et à réaliser notre projet de façon agile.
-                    Cela nous a menés par la suite à créer des documents de synthèse et un bilan pour rédiger notre travail.<br><br>
-
-                    <h3>Organisation du projet</h3>
-                    Lors de notre projet universitaire, nous avons structuré notre travail en plusieurs étapes. 
-                    Nous avons commencé par récupérer les données fournies par Calyxis et les avons organisées. 
-                    Nous avons réparti les rôles entre les membres de l'équipe pour que chacun puisse se concentrer sur une partie du projet.
-                    Nous avons ensuite réalisé un programme Python pour traiter les données, arranger toutes les colonnes qui ne convenaient pas dans le dataframe,
-                    et créer une interface utilisateur pour interagir avec les données. Nous avons ensuite réalisé une analyse des données et créé des graphiques 
-                    pour visualiser les résultats. Enfin, nous avons rédigé un document de synthèse, une vidéo et un bilan pour présenter notre travail. 
-                    Cet outil que nous avons réalisé est un outil dynamique : pour chaque fichier ayant la même structure, le traitement des données 
-                    et le tableau de bord se feront automatiquement par rapport aux nouvelles données.<br><br>
-                    
-                    <h3>Apprentissages critiques</h3>
-
-                    <ul>
-                        <li>Correctement interpréter et prendre en compte le besoin du commanditaire ou du client</li>
-                        <li>Respecter les formalismes de notation</li>
-                        <li>Connaître la syntaxe des langages et savoir l’utiliser</li>
-                        <li>Mesurer l’importance de maîtriser la structure des données à exploiter</li>
-                        <li>Comprendre les structures algorithmiques de base et leur contexte d’usage</li>
-                        <li>Prendre conscience de l’intérêt de la programmation</li>
-                        <li>Réaliser que les sources de données ont des caractéristiques propres à considérer (variation, précision, mise à jour...)</li>
-                        <li>Comprendre qu’une analyse correcte ne peut émaner que de données propres et préparées</li>
-                        <li>Comprendre l’intérêt des synthèses numériques et graphiques pour décrire une variable statistique</li>
-                        <li>Comprendre l’intérêt des synthèses numériques et graphiques pour mettre en évidence des liaisons entre variables.</li>
-                        <li>Comprendre l’intérêt de l’utilisation d’un modèle probabiliste</li>
-                        <li>Appréhender la notion de fluctuation d’échantillonnage, notamment à l’aide de simulations probabilistes</li>
-                        <li>Prendre connaissance des biais rencontrés dans la mise en place d’une enquête</li>
-                        <li>Identifier l’importance de contextualiser ses données</li>
-                        <li>Mesurer l’importance de mettre en évidence des résultats clés par l’utilisation d’indicateurs pertinents</li>
-                        <li>Lors de la restitution des résultats, mesurer l’importance d’expliciter également la démarche suivie</li>
-                        <li>Comprendre les intérêts de la data visualisation et de l’infographie</li>
-                        <li>Mesurer l’importance d’une expression précise et nuancée dans la communication en français et dans une langue étrangère des résultats</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div>
-                    <embed src="./../projets/Projet_final.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" style="width:100%; height:1100px;" />
-                </div>
-                <br><br>
-                <div>
-                    <figcaption class="blockquote-footer">
-                        Tutoriel vidéo de l'outil mis en place
-                    </figcaption>
-                    <video controls style="width:100%; height: auto; border-radius: 16px;">
-                        <source src="./../projets/Projet_final.mp4" type="video/mp4">
-                        Votre navigateur ne supporte pas la lecture vidéo.
-                    </video>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <!-- Footer -->
     <footer>
-        &copy; 2025 Portfolio BENOIT Nathaël
+        <div class="footer-content">
+            <nav class="footer-nav">
+                <a href="../index.html#accueil">Accueil</a>
+                <a href="../index.html#a-propos">À propos</a>
+                <a href="../index.html#projets">Projets</a>
+                <a href="../index.html#bilan">Bilan</a>
+                <a href="./Contact.html">Contact</a>
+            </nav>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nathaël BENOIT - Tous droits réservés</p>
+            </div>
+        </div>
     </footer>
+
     <script src="./../scripts/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+    // Modal management
+    function openModal(id) {
+        const modal = document.getElementById(id);
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        
+        // Fermer en cliquant en dehors du contenu
+        modal.onclick = function(event) {
+            if (event.target === modal) {
+                closeModal(id);
+            }
+        }
+    }
+    
+    function closeModal(id) {
+        const modal = document.getElementById(id);
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+    
+    // Fermer les modals avec le bouton X
+    document.querySelectorAll('.popup-details .close').forEach(btn => {
+        btn.onclick = function() {
+            const modal = this.closest('.popup-details');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    // Fermer avec la touche Echap
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            document.querySelectorAll('.popup-details').forEach(modal => {
+                if (modal.style.display === 'block') {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+    });
+    </script>
 </body>
 </html>

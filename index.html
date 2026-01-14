@@ -3,91 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio BENOIT Nathaël</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <title>Nathaël BENOIT - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    <header>
-        <div class="header-style hero">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-12 d-flex justify-content-end">
-                        <button id="theme-toggle" class="theme-toggle" aria-label="Basculer thème">
-                            <i class="fas fa-moon"></i>
-                        </button>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#accueil" class="navbar-brand">NB</a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-nav">
+                <li><a href="#accueil" class="active">Accueil</a></li>
+                <li><a href="#a-propos">À propos</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#bilan">Bilan</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Bonjour, je suis<br>Nathaël BENOIT</h1>
+                    <p class="subtitle">Étudiant en 2ème année de BUT Science des Données</p>
+                    <p>Passionné par l'analyse de données et les nouvelles technologies, je développe mes compétences à travers divers projets universitaires et personnels.</p>
+                    <div style="display: flex; gap: 1rem; margin-top: 2rem;" class="hero-buttons">
+                        <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                        <a href="#contact" class="btn btn-outline">Me contacter</a>
                     </div>
-                    <div class="col-lg-7">
-                        <h1 class="hero-title">Nathaël BENOIT</h1>
-                        <p class="hero-subtitle mt-2">Étudiant en BUT Science des données à l'Université de Poitiers. Passionné par l'analyse, la visualisation et les projets qui donnent vie aux données.</p>
-                        <a class="btn btn-primary-soft" href="#about">Découvrir mon profil</a>
-                        <a class="btn btn-outline-light" href="./pages/Contact.html">Contactez-moi</a><br><br>
-                        <a class="btn btn-outline-light " href="./pages/ExpPro.html"><i class="fas fa-briefcase me-1"></i> Expériences pro</a>
-                        <a class="btn btn-outline-light " href="./pages/BUT1.html#projects"><i class="fas fa-graduation-cap me-1"></i> BUT SD 1</a>
-                        <a class="btn btn-outline-light " href="./pages/BUT2.html"><i class="fas fa-graduation-cap me-1"></i> BUT SD 2</a>
-                        <a class="btn btn-outline-light " href="./pages/BUT3.html"><i class="fas fa-graduation-cap me-1"></i> BUT SD 3</a>
-                        <a class="btn btn-outline-light " href="./pages/Bilan.html"><i class="fas fa-heart me-1"></i> Bilan</a>
-                    </div> 
-                    <div class="col-lg-5 mt-4 mt-lg-0 text-center">
-                        <img src="./images/profil.png" alt="Profil de Nathaël BENOIT" class="img-fluid" >
-                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="./images/profil.png" alt="Nathaël BENOIT">
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <section id="about" class="section section-gradient">
+    <!-- À propos Section -->
+    <section id="a-propos" class="section bg-light">
         <div class="container">
-            <div class="row align-items-center g-4">
-                <div class="col-md-6 reveal">
-                    <h1>Nathaël BENOIT</h1>
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-grid">
+                <div class="about-content">
+                    <h3><i class="fas fa-user"></i> Formation</h3>
+                    <p><strong>BUT Science des Données</strong><br>IUT de Niort - Université de Poitiers</p>
+                    
+                    <h3 class="mt-4"><i class="fas fa-lightbulb"></i> Mon parcours</h3>
                     <p>Bonjour, je m'appelle <strong>Nathaël BENOIT</strong>. Je suis étudiant en BUT Science des données à l'Université de Poitiers.</p>
                     <p>Passionné par l'analyse de données et les nouvelles technologies, je m'efforce de développer mes compétences à travers divers projets universitaires et personnels.</p>
                     <p>Dans cette formation, j'ai acquis des compétences importantes dans certains domaines comme la programmation, les statistiques, et l'utilisation d'outils de data analyse.</p>
                 </div>
-                <div class="col-md-6 reveal">
-                    <img src="./images/iut.jpg" alt="IUT Niort" class="img-fluid rounded shadow">
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-code"></i> Compétences</h4>
+                        <ul>
+                            <li>Python, R, SQL</li>
+                            <li>Machine Learning</li>
+                            <li>Statistiques</li>
+                            <li>Power BI</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4><i class="fas fa-chart-line"></i> Spécialités</h4>
+                        <ul>
+                            <li>Analyse de données</li>
+                            <li>Datavisualisation</li>
+                            <li>Reporting</li>
+                            <li>Data Cleaning</li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
+            <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">R</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Power BI</span>
+                <span class="tech-tag">Excel VBA</span>
+                <span class="tech-tag">Statistiques</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Git</span>
             </div>
         </div>
     </section>
 
-    <section id="passion" class="section section-gradient">
+    <!-- Passion Section -->
+    <section class="section">
         <div class="container">
-            <div class="row align-items-center g-4">
-                <div class="col-md-6 order-md-1 order-2 reveal">
-                    <img src="./images/tel.jpg" alt="Téléphone" class="img-fluid rounded shadow">
-                </div>
-                <div class="col-md-6 order-md-2 order-1 reveal">
-                    <h1>Passion pour l'informatique</h1>
+            <div class="about-grid">
+                <div class="about-content">
+                    <h3><i class="fas fa-laptop-code"></i> Passion pour l'informatique</h3>
                     <p>Je me suis intéressé à l'informatique dès tout petit où j'ai été plongé dans les jeux vidéo en jouant avec ma famille et mes amis.</p>
                     <p>Pendant le Covid-19, j'ai eu le temps de m'amuser à démonter des ordinateurs et des téléphones. C'est ainsi que ma passion pour l'informatique est née.</p>
                     <p>Pour le bac, j'ai donc choisi les spécialités mathématiques et numérique et sciences de l'informatique pour suivre ma passion.</p>
                 </div>
+                <div class="about-content">
+                    <h3><i class="fas fa-bicycle"></i> Le Cyclisme</h3>
+                    <p>En plus de l'informatique, je suis assez sportif. Je suis passionné par la pratique du vélo en tout genre, que ce soit du vélo de route ou encore du VTT.</p>
+                    <p>Je regarde certaines compétitions de VTT mais surtout le tour de France.</p>
+                    <p>J'essaie de pratiquer tout type de sport le plus souvent possible que ce soit seul ou avec mes amis. Durant l'année, j'ai fait du badminton au sein de l'association sportive de l'université (le SUAPS).</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="cycling" class="section section-gradient">
+    <!-- Projets Section -->
+    <section id="projets" class="section bg-light">
         <div class="container">
-            <div class="row align-items-center g-4">
-                <div class="col-md-6 reveal">
-                    <h1>Le Cyclisme</h1>
-                    <p>En plus de l'informatique, je suis assez sportif. Je suis passionné par la pratique du vélo en tout genre, que ce soit du vélo de route ou encore du VTT. Je regarde certaines compétitions de VTT mais surtout le tour de France.</p>
-                    <p>J'essaie de pratiquer tout type de sport le plus souvent possible que ce soit seul ou avec mes amis. Durant l'année, j'ai fait du badminton au sein de l'association sportive de l'université (le SUAPS).</p>
+            <h2 class="section-title">Mes Projets</h2>
+            <p class="text-center mb-4" style="color: #6b7280; max-width: 700px; margin: 0 auto 3rem;">
+                Découvrez mes réalisations universitaires organisées par année d'étude
+            </p>
+            
+            <div class="projects-grid">
+                <!-- Liens vers les pages de projets -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <span class="project-year">1ère année</span>
+                        <h3>Projets BUT SD 1</h3>
+                        <p>Découvrez mes projets de première année en Science des Données</p>
+                        <div class="project-links">
+                            <a href="./pages/BUT1.html" class="project-link primary">Voir les projets</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 reveal">
-                    <img src="./images/velo1.jpg" alt="Cyclisme" class="img-fluid rounded shadow">
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <span class="project-year">2ème année</span>
+                        <h3>Projets BUT SD 2</h3>
+                        <p>Explorez mes réalisations de deuxième année</p><br>
+                        <div class="project-links">
+                            <a href="./pages/BUT2.html" class="project-link primary">Voir les projets</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <span class="project-year">3ème année</span>
+                        <h3>Projets BUT SD 3</h3>
+                        <p>Découvrez mes projets les plus avancés</p><br>
+                        <div class="project-links">
+                            <a href="./pages/BUT3.html" class="project-link primary">Voir les projets</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <span class="project-year">Professionnel</span>
+                        <h3>Expériences Professionnelles</h3>
+                        <p>Mon parcours professionnel et mes stages</p>
+                        <div class="project-links">
+                            <a href="./pages/ExpPro.html" class="project-link primary">En savoir plus</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Bilan Section -->
+    <section id="bilan" class="section">
+        <div class="container">
+            <h2 class="section-title">Mon Bilan Personnel</h2>
+            <p class="text-center mb-4" style="color: #6b7280; max-width: 700px; margin: 0 auto 3rem;">
+                Cette année en BUT Science des Données représente un nouveau départ passionnant dans mon parcours académique et professionnel.
+            </p>
+            
+            <div class="bilan-grid">
+                <div class="bilan-card">
+                    <h3><i class="fas fa-route"></i> Mon parcours</h3>
+                    <p>Après mon Bac, j'ai entrepris ce BUT Science des Données avec l'envie d'apprendre et de me spécialiser dans l'analyse de données...</p>
+                </div>
+                
+                <div class="bilan-card">
+                    <h3><i class="fas fa-trophy"></i> Mes réussites</h3>
+                    <p>Cette année a été riche en apprentissages. J'ai pu progresser dans les domaines de la programmation, des statistiques et de l'analyse de données...</p>
+                </div>
+                
+                <div class="bilan-card">
+                    <h3><i class="fas fa-rocket"></i> Projets futurs</h3>
+                    <p>Mon objectif est d'approfondir mes compétences et de participer à des projets innovants dans le domaine de la data science...</p>
+                </div>
+                
+                <div class="bilan-card">
+                    <h3><i class="fas fa-briefcase"></i> Opportunités</h3>
+                    <p>Je suis intéressé par les opportunités professionnels qui me permettront d'appliquer mes connaissances...</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="./pages/Bilan.html" class="btn btn-secondary">Lire le bilan complet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Me Contacter</h2>
+            <p class="text-center mb-4" style="color: #6b7280; max-width: 700px; margin: 0 auto 3rem;">
+                N'hésitez pas à me contacter pour toute opportunité ou question !
+            </p>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>Email</h3>
+                    <a href="mailto:benoitnathael@gmail.com">benoitnathael@gmail.com</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <h3>Téléphone</h3>
+                    <p>+33 6 27 28 77 19</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/nathael-benoit/" target="_blank">linkedin.com/in/nathael-benoit</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fab fa-github"></i></div>
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/nathaelbenoit" target="_blank">github.com/nathaelbenoit</a>
+                </div>
+                
+                <!--<div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Adresse</h3>
+                    <p>Niort, France</p>
+                </div>-->
+            </div> 
+            
+            <div class="cv-download">
+                <h3>Télécharger mon CV</h3>
+                <p style="color: #6b7280; margin-bottom: 1.5rem;">Retrouvez l'ensemble de mon parcours et de mes compétences</p>
+                <a href="./images/CV Nathaël-BENOIT 2025.pdf" target="_blank" class="btn btn-secondary"><i class="fas fa-download"></i> Télécharger le CV</a>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        &copy; 2025 Portfolio BENOIT Nathaël
+        <div class="footer-content">
+            <nav class="footer-nav">
+                <a href="#accueil">Accueil</a>
+                <a href="#a-propos">À propos</a>
+                <a href="#projets">Projets</a>
+                <a href="#bilan">Bilan</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nathaël BENOIT - Tous droits réservés</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Scroll to top -->
+    <div class="scroll-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
     <script src="./scripts/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
