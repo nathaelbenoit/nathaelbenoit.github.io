@@ -12,10 +12,11 @@ html {
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
+    color: var(--text-dark);
     line-height: 1.6;
-    background: #fff;
+    background: var(--bg-primary);
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Variables CSS */
@@ -26,6 +27,25 @@ body {
     --text-light: #6b7280;
     --bg-light: #f9fafb;
     --border-color: #e5e7eb;
+    --bg-primary: #ffffff;
+    --surface: #ffffff;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+[data-theme="dark"] {
+    --primary-color: #3d8b8f;
+    --primary-dark: #2a6365;
+    --text-dark: #e5e7eb;
+    --text-light: #c7c9ce;
+    --bg-light: #1f2937;
+    --border-color: #374151;
+    --bg-primary: #111827;
+    --surface: #1f2937;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.3);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.3);
 }
 
 /* Navigation Sticky */
@@ -34,10 +54,11 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: #fff;
+    background: var(--bg-primary);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     z-index: 1000;
     transition: all 0.3s ease;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .navbar .container {
@@ -340,12 +361,13 @@ body {
 }
 
 .project-card {
-    background: #fff;
+    background: var(--surface);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-sm);
     transition: all 0.3s;
     cursor: pointer;
+    border: 1px solid var(--border-color);
 }
 
 .project-card:hover {
@@ -461,10 +483,11 @@ body {
 }
 
 .timeline-content {
-    background: #fff;
+    background: var(--surface);
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
 }
 
 .timeline-period {
@@ -492,10 +515,11 @@ body {
 }
 
 .bilan-card {
-    background: #fff;
+    background: var(--surface);
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
 }
 
 .bilan-card h3 {
@@ -545,12 +569,13 @@ body {
 }
 
 .contact-card {
-    background: #fff;
+    background: var(--surface);
     padding: 2rem;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-sm);
     transition: all 0.3s;
+    border: 1px solid var(--border-color);
 }
 
 .contact-card:hover {
@@ -722,13 +747,13 @@ footer {
 }
 
 .project-card-item {
-    background: #fff;
+    background: var(--surface);
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-color);
 }
 
 .project-card-item:hover {
@@ -767,7 +792,7 @@ footer {
 }
 
 .section-white {
-    background: #fff;
+    background: var(--surface);
     padding: 80px 0;
 }
 
@@ -814,7 +839,7 @@ footer {
 }
 
 .popup-details .container {
-    background-color: #ffffff;
+    background-color: var(--surface);
     color: var(--text-dark);
     padding: 50px;
     margin: auto;
@@ -825,6 +850,7 @@ footer {
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     position: relative;
+    border: 1px solid var(--border-color);
 }
 
 .popup-details .close {
@@ -1071,6 +1097,30 @@ footer {
     cursor: pointer;
 }
 
+/* Dark Mode Toggle */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle:hover {
+    background: var(--bg-light);
+    transform: rotate(20deg);
+}
+
+.theme-toggle i {
+    transition: transform 0.3s ease;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .navbar .container {
@@ -1081,16 +1131,21 @@ footer {
         display: block;
     }
     
+    .theme-toggle {
+        font-size: 1.1rem;
+    }
+    
     .navbar-nav {
         position: fixed;
         top: 70px;
         left: -100%;
         width: 100%;
-        background: #fff;
+        background: var(--bg-primary);
         flex-direction: column;
         padding: 2rem;
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
         transition: left 0.3s;
+        border-bottom: 1px solid var(--border-color);
     }
     
     .navbar-nav.active {

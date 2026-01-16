@@ -1,6 +1,35 @@
 // Navigation
 const navLinks = document.querySelectorAll('.navbar-nav a');
 
+// Dark Mode Toggle
+function toggleTheme() {
+    const html = document.documentElement;
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    
+    // Update icon
+    const themeIcon = document.querySelector('.theme-toggle i');
+    if (newTheme === 'dark') {
+        themeIcon.className = 'fas fa-sun';
+    } else {
+        themeIcon.className = 'fas fa-moon';
+    }
+}
+
+// Load theme preference on page load
+document.addEventListener('DOMContentLoaded', function() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    const themeIcon = document.querySelector('.theme-toggle i');
+    if (savedTheme === 'dark' && themeIcon) {
+        themeIcon.className = 'fas fa-sun';
+    }
+});
+
 // Toggle mobile menu
 function toggleMenu() {
     const navMenu = document.querySelector('.navbar-nav');
