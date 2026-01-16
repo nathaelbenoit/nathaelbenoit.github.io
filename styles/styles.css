@@ -131,6 +131,7 @@ body {
     color: rgba(255,255,255,0.8);
     font-size: 1.1rem;
     margin-bottom: 2rem;
+    text-align: justify;
 }
 
 .hero-buttons {
@@ -270,6 +271,7 @@ body {
     color: var(--text-light);
     margin-bottom: 1.5rem;
     line-height: 1.8;
+    text-align: justify;
 }
 
 .skills-grid {
@@ -653,7 +655,7 @@ footer {
 .stats .counter { 
     font-size: 2.5rem; 
     font-weight: 700; 
-    color: var(--primary);
+    color: var(--primary-color);
     display: block;
     margin-bottom: 0.5rem;
 }
@@ -1173,7 +1175,7 @@ footer {
 
 /* Selection */
 ::selection {
-    background-color: var(--primary);
+    background-color: var(--primary-color);
     color: #ffffff;
 }
 
@@ -1246,13 +1248,13 @@ footer {
 .contact-card:hover { 
     transform: translateY(-6px);
     box-shadow: var(--shadow-md);
-    border-color: var(--primary);
+    border-color: var(--primary-color);
 }
 
 .contact-card .icon { 
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: var(--primary);
+    color: var(--primary-color);
 }
 
 .contact-card h3 { 
@@ -1271,7 +1273,7 @@ footer {
 }
 
 .contact-card a:hover { 
-    color: var(--primary);
+    color: var(--primary-color);
 }
 
 .contact-form { 
@@ -1385,6 +1387,10 @@ footer {
         flex: 1 1 auto;
         height: 100%;
     }
+    .section-projects { 
+        padding-left: 3rem; 
+        padding-right: 3rem; 
+    }
 }
 
 /* Mobile adjustments */
@@ -1398,7 +1404,8 @@ footer {
         align-items: center;
         gap: 0.75rem;
     }
-    .popup-details { margin: 1.5rem; padding: 1.5rem; }
+    .popup-details { padding: 0; }
+    .popup-details .container { padding: 30px; max-width: 100%; border-radius: 0; }
     .contact-intro { padding-left: 1rem; padding-right: 1rem; }
     .contact-intro p { font-size: 1rem; }
     .contact-cards { padding-left: 1rem; padding-right: 1rem; grid-template-columns: 1fr; }
@@ -1406,6 +1413,10 @@ footer {
     .stats { gap: 1.5rem; }
     .section { padding: 70px 1.5rem; }
     .section .container { padding: 0 1rem; }
+    .section-projects { 
+        padding-left: 1.5rem; 
+        padding-right: 1.5rem; 
+    }
     .header-style img { max-width: 300px; }
     .btn { padding: 0.625rem 1.25rem; font-size: 0.9rem; }
     .contact-form { margin-top: 2rem; }
@@ -1419,6 +1430,8 @@ footer {
     .hero-title { font-size: clamp(2rem, 7vw, 2.6rem); }
     .hero-subtitle { font-size: clamp(1rem, 3vw, 1.15rem); }
     .hero-buttons { gap: 0.75rem; }
+    .popup-details { padding: 0; }
+    .popup-details .container { padding: 20px; max-width: 100%; border-radius: 0; }
 }
 
 @media (max-width: 576px) {
@@ -1428,6 +1441,8 @@ footer {
     .header-style { padding: 80px 1rem 56px; }
     .hero-buttons { width: 100%; }
     .hero-buttons .btn { width: 100%; text-align: center; }
+    .popup-details { padding: 0; }
+    .popup-details .container { padding: 15px; max-width: 100%; border-radius: 0; }
 }
 
 /* Empêche toute barre de défilement horizontale parasite */
@@ -1469,4 +1484,59 @@ embed, iframe, video { max-width: 100%; display: block; }
 
 .scroll-to-top svg {
     display: block;
+}
+
+/* Hero buttons styling */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Section intro text */
+.section-intro {
+    color: #6b7280;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+}
+
+/* CV download section */
+.cv-download-text {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+}
+
+/* Construction/Coming soon pages */
+.construction-icon {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.construction-title {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.construction-text {
+    color: var(--text-muted);
+    margin: 0 auto 2.5rem;
+    max-width: 600px;
+}
+
+/* Bilan custom grid */
+.bilan-custom-grid {
+    grid-template-columns: 1fr;
+}
+
+.bilan-card-custom {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.bilan-content-wrapper {
+    line-height: 1.8;
+    color: var(--text-muted);
 }

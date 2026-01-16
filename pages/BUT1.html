@@ -46,7 +46,7 @@
         <div class="container">
             <div class="projects-grid">
                 <!-- Projet 1 -->
-                <div class="project-card-item" onclick="openModal('details1')">
+                <div class="project-card-item" data-modal="details1">
                     <img src="./../images/montreal.jpg" alt="photo de Montréal">
                     <div class="project-card-content">
                         <h3>Oral & Anglais</h3>
@@ -56,7 +56,7 @@
                 </div>
 
                 <!-- Projet 2 -->
-                <div class="project-card-item" onclick="openModal('details2')">
+                <div class="project-card-item" data-modal="details2">
                     <img src="./../images/hautevienneNFP.jpg" alt="photo Haute-Vienne">
                     <div class="project-card-content">
                         <h3>Écrit & Économie</h3>
@@ -151,7 +151,7 @@
                 </div>
 
                 <!-- Projet 3 -->
-                <div class="project-card-item" onclick="openModal('details3')">
+                <div class="project-card-item" data-modal="details3">
                     <img src="./../images/jsonCsv.jpg" alt="JsonPythonCsv">
                     <div class="project-card-content">
                         <h3>Python & JSON</h3>
@@ -161,7 +161,7 @@
                 </div>
                 
                 <!-- Projet 4 -->
-                <div class="project-card-item" onclick="openModal('details4')">
+                <div class="project-card-item" data-modal="details4">
                     <img src="./../images/vba-excel.jpg" alt="Excel-VBA">
                     <div class="project-card-content">
                         <h3>Excel & VBA</h3>
@@ -260,7 +260,7 @@
                 </div>
 
                 <!-- Projet 5 -->
-                <div class="project-card-item" onclick="openModal('details5')">
+                <div class="project-card-item" data-modal="details5">
                     <img src="./../images/enquete.jpeg" alt="Enquête Sport">
                     <div class="project-card-content">
                         <h3>Enquête & Sport</h3>
@@ -270,7 +270,7 @@
                 </div>
 
                 <!-- Projet 6 -->
-                <div class="project-card-item" onclick="openModal('details6')">
+                <div class="project-card-item" data-modal="details6">
                     <img src="./../images/portfolio.jpg" alt="portfolio">
                     <div class="project-card-content">
                         <h3>Portfolio</h3>
@@ -355,7 +355,7 @@
                 </div>
 
                 <!-- Projet 7 -->
-                <div class="project-card-item" onclick="openModal('details7')">
+                <div class="project-card-item" data-modal="details7">
                     <img src="./../images/baseDeDonnée.jpg" alt="Base de données">
                     <div class="project-card-content">
                         <h3>Base de données & IHM</h3>
@@ -365,7 +365,7 @@
                 </div>
 
                 <!-- Projet 8 -->
-                <div class="project-card-item" onclick="openModal('details8')">
+                <div class="project-card-item" data-modal="details8">
                     <img src="./../images/regression.png" alt="Régression">
                     <div class="project-card-content">
                         <h3>Logements & Régression</h3>
@@ -465,7 +465,7 @@
                 </div>
 
                 <!-- Projet 9 -->
-                <div class="project-card-item" onclick="openModal('details9')">
+                <div class="project-card-item" data-modal="details9">
                     <img src="./../images/echantillonnage.jpeg" alt="échantillonnage">
                     <div class="project-card-content">
                         <h3>Échantillonnage & Estimation</h3>
@@ -475,7 +475,7 @@
                 </div>
 
                 <!-- Projet 10 -->
-                <div class="project-card-item" onclick="openModal('details10')">
+                <div class="project-card-item" data-modal="details10">
                     <img src="./../images/insee.jpg" alt="insee">
                     <div class="project-card-content">
                         <h3>Concours & Projet 🏆</h3>
@@ -583,7 +583,7 @@
                                 <h3>Victoire</h3>
                                 À la suite de la réalisation du projet, ce dernier a été notés. Nous avons remporté la victoire de la meilleure visualisation 
                                 de données au sein du BUT SD de Niort. Nous passons en national contre les autres gagnants des autres BUT SD de France.
-                                <button onclick="openModal('details10_2')" class="bouton">Passage national</button><br><br>
+                                <button data-modal="details10_2" class="bouton">Passage national</button><br><br>
                                 
                             </div>
                             </div>
@@ -618,7 +618,7 @@
                 </div>
 
                 <!-- Projet 11 -->
-                <div class="project-card-item" onclick="openModal('details11')">
+                <div class="project-card-item" data-modal="details11">
                     <img src="./../images/indicateurs.jpg" alt="indicateurs">
                     <div class="project-card-content">
                         <h3>Indicateurs & Analyse</h3>
@@ -628,7 +628,7 @@
                 </div>
 
                 <!-- Projet 12 -->
-                <div class="project-card-item" onclick="openModal('details12')">
+                <div class="project-card-item" data-modal="details12">
                     <img src="./../images/final.png" alt="finalproject">
                     <div class="project-card-content">
                         <h3>Dataviz & Projet Final</h3>
@@ -783,47 +783,5 @@
     </footer>
 
     <script src="./../scripts/script.js"></script>
-    <script>
-    // Modal management
-    function openModal(id) {
-        const modal = document.getElementById(id);
-        modal.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-        
-        // Fermer en cliquant en dehors du contenu
-        modal.onclick = function(event) {
-            if (event.target === modal) {
-                closeModal(id);
-            }
-        }
-    }
-    
-    function closeModal(id) {
-        const modal = document.getElementById(id);
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
-    
-    // Fermer les modals avec le bouton X
-    document.querySelectorAll('.popup-details .close').forEach(btn => {
-        btn.onclick = function() {
-            const modal = this.closest('.popup-details');
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-    });
-    
-    // Fermer avec la touche Echap
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape') {
-            document.querySelectorAll('.popup-details').forEach(modal => {
-                if (modal.style.display === 'block') {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }
-            });
-        }
-    });
-    </script>
 </body>
 </html>
