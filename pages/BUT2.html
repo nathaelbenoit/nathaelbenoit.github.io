@@ -37,21 +37,449 @@
             <p class="hero-subtitle">Projets et apprentissages de deuxième année</p>
             <div class="hero-badges">
                 <span class="hero-badge">
-                    <i class="fas fa-hourglass-half"></i> En cours
+                    <i class="fas fa-project-diagram"></i> 8 Projets réalisés
                 </span>
+                <!-- <span class="hero-badge">
+                    <i class="fas fa-clock"></i> // Heures de formation
+                </span> -->
             </div>
         </div>
     </section>
 
-    <!-- Coming Soon Section -->
-    <section class="section-white">
-        <div class="container text-center">
-            <i class="fas fa-tools construction-icon"></i>
-            <h2 class="section-title construction-title">En construction</h2>
-            <p class="construction-text">
-                Les projets de BUT 2 seront ajoutés prochainement. Revenez bientôt pour découvrir mes nouvelles réalisations !
-            </p>
-            <a href="../index.html" class="bouton"><i class="fas fa-home"></i> Retour à l'accueil</a>
+   <!-- All Projects Grid -->
+    <section class="section-projects">
+        <div class="container">
+            <div class="projects-grid">
+                <!-- Projet 8 -->
+                <div class="project-card-item" onclick="openModal('details2')">
+                    <span class="project-badge">Concours</span>
+                    <img src="./../images/jefilmemaformation.jpg" alt="photo JFMF">
+                    <div class="project-card-content">
+                        <h3>Présentation & Formation</h3>
+                        <p>Dans le cadre de nos cours de communication, nous devions faire une présentation vidéo de notre formation.</p>
+                        <button class="bouton">En savoir plus</button>
+                    </div>
+                </div>
+
+                <!-- Projet 7 -->
+                <div class="project-card-item" onclick="openModal('details7')">
+                    <span class="project-badge">Projet universitaire</span>
+                    <img src="./../images/progWeb.jpg" alt="Base de données">
+                    <div class="project-card-content">
+                        <h3>API & Webscraping</h3>
+                        <p>Dans le cadre de nos cours de programmation web, nous devions créer des visuels à partir d'API et du webscraping.</p>
+                        <button class="bouton">En savoir plus</button>
+                    </div>
+                </div>
+
+                <!-- Projet 6 -->
+                <div class="project-card-item" onclick="openModal('details1')">
+                    <span class="project-badge">Projet</span>
+                    <img src="./../images/vba-appscript.png" alt="photo de vba-appscript">
+                    <div class="project-card-content">
+                        <h3>VBA & Apps Script</h3>
+                        <p>Dans le cadre de nos cours dans le parcours VCOD, nous devions faire un projet sur l'automatisation de tâches à l'aide de VBA et Google Apps Script.</p>
+                        <button class="bouton">En savoir plus</button>
+                    </div>
+                </div>
+
+                <!-- Projet 5 -->
+                <div class="project-card-item" onclick="openModal('details4')">
+                    <span class="project-badge">Projet</span>
+                    <img src="./../images/baseDeDonnée.jpg" alt="Modélisation SID">
+                    <div class="project-card-content">
+                        <h3>SQL & SID</h3>
+                        <p>Dans le cadre de nos cours de modélisation SID, nous devions créer une base de données pour une clinique dentaire.</p>
+                        <button class="bouton">En savoir plus</button>
+                    </div>
+                </div>
+
+                <!-- Projet 4 -->
+                <div class="project-card-item" onclick="openModal('details5')">
+                    <span class="project-badge">Projet universitaire</span>
+                    <img src="./../images/SerieTemp.png" alt="Série Temporelle">
+                    <div class="project-card-content">
+                        <h3>Uranium & Statistiques</h3>
+                        <p>Dans le cadre de nos cours de séries temporelles, nous avons étudié des données liées à l'uranium et à la variation des prix associées.</p>
+                        <button class="bouton">En savoir plus</button>
+                    </div>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="project-card-item" onclick="openModal('details6')">
+                    <span class="project-badge">Projet</span>
+                    <img src="./../images/Talend.jpg" alt="Talend">
+                    <div class="project-card-content">
+                        <h3>Projet & ETL</h3>
+                        <p>Dans le cadre de nos cours de talend, nous devions réaliser un projet d'extraction, transformation et chargement de données.</p>
+                        <button class="bouton">En savoir plus</button>
+                    </div>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="project-card-item" onclick="openModal('details8')">
+                    <span class="project-badge">Projet</span>
+                    <img src="./../images/webDynamique.png" alt="Régression">
+                    <div class="project-card-content">
+                        <h3>Web & SNCF</h3>
+                        <p>Dans le cadre de nos cours de programmation web, nous devions réaliser un site web dynamique avec des données open source</p>
+                        <button class="bouton">En savoir plus</button>
+                    </div>
+                </div>
+
+                <!-- Projet 1 -->
+                <div class="project-card-item" onclick="openModal('details3')">
+                    <span class="project-badge">Projet universitaire</span>
+                    <img src="./../images/droitsRGPD.jpg" alt="RGPD">
+                    <div class="project-card-content">
+                        <h3>Droits & RGPD</h3>
+                        <p>Dans le cadre de nos cours de droits, nous devions faire un rendu visuel sur le RGPD et les droits associés.</p>
+                        <button class="bouton">En savoir plus</button>
+                    </div>
+                </div>
+
+                <div id="details1" class="popup-details">
+                    <div class="container">
+                        <span class="close">&times;</span>
+                        <div class="row contenu">
+                        <div class="col-md-6">
+                            <div class="titre">
+                                <h1> Projet - Automatisation du traitement des données dans un tableur</h1>
+                            </div>
+                            <div class="membres">
+                                <ul>
+                                    <li>BENOIT Nathaël</li>
+                                    ⋅
+                                    <li>BRUNET--LARE Rafaël</li>
+                                </ul>
+                            <br>
+                            <h5 class="project-date">
+                                Décembre 2025
+                            </h5>
+                            <span class="projcompetences">Excel, VBA, Google Apps Script</span>
+                            </div>
+                            <div class="popup-text">
+                                Lors de ce projet, nous avons créé une application automatisant la collecte et l'analyse de données de satisfaction sur la formation sur de Google Sheets et Excel. <br><br>
+                                Ce projet m'a permis de développer mes compétences en programmation VBA et Google Apps Script, ainsi que ma capacité à travailler en équipe pour atteindre un objectif commun. <br><br>
+                            
+                                <h3>Organisation du projet</h3>
+                                Nous avons créé des formulaires HTML et VBA pour collecter les données de satisfaction des étudiants. Les données collectées étaient ensuite stockées dans des feuilles de calcul Google Sheets et Excel. Nous avons utilisé Google Apps Script pour automatiser la collecte des données à partir des formulaires HTML et VBA pour analyser les données dans Excel. <br><br>
+                                Un tableau de bord a été créé pour visualiser les résultats de l'analyse des données, permettant aux formateurs de prendre des décisions éclairées pour améliorer la qualité de la formation. <br><br>
+                                
+                                <h3>Apprentissages critiques</h3>
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <embed src="./../projets/AppsScript_Excel.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
+                            <a href="./../projets/AppsScript_Excel.zip" class="bouton">Télécharger les fichiers</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="details2" class="popup-details">
+                    <div class="container">
+                        <span class="close">&times;</span>
+                        <div class="row contenu">
+                        <div class="col-md-6">
+                            <div class="titre">
+                                <h1> Concours - Je Filme Ma Formation</h1>
+                            </div>
+                            <div class="membres">
+                                <ul>
+                                    <li>BENOIT Nathaël</li>
+                                    .
+                                    <li>GUENARD Eliott</li>
+                                    .
+                                    <li>GIRAUD Orian</li>
+                                    .
+                                    <li>GARDERE Théo</li>
+                                </ul>
+                            <br><h5 class="project-date">
+                                Janvier 2026
+                            </h5>
+                            <span class="projcompetences">Canva</span>
+                            </div>
+                            <div class="popup-text">
+                                Lors de ce concours national, nous avons réalisé une vidéo présentant notre formation en BUT Science des Données. <br><br>
+                                Ce projet m'a permis de développer mes compétences en communication visuelle et en travail d'équipe, ainsi que de mieux comprendre les aspects clés de notre formation. <br><br>
+
+                                <h3>Organisation du projet</h3>
+                                Lors de ce projet, nous avons d'abord brainstormé pour définir les messages clés que nous voulions transmettre sur notre formation. Nous sommes parties sur l'idée de ne pas avoir d'idées. Nous avons ensuite écrit un script et planifié le tournage de la vidéo. <br><br>
+                                Le tournage a été réalisé en utilisant des smartphones et des logiciels de montage vidéo gratuits. Nous avons utilisé Canva pour réaliser le montage de la vidéo. <br><br>
+
+                                <h3>Apprentissages critiques</h3>
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <video controls class="popup-video">
+                                <source src="./../projets/jefilmemaformation.mp4" type="video/mp4">
+                                Votre navigateur ne supporte pas la lecture vidéo.
+                            </video>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                
+                <div id="details3" class="popup-details">
+                    <div class="container">
+                        <span class="close">&times;</span>
+                        <div class="row contenu">
+                        <div class="col-md-6">
+                            <div class="titre">
+                                <h1> Projet Universitaire - Conformité réglementaire pour traiter / analyser les données</h1>
+                            </div>
+                            <div class="membres">
+                                <ul>
+                                    <li>BENOIT Nathaël</li>
+                                    . 
+                                    <li>CARRACO Camille</li>
+                                    . 
+                                    <li>CHAUVIN Rose</li>
+                                    .
+                                    <li>GASSE Armand-Valentin</li>
+                                </ul>
+                            <br><h5 class="project-date">
+                                Octobre 2025
+                            </h5>
+                            <span class="projcompetences">PowerPoint</span>
+                            </div>
+                            <div class="popup-text">
+                                Lors de ce projet universitaire, nous avons réalisé un PowerPoint sur la conformité réglementaire pour traiter et analyser les données, en mettant l'accent sur le RGPD et les bonnes pratiques à adopter. <br><br>
+                                Ce projet universitaire m'a permis de mieux comprendre les enjeux liés à la protection des données personnelles et les obligations légales des entreprises en matière de traitement des données. <br><br>
+                
+                                <h3>Organisation du projet</h3>
+                                Lors de notre projet universitaire, nous avons commencé par rechercher des informations sur le RGPD et les bonnes pratiques en matière de traitement des données. Nous avons ensuite structuré notre présentation en plusieurs parties, en mettant l'accent sur les points clés à retenir. <br><br>
+                                Nous avons utilisé des exemples concrets pour illustrer nos propos et rendre notre présentation plus vivante. <br><br>
+                
+                                <h3>Apprentissages critiques </h3>
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <embed src="./../projets/Projet_droit.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="details4" class="popup-details">
+                    <div class="container">
+                        <span class="close">&times;</span>
+                        <div class="row contenu">
+                        <div class="col-md-6">
+                            <div class="titre">
+                                <h1> Projet – Création d'une Base de Données de Gestion d’une Clinique Dentaire</h1>
+                            </div>
+                            <div class="membres">
+                                <ul>
+                                    <li>BENOIT Nathaël</li>
+                                    . 
+                                    <li>BABIN Paul</li>
+                                </ul>
+                            <br><h5 class="project-date">
+                                Décembre 2025
+                            </h5>
+                            <span class="projcompetences">SQL</span>
+                            </div>
+                            <div class="popup-text">
+                                Lors de ce projet, nous avons créé une base de données pour gérer les informations d'une clinique dentaire, en utilisant SQL pour structurer les données. <br><br>
+                                Ce projet universitaire m'a permis de développer mes compétences en modélisation de données et en SQL, ainsi que ma capacité à travailler en équipe pour atteindre un objectif commun. <br><br>
+
+                                <h3>Organisation du projet</h3>
+                                Lors de ce projet universitaire, nous avons commencé par analyser les besoins de la clinique dentaire en termes de gestion des données. Nous avons ensuite conçu un modèle de données en utilisant la modélisation SID, en identifiant les entités, les attributs et les relations entre les différentes tables. <br><br>
+                                Nous avons ensuite implémenté la base de données en utilisant SQL, en créant les tables et en définissant les contraintes d'intégrité. Enfin, nous avons créer des requêtes afin de visualiser les données de la clinique dentaire. <br><br>
+                                
+                                <h3>Apprentissages critiques</h3>
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <embed src="./../projets/ModélisationSID.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
+                            <a href="./../projets/ModélisationSID.zip" class="bouton">Télécharger les fichiers</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="details5" class="popup-details">
+                    <div class="container">
+                        <span class="close">&times;</span>
+                        <div class="row contenu">
+                        <div class="col-md-6">
+                            <div class="titre">
+                                <h1> Projet Universitaire - Description et prévision de données temporelles</h1>
+                            </div>
+                            <div class="membres">
+                                <ul>
+                                    <li>BENOIT Nathaël</li>
+                                    . 
+                                    <li>CARRACO Camille</li>
+                                </ul>
+                            <br><h5 class="project-date">
+                                Novembre 2025
+                            </h5>
+                            <span class="projcompetences">Excel / Word</span>
+                            </div>
+                            <div class="popup-text">
+                                Lors de ce projet, nous avons analysé des données temporelles liées aux fluctuations boursières de l'uranium. <br><br>
+                                Ce projet universitaire m'a permis de développer mes compétences en analyse de séries temporelles, en modélisation statistique et en utilisation d'outils tels qu'Excel pour traiter et visualiser les données. <br><br>
+                
+                                <h3>Organisation du projet</h3>
+                                Lors de notre projet universitaire, nous avons commencé par collecter les données temporelles sur les prix de l'uranium à partir de sources fiables. Nous avons ensuite nettoyé et préparé les données pour l'analyse, en traitant les valeurs manquantes et en identifiant les tendances saisonnières. <br><br>
+                                Nous avons par la suite réalisé plusieurs models afin de trouver le meilleure modèle de prévision pour les données de l'uranium. <br><br> Nous avons enfin rédigé un rapport détaillant nos méthodes, nos résultats et nos conclusions sur l'analyse des données temporelles. <br><br>
+                                <h3>Apprentissages critiques</h3>
+                                <ul>
+                                    <li></li>
+                                </ul>              
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <embed src="./../projets/SerieTemp.pdf" type="application/pdf"  class="popup-pdf popup-pdf-responsive" />
+                            <a href="./../projets/SerieTemp.xlsx" class="bouton">Télécharger les fichiers</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="details6" class="popup-details">
+                    <div class="container">
+                        <span class="close">&times;</span>
+                        <div class="row contenu">
+                        <div class="col-md-6">
+                            <div class="titre">
+                                <h1> Projet - Alimentation d’une étoile de gestion des ventes</h1>
+                            </div>
+                            <div class="membres">
+                                <ul>
+                                    <li>BENOIT Nathaël</li>
+                                </ul>
+                                <br><h5 class="project-date">
+                                    Novembre 2025
+                                </h5>
+                                <span class="projcompetences">Talend</span>
+                            </div>
+                            <div class="popup-text">
+                                Lors de ce projet, nous avons utilisé Talend pour créer un processus ETL (Extract, Transform, Load) afin d'alimenter une étoile de gestion des ventes à partir de différentes sources de données. <br><br>
+                                Ce projet m'a permis de développer mes compétences en ETL, en modélisation de données et en utilisation de Talend pour automatiser les processus de gestion des données. <br><br>
+
+                                <h3>Organisation du projet</h3>
+                                Lors de notre projet universitaire, nous avons commencé par analyser les sources de données disponibles, qui comprenaient des fichiers plats, des bases de données relationnelles et des flux de données en temps réel. Nous avons ensuite conçu un modèle en étoile avec des jobs Talend pour structurer les données de vente, en identifiant les faits et les dimensions nécessaires pour répondre aux besoins d'analyse. <br><br>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <embed src="./../projets/Talend.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
+                            <a href="./../projets/Talend.zip" class="bouton">Télécharger les fichiers</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        
+
+                <div id="details7" class="popup-details">
+                    <div class="container">
+                        <span class="close">&times;</span>
+                        <div class="row contenu">
+                        <div class="col-md-6">
+                            <div class="titre">
+                                <h1> Projet Universitaire - Collecte automatisé de données web</h1>
+                            </div>
+                            <div class="membres">
+                                <ul>
+                                    <li>BENOIT Nathaël</li>
+                                    . 
+                                    <li>CARRACO Camille</li>
+                                    . 
+                                    <li>Piton Jérémie</li>
+                                </ul>
+                                <br><h5 class="project-date">
+                                    Janvier 2026
+                                </h5>
+                                <span class="projcompetences">Php / Python / HTML / CSS / JavaScript </span>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="popup-text">
+                                Lors de ce projet,nous avons créé une application web permettant de collecter automatiquement des données à partir de sites web en utilisant des techniques de web scraping et des API. <br><br>
+                                Ce projet universitaire m'a permis de développer mes compétences en programmation web, en collecte de données et en automatisation des processus. <br><br>
+                
+                                <h3>Organisation du projet</h3>
+                                Lors de ce projet universitaire séparé en 2 parties, nous avons d'abord créé un site pour gérer les données collectées de l'API Observation météorologique historiques France (SYNOP). Nous avons utilisé PHP et Python pour le backend et HTML/CSS/JavaScript pour le frontend. Nous avons ensuite implémenté des fonctionnalités permettant aux utilisateurs de visualiser, filtrer et exporter les données collectées.<br><br>
+                                Ensuite, nous avons réalisé du web scraping pour collecter des données supplémentaires à partir de sites web de l'Onicep pour récupérer les données des formations qui tournent autour de l'informatique. Nous avons utilisé des bibliothèques Python telles que BeautifulSoup pour extraire les données souhaitées. <br><br>
+                                
+                                <h3>Apprentissages critiques</h3>
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <embed src="./../projets/progWeb.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
+                            <a href="./../projets/progWeb.zip" class="bouton">Télécharger les fichiers</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="details8" class="popup-details">
+                    <div class="container">
+                        <span class="close">&times;</span>
+                        <div class="row contenu">
+                        <div class="col-md-6">
+                            <div class="titre">
+                                <h1> Projet - Site web dynamique</h1>
+                            </div>
+                            <div class="membres">
+                                <ul>
+                                    <li>BENOIT Nathaël</li>
+                                    . 
+                                    <li>CARRACO Camille</li>
+                                    . 
+                                    <li>CHAUVIN Rose</li>
+                                </ul>
+                                <br><h5 class="project-date">
+                                    Octobre 2025
+                                </h5>
+                                <span class="projcompetences">PHP / MySQL / JavaScript</span>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="popup-text">
+                                Lors de ce projet, nous avons créé un site web dynamique utilisant des données open source de la SNCF pour afficher des informations sur les gares, les horaires et les itinéraires des trains. <br><br>
+                                Ce projet m'a permis de développer mes compétences en développement web, en gestion de bases de données et en intégration de données externes dans une application web. <br><br>    
+                
+                                <h3>Organisation du projet</h3>
+                                Lors de notre projet, nous avons commencé par analyser les données open source fournies par la SNCF, qui comprenaient des informations sur les gares, les horaires et les itinéraires des trains. Nous avons ensuite conçu une base de données MySQL pour stocker ces informations de manière structurée. <br><br>
+                                Nous avons ensuite développé le site web en utilisant PHP pour le backend et JavaScript pour le frontend, en intégrant les données de la base de données pour afficher les informations pertinentes aux utilisateurs. Nous avons aussi fait une gestion des utilisateur.<br><br>
+                                
+                                <h3>Apprentissages critiques</h3>
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <embed src="./../projets/webDynamique.pdf" type="application/pdf" class="popup-pdf popup-pdf-responsive" />
+                            <a href="./../projets/webDynamique.zip" class="bouton">Télécharger les fichiers</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -72,6 +500,48 @@
     </footer>
 
     <script src="./../scripts/script.js"></script>
+    <script>
+    // Modal management
+    function openModal(id) {
+        const modal = document.getElementById(id);
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        
+        // Fermer en cliquant en dehors du contenu
+        modal.onclick = function(event) {
+            if (event.target === modal) {
+                closeModal(id);
+            }
+        }
+    }
+    
+    function closeModal(id) {
+        const modal = document.getElementById(id);
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+    
+    // Fermer les modals avec le bouton X
+    document.querySelectorAll('.popup-details .close').forEach(btn => {
+        btn.onclick = function() {
+            const modal = this.closest('.popup-details');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    // Fermer avec la touche Echap
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            document.querySelectorAll('.popup-details').forEach(modal => {
+                if (modal.style.display === 'block') {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+    });
+    </script>
 </body>
 </html>
 
